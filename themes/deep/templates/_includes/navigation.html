@@ -13,15 +13,21 @@
             {% endif %}
             {% if DISPLAY_CATEGORIES_ON_MENU %}
                 <li class="navbar-item">
-                    <a class="navbar-link" href="#" data-popover="#codeNavPopover">Categories</a>
-                    <div id="codeNavPopover" class="popover">
-                      <ul class="popover-list">
-                      {% for cat, null in categories %}
-                        <li class="popover-item {% if cat == category %}active{% endif %}">
-                            <a class="popover-link" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                      {% endfor %}
-                      </ul>
+                    <div class="popover-wrapper">
+                        <a class="navbar-link" href="#">Categories</a>
+                        <div class="push popover-content">
+                            <ul class="popover-list">
+                                <li class="popover-item {% if page_name == 'categories' %}active{% endif %}">
+                                    <a class="popover-link" href="{{ SITEURL }}/categories.html">All categories</a>
+                                </li>
+                                {% for cat, null in categories %}
+                                <li class="popover-item {% if cat == category %}active{% endif %}">
+                                    <a class="popover-link" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
+                </li>
             {% endif %}
             </ul>
         </div>

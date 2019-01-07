@@ -1,8 +1,20 @@
 {% extends "base.html" %}
+{% block title %}{{ SITENAME }} - Model categories{% endblock %}
 {% block content %}
-<ul>
-{% for category, articles in categories %}
-    <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
-{% endfor %}
-</ul>
+<section id="categories">
+<div class="container section">
+    <div class="row">
+        <div class="twelve column">
+            <h2>Model Categories</h2>
+        </div>
+    </div>
+    <div class="row">
+        <ul>
+        {% for category, articles in categories %}
+            <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+</section>
 {% endblock %}
