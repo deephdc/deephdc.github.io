@@ -1,11 +1,41 @@
 {% extends "base.html" %}
-{% block content %}
-<h1>Archives for {{ SITENAME }}</h1>
 
-<dl>
-{% for article in dates %}
-    <dt>{{ article.locale_date }}</dt>
-    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
-{% endfor %}
-</dl>
+{% block title %} - All models{% endblock %}
+
+{% block content %}
+<section id="model-list">
+<div class="container section">
+    <div class="row">
+        <h2>All published models</h2>
+    </div>
+
+    <div class="row">
+        <table  class="u-full-width">
+            <thead>
+                <tr>
+                    <th>Model Name</th>
+                    <th>Published</th>
+                    <th>Updated</th>
+                    <th>Categories</th>
+                    <th>GitHub URL</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for article in articles %}
+                <tr>
+                    <td><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
+                    <td>{{ article.locale_date }}</td>
+                    <td>{% if article.modified %} {{ article.locale_modified }} {% else %} - {% endif %}
+                    </td>
+                    <td>{% for cat in article.categories or [article.category] %}
+                        <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>{{ ', ' if not loop.last }}
+                        {% endfor %}
+                    </td>
+                    <td>{{ article.github }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}
