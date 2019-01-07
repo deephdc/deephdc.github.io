@@ -1,0 +1,38 @@
+<ul class="model-list">
+{% for article in articles_page.object_list %}
+    <li class="six columns">
+        <article class="hentry">
+            <header>
+                <h3 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3>
+            </header>
+            <div class="row">
+                <div class="one column">
+                </div>
+                <div class="ten columns">
+                <footer class="post-info">
+                    <span class="fas fa-folder"></span>
+                    {% for cat in article.categories or [article.category] %}
+                        <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>{{ ', ' if not loop.last }}
+                    {% endfor %}
+                </div>
+            </div>
+            <!--
+                <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time> 
+                <address class="vcard author">By
+                {% for author in article.authors %}
+                    <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                {% endfor %}
+                </address>
+            -->
+            </footer><!-- /.post-info -->
+            <div class="entry-content"> 
+                <p>
+                {{ article.summary }} 
+                </p>
+                <a class="button button-primary" href="{{ SITEURL }}/{{ article.url }}">Know more &raquo;&raquo;</a>
+            </div><!-- /.entry-content -->
+        </article>
+    </li>
+{% endfor %}
+</ul>
+

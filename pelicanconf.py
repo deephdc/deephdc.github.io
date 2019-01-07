@@ -26,6 +26,9 @@ DISPLAY_CATEGORIES_ON_MENU = True
 
 USE_FOLDER_AS_CATEGORY = True
 
+PLUGIN_PATHS = ["plugins"]
+PLUGINS = ["more_categories"]
+
 THEME = "themes/deep"
 
 STATIC_PATHS = [

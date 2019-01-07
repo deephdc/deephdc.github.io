@@ -29,12 +29,19 @@ code {
     padding-top: 200px;
 }
 
+.container a {
+    text-decoration: none;
+}
+.container a:hover {
+    text-decoration: underline;
+}
 /* Footer */
 
 .footer {
     background-color: rgb(38, 39, 39);
     color: #FFFFFF;
     padding-top: 50px;
+    margin-top: 50px;
 }
 
 .footer li {
@@ -79,7 +86,7 @@ code {
 .model-list li {
     padding: 1em;
     border: 1px solid #d1d1d1;
-    background: #eeeeee;
+    background: #f1f1f2;
     margin-left: 0px;
     margin-right: 30px;
 }
@@ -91,7 +98,16 @@ code {
     margin-top: 7rem;
     margin-bottom: 7rem;
 }
-
+.model-entry .button {
+    background: #fff;
+}
+.model-entry .header {
+    background: #f1f1f2;
+}
+.model-entry .header,
+.model-entry .content {
+    padding:5em;
+}
 
 /* Navbar */
 .navbar {
