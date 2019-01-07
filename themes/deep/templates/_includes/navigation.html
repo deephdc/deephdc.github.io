@@ -1,0 +1,33 @@
+<nav class="navbar">
+<div class="container">
+    <div class="row">
+        <div class="nine columns">
+            <ul class="navbar-list">
+            {% for title, link in MENUITEMS %}
+                <li class="navbar-item"><a class="navbar-link" href="{{ link }}">{{ title }}</a></li>
+            {% endfor %}
+            {% if DISPLAY_PAGES_ON_MENU %}
+              {% for p in pages %}
+                <li  class="navbar-item {% if p == page %}active{% endif %}"><a class="navbar-link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+              {% endfor %}
+            {% endif %}
+            {% if DISPLAY_CATEGORIES_ON_MENU %}
+                <li class="navbar-item">
+                    <a class="navbar-link" href="#" data-popover="#codeNavPopover">Categories</a>
+                    <div id="codeNavPopover" class="popover">
+                      <ul class="popover-list">
+                      {% for cat, null in categories %}
+                        <li class="popover-item {% if cat == category %}active{% endif %}">
+                            <a class="popover-link" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                      {% endfor %}
+                      </ul>
+                    </div>
+            {% endif %}
+            </ul>
+        </div>
+        <div class="three columns logo">
+            <img src="images/logo-deep.png" class="logo"/>
+        </div>
+    </div>
+</div>
+</nav>
