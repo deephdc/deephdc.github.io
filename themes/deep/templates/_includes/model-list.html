@@ -1,7 +1,7 @@
 <ul class="model-list">
 {% for article in articles_page.object_list %}
     <li class="six columns">
-        <article class="hentry">
+        <div class="model-list-entry">
             <header>
                 <h3 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3>
             </header>
@@ -31,7 +31,7 @@
                 </p>
                 <a class="button button-primary" href="{{ SITEURL }}/{{ article.url }}">Know more &raquo;&raquo;</a>
             </div><!-- /.entry-content -->
-        </article>
+        </div>
     </li>
 {% endfor %}
 </ul>

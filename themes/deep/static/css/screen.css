@@ -85,10 +85,13 @@ code {
 
 .model-list li {
     padding: 1em;
+    margin: 0px;
+}
+
+.model-list-entry {
+    padding: 1em;
     border: 1px solid #d1d1d1;
     background: #f1f1f2;
-    margin-left: 0px;
-    margin-right: 30px;
 }
 
 /* Model entries */
