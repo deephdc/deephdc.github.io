@@ -1,7 +1,7 @@
 Title: DEEP OC Plant Classification (Theano)
 Date: 2018-07-03 10:20
 Modified: 2018-12-21
-Category: models/toy, library/theano, library/lasagne, docker
+Category: models, library/theano, library/lasagne, docker
 GitHub: https://github.com/indigo-dc/DEEP-OC-plant-classification-theano
 DockerHub: deephdc/deep-oc-plant-classification-theano
 Cite: https://doi.org/10.1145/3075564.3075590
