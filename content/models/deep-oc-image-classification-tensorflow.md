@@ -1,6 +1,6 @@
 Title: DEEP OC Image Classification (Tensorflow)
 Date: 2018-11-15
-Category: models/toy, library/tensorflow, library/keras, docker
+Category: models, library/tensorflow, library/keras, docker
 GitHub: https://github.com/indigo-dc/image-classification-tf
 DockerHub: deephdc/deep-oc-image-classification-tf
 License: Apache License 2.0

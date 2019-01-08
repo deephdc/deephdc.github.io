@@ -1,6 +1,6 @@
 Title: DEEP OC Phytopankton (Theano)
 Date: 2018-09-5
-Category: models/toy, library/theano, library/lasagne, docker
+Category: models, library/theano, library/lasagne, docker
 GitHub: https://github.com/indigo-dc/phytoplankton-classification-theano
 DockerHub: deephdc/deep-oc-phytoplankton-classification
 License: Apache License 2.0
