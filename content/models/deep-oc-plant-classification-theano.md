@@ -12,9 +12,9 @@ Summary: A trained ResNet50 on Theano to classify European plants.
 
 The deep learning revolution has brought significant advances in a number of
 fields [1], primarily linked to image and speech recognition. The
-standardization of image classification tasks like the ImageNet Large Scale
-Visual Recognition Challenge [2] has resulted in a reliable way to compare top
-performing architectures.
+standardization of image classification tasks like the [ImageNet Large Scale
+Visual Recognition Challenge](http://www.image-net.org/challenges/LSVRC/) [2]
+has resulted in a reliable way to compare top performing architectures.
 
 The use of deep learning for plant classification is not novel [3, 4] but has
 mainly focused in leaves and has been restricted to a limited amount of
@@ -33,16 +33,16 @@ families.
 
 A detailed article about this network and the results obtained with it can be found in [6].
 
-## References:
+### References
 
-[1]: Yann LeCun, Yoshua Bengio, and Geofrey Hinton. Deep learning. Nature, 521(7553):436–444, may 2015.
+[1]: Yann LeCun, Yoshua Bengio, and Geofrey Hinton. [Deep learning](https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf). Nature, 521(7553):436–444, may 2015.
 
-[2]: Olga Russakovsky et al. ImageNet Large Scale Visual Recognition Challenge. International Journal of Computer Vision (IJCV), 115(3):211–252, 2015.
+[2]: Olga Russakovsky et al. [ImageNet Large Scale Visual Recognition Challenge](https://arxiv.org/abs/1409.0575). International Journal of Computer Vision (IJCV), 115(3):211–252, 2015.
 
-[3]: Sue Han Lee, Chee Seng Chan, Paul Wilkin, and Paolo Remagnino. Deep-plant: Plant identification with convolutional neural networks, 2015.
+[3]: Sue Han Lee, Chee Seng Chan, Paul Wilkin, and Paolo Remagnino. [Deep-plant: Plant identification with convolutional neural networks](https://arxiv.org/abs/1506.08425), 2015.
 
-[4]: Mads Dyrmann, Henrik Karstoft, and Henrik Skov Midtiby. Plant species classification using deep convolutional neural network. Biosystems Engineering, 151:72–80, 2016.
+[4]: Mads Dyrmann, Henrik Karstoft, and Henrik Skov Midtiby. [Plant species classification using deep convolutional neural network.](https://www.sciencedirect.com/science/article/pii/S1537511016301465) Biosystems Engineering, 151:72–80, 2016.
 
-[5]: He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 770-778)
+[5]: He, K., Zhang, X., Ren, S., & Sun, J. (2016). [Deep residual learning for image recognition.](https://arxiv.org/abs/1512.03385) In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 770-778)
 
-[6]: Heredia, Ignacio. "Large-scale plant classification with deep neural networks." Proceedings of the Computing Frontiers Conference. ACM, 2017.
+[6]: Heredia, Ignacio. [Large-scale plant classification with deep neural networks.](https://arxiv.org/abs/1706.03736) Proceedings of the Computing Frontiers Conference. ACM, 2017.
