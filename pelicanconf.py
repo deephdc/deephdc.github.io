@@ -21,7 +21,6 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 AUTHOR_SAVE_AS = ''
 
-ARCHIVES_SAVE_AS = "models.html"
 
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = True
@@ -30,6 +29,7 @@ USE_FOLDER_AS_CATEGORY = True
 
 ARTICLE_URL = "models/{slug}.html"
 ARTICLE_SAVE_AS = 'models/{slug}.html'
+ARCHIVES_SAVE_AS = "models/index.html"
 
 PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["more_categories"]

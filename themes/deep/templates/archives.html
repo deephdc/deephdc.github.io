@@ -19,7 +19,8 @@
                     <th>License</th>
                     <th>Categories</th>
                     <th>Cite as</th>
-                    <th>GitHub URL</th>
+                    <th><span class="fab fa-github"></span> GitHub URL</th>
+                    <th><span class="fab fa-docker"></span> Docker image</th>
                 </tr>
             </thead>
             <tbody>
@@ -46,7 +47,12 @@
                         {% if article.cite %}<a href="{{ article.cite }}">{{ article.cite }}</a>{% else %} - {% endif %}
                     </td>
                     <td>
-                        <a href="{{ article.github }}">{{ article.github }}</a>
+                        <a title="GitHub repository" href="{{ article.github }}">{{ article.github }}</a>
+                    </td>
+                    <td>
+                        {% if article.dockerhub %}
+                        <a title="Docker image" href="{{ article.dockerhub }}">{{ article.dockerhub }}</a>
+                        {% else %} - {% endif %}
                     </td>
                 </tr>
             {% endfor %}
