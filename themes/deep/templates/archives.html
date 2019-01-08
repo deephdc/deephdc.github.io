@@ -16,22 +16,38 @@
                     <th>Model Name</th>
                     <th>Published</th>
                     <th>Updated</th>
+                    <th>License</th>
                     <th>Categories</th>
+                    <th>Cite as</th>
                     <th>GitHub URL</th>
                 </tr>
             </thead>
             <tbody>
             {% for article in articles %}
                 <tr>
-                    <td><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
-                    <td>{{ article.locale_date }}</td>
-                    <td>{% if article.modified %} {{ article.locale_modified }} {% else %} - {% endif %}
+                    <td>
+                        <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
                     </td>
-                    <td>{% for cat in article.categories or [article.category] %}
+                    <td>
+                        {{ article.locale_date }}
+                    </td>
+                    <td>
+                        {% if article.modified %} {{ article.locale_modified }} {% else %} - {% endif %}
+                    </td>
+                    <td>
+                        {{ article.license}}
+                    </td>
+                    <td>
+                        {% for cat in article.categories or [article.category] %}
                         <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>{{ ', ' if not loop.last }}
                         {% endfor %}
                     </td>
-                    <td>{{ article.github }}</td>
+                    <td>
+                        {% if article.cite %}<a href="{{ article.cite }}">{{ article.cite }}</a>{% else %} - {% endif %}
+                    </td>
+                    <td>
+                        <a href="{{ article.github }}">{{ article.github }}</a>
+                    </td>
                 </tr>
             {% endfor %}
             </tbody>

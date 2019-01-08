@@ -24,27 +24,37 @@
         </div>
         <div class="row">
             <a class="button" href="{{ article.github }}">Get this model</a>
+            {% if article.cite %}
+            <a class="button" href="{{ article.cite }}">Cite this model</a>
+            {% endif %}
         </div>
         <div class="row">
-            {% if article.authors %}
-                By
-                {% for author in article.authors %}
-<!--                    <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> -->
-                    {{ author }}
+            <p>
+                {% if article.authors %}
+                    By
+                    {% for author in article.authors %}
+    <!--                    <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> -->
+                        {{ author }}
+                    {% endfor %}
+                | {% endif %}
+                Created: <time class="published" datetime="{{ article.date.isoformat() }}">
+                    {{ article.locale_date }}
+                </time>
+                {% if article.modified %}
+                - Updated: <time class="modified" datetime="{{ article.modified.isoformat() }}">
+                    {{ article.locale_modified }}
+                </time>
+                {% endif %}
+            </p>
+            <p>
+                <span class="fas fa-folder"></span>
+                {% for cat in article.categories or [article.category] %}
+                    <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>{{ ', ' if not loop.last }}
                 {% endfor %}
-            | {% endif %}
-            Created: <time class="published" datetime="{{ article.date.isoformat() }}">
-                {{ article.locale_date }}
-            </time>
-            {% if article.modified %}
-            - Updated: <time class="modified" datetime="{{ article.modified.isoformat() }}">
-                {{ article.locale_modified }}
-            </time>
-            {% endif %} |
-            <span class="fas fa-folder"></span>
-            {% for cat in article.categories or [article.category] %}
-                <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>{{ ', ' if not loop.last }}
-            {% endfor %}
+            </p>
+            <p>
+                License: {% if article.license %} {{ article.license }} {% else %} - {% endif %}
+            </p>
         </div>
     </div>
     <div class="content">
