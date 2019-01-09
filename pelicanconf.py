@@ -32,7 +32,10 @@ ARTICLE_SAVE_AS = 'models/{slug}.html'
 ARCHIVES_SAVE_AS = "models/index.html"
 
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["more_categories"]
+PLUGINS = [
+    "more_categories",
+    "pelican-yaml-metadata",
+]
 
 THEME = "themes/deep"
 

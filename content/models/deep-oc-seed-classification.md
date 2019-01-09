@@ -1,3 +1,4 @@
+---
 Title: DEEP OC Seed Classification (Theano)
 Date: 2018-09-16
 Category: models, library/theano, library/lasagne, docker
@@ -5,6 +6,7 @@ GitHub: https://github.com/indigo-dc/seeds-classification-theano
 DockerHub: deephdc/deep-oc-seeds-classification
 License: Apache License 2.0
 Summary: A trained ResNet50 on Theano to seeds.
+---
 
 The deep learning revolution has brought significant advances in a number of
 fields [1], primarily linked to image and speech recognition. The
@@ -16,7 +18,7 @@ This Docker container contains a trained Convolutional Neural network optimized
 for seed identification using images. The architecture used is a Resnet50 [5]
 using Lasagne on top of Theano.
 
-As training dataset it has been used a collection of images from the 
+As training dataset it has been used a collection of images from the
 [Royal Botanical Garden](http://www.rjb.csic.es) of Spain. It consists of around
 28K images from 743 species and 493 genera.
 

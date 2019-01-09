@@ -1,10 +1,12 @@
+---
 Title: DEEP OC Retinopathy
 Date: 2019-01-01
 Category: models, docker
 GitHub: https://github.com/itokeiic/retinopathy_test
 DockerHub: itokeiic/deep-oc-retinopathy_test
 License: Apache License 2.0
-Summary: 
+Summary:
+---
 
 This use case is concerned with the classification of biomedical images (of the retina) into five disease categories or stages (from healthy to severe) using a deep learning approach.  This is a TensorFlow example implementation. The network is a standard residual network model with 50 layers (ResNet50). The model used in this use case was made available by Niklas Köhler: https://gitlab.com/niklaskoehler/retinopathy_model
 
@@ -12,13 +14,13 @@ Retinopathy is a fast-growing cause of blindness worldwide, over 400 million peo
 
 A trained model can be accessed via the DEEPaaS API web interface.  The user provides the retina image and the trained model will return the probability of the five categories from healthy 'dr0' to the most severely pathological 'dr4'.
 
-In the DEEPaaS API, 
-click on the "POST" frame, 
-click on the "Browse" button to select the image to classify. 
-Type "retinopathy_test" without quotes in the "model_name" field. 
+In the DEEPaaS API,
+click on the "POST" frame,
+click on the "Browse" button to select the image to classify.
+Type "retinopathy_test" without quotes in the "model_name" field.
 Click "Execute".
 
-Look into the "response body" window.  For example, 
+Look into the "response body" window.  For example,
 
 [
   "{'/tmp/tmpTuMwqe': {u'probabilities': array([[0.02030031, 0.00091151, 0.04386754, 0.04448699, 0.89043367]],\n      dtype=float32), u'classes': array([4])}}"
