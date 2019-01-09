@@ -1,5 +1,5 @@
 ---
-title: DEEP OC Plant Classification (Theano)
+Title: DEEP OC Plant Classification (Theano)
 Date: 2018-07-03 10:20
 Modified: 2018-12-21
 Category: models, library/theano, library/lasagne, docker
@@ -8,6 +8,8 @@ DockerHub: deephdc/deep-oc-plant-classification-theano
 Cite: https://doi.org/10.1145/3075564.3075590
 License: Apache License 2.0
 Summary: A trained ResNet50 on Theano to classify European plants.
+Tosca:
+    Mesos (CPU): https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-plants-mesos-cpu.yml
 ---
 
 

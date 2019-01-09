@@ -7,6 +7,9 @@ GitHub: https://github.com/indigo-dc/DEEP-OC-dogs_breed_det
 DockerHub: deephdc/deep-oc-dogs_breed_det
 License: Apache License 2.0
 Summary: A toy example to identify Dog's breed.
+Tosca:
+    Mesos (GPU): https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-dogs_breed-mesos-gpu.yml
+    Mesos (CPU): https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-dogs_breed-mesos-cpu.yml
 ---
 
 [![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/dogs_breed_det/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/dogs_breed_det/job/master/)

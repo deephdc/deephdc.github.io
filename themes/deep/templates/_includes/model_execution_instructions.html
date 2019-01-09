@@ -1,0 +1,44 @@
+<div class="row run">
+    <h3>Run locally on your computer</h3>
+    <p>
+		You can run this model directly on your computer, assuming that you
+		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
+		installed, by following these steps:
+    </p>
+    <pre><code>docker pull {{ article.dockerhub }}
+docker run -ti -p 5000:5000 {{ article.dockerhub }}</code></pre>
+ 
+    <p>
+        Once running, point your browser to <code>http://127.0.0.1:5000/</code>
+        and you will see the API documentation, where you can test the model
+        functionality, as well as perform other actions (such as training).
+    </p>
+    <p>
+        For more information, refer to the 
+        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
+           title="DEEP user documentation">user documentation</a>.
+    </p>
+</div>
+{% if article.tosca %}
+<div class="row run">
+    <h3>Run on our pilot e-Infrastructure</h3>
+    <p>
+        In order to execute this model in our pilot e-Infrastructure you would
+        need to be registered in the 
+        <a href="https://iam.deep-hybrid-datacloud.eu/"
+           title="DEEP Identity and Access Management">DEEP IAM</a>.
+    </p>
+  {% for title, link in article.tosca.items() %}
+    <h4>{{ title }}</h4>
+    <pre><code>curl -o {{ article.slug }}.tosca \
+    {{ link }}
+orchent {{ article.slug }}.tosca ...</code></pre>
+  {% endfor %}
+    <p>Once running...</p>
+    <p>
+        For more information, refer to the 
+        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
+           title="DEEP user documentation">user documentation</a>.
+    </p>
+</div>
+{% endif %}
