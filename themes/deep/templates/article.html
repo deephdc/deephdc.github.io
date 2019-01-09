@@ -62,7 +62,15 @@
     </div>
     <div class="content">
         <div class="row">
-            {{ article.content }}
+            <div class="seven columns">
+                {{ article.content }}
+            </div>
+            <div class="five columns">
+                <h3>Run locally on your computer</h3>
+                <pre>
+<code>docker pull {{ article.dockerhub }}
+docker run -ti -p 5000:5000 {{ article.dockerhub }}</code></pre>
+            </div>
         </div>
     </div>
 </div>
