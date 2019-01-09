@@ -3,6 +3,7 @@ Date: 2018-09-5
 Category: models, library/theano, library/lasagne, docker
 GitHub: https://github.com/indigo-dc/phytoplankton-classification-theano
 DockerHub: deephdc/deep-oc-phytoplankton-classification
+Training_files: https://cephrgw01.ifca.es:8080/swift/v1/plankton/
 License: Apache License 2.0
 Summary: A trained ResNet50 on Theano to classify phytoplankton species.
 

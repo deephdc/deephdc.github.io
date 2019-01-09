@@ -4,6 +4,7 @@ Modified: 2018-12-21
 Category: models, library/theano, library/lasagne, docker
 GitHub: https://github.com/indigo-dc/DEEP-OC-conus-classification
 DockerHub: deephdc/deep-oc-conus-classification
+Training_files: https://cephrgw01.ifca.es:8080/swift/v1/conus/
 License: Apache License 2.0
 Summary: A trained ResNet50 on Theano to classify conus marine snails.
 
