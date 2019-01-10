@@ -33,7 +33,7 @@ Current modelling approach using DL techniques [3]:
 LSTM (vanilla, stacked, bidirectional, seq2seq encoder/decoder), GRU, CNN, and MLP
 
 
-### References
+## References
 
 [1]: Bhattacharyya, D.K. and Kalita, J.K., 2013. Network anomaly detection: A machine learning perspective. Chapman and Hall/CRC.
 
