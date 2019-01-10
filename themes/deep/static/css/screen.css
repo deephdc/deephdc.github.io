@@ -94,6 +94,33 @@ code {
     background: #f1f1f2;
 }
 
+.entry-title {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    .model-list-entry {
+        min-height: 420px;
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+    .model-list-entry {
+        min-height: 200px;
+    }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+    .model-list-entry {
+        min-height: 200px;
+    }
+}
+
 /* Model entries */
 
 .model-entry {

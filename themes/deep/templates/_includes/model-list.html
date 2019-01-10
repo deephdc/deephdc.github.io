@@ -9,11 +9,12 @@
                 <div class="one column">
                 </div>
                 <div class="ten columns">
-                <footer class="post-info">
-                    <span class="fas fa-folder"></span>
-                    {% for cat in article.categories or [article.category] %}
-                        <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>{{ ', ' if not loop.last }}
-                    {% endfor %}
+                    <p class="post-info">
+                        <span class="fas fa-folder"></span>
+                        {% for cat in article.categories or [article.category] %}
+                            <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>{{ ', ' if not loop.last }}
+                        {% endfor %}
+                    </p><!-- /.post-info -->
                 </div>
             </div>
             <!--
@@ -24,11 +25,12 @@
                 {% endfor %}
                 </address>
             -->
-            </footer><!-- /.post-info -->
             <div class="entry-content"> 
-                <p>
-                {{ article.summary }} 
-                </p>
+              {% if article.summary %}
+                {{ article.summary }}
+              {% else %}
+                <p> &nbsp; </p>
+              {% endif %}
                 <a class="button button-primary" href="{{ SITEURL }}/{{ article.url }}">Know more &raquo;&raquo;</a>
             </div><!-- /.entry-content -->
         </div>
