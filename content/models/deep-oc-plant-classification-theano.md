@@ -6,6 +6,7 @@ Category: models, library/theano, library/lasagne, docker
 GitHub: https://github.com/indigo-dc/DEEP-OC-plant-classification-theano
 DockerHub: deephdc/deep-oc-plant-classification-theano
 Cite: https://doi.org/10.1145/3075564.3075590
+Training_files: https://cephrgw01.ifca.es:8080/swift/v1/Plants/
 License: Apache License 2.0
 Summary: A trained ResNet50 on Theano to classify European plants.
 Tosca:

@@ -4,6 +4,7 @@ Date: 2018-09-16
 Category: models, library/theano, library/lasagne, docker
 GitHub: https://github.com/indigo-dc/seeds-classification-theano
 DockerHub: deephdc/deep-oc-seeds-classification
+Training_files: https://cephrgw01.ifca.es:8080/swift/v1/seeds/
 License: Apache License 2.0
 Summary: A trained ResNet50 on Theano to seeds.
 ---
