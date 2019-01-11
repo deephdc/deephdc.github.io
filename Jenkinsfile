@@ -37,7 +37,7 @@ pipeline {
                 sh 'make html'
                 sh 'git config user.name "indigobot"'
                 sh 'git config user.email "orviz@cern.ch"'
-                sh 'git pull origin master'
+                sh 'git fetch origin master:master'
                 sh 'make github'
             }
         }
