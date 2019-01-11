@@ -32,13 +32,28 @@
     <div class="row">
         <div class="three columns">
             <h4>1. Choose a model</h3>
-            Browse the <a href="#model-list">list of available models</a> and pick the one of your choice.
+            <p>Browse the <a href="#model-list">list of available models</a>
+            and pick the one of your choice.</p>
+            <p>The <a href="{{ SITEURL
+                }}/models/deep-generic-container.html">DEEP Generic
+                Container</a> is a good starting point to see how the API looks
+            like (but it does not provide any functionality at all).</p>
         </div>
         <div class="five columns">
             <h4>2. Download &amp; execute</h3>
+            With Docker
             <pre><code>$ docker search deephdc
 $ docker pull deephdc/deep-oc-generic-container
 $ docker run -ti -p 5000:5000 deephdc/deep-oc-generic-container</code></pre>
+            No Docker available? Try <a title="udocker repository" target="_blank" href="https://github.com/indigo-dc/udocker">udocker</a> instead!
+            <pre><code>$ virtualenv udocker
+$ source udocker/bin/activate
+$ git clone https://github.com/indigo-dc/udocker
+$ cd udocker
+$ pip install .
+$ udocker pull deephdc/deep-oc-generic-container
+$ udocker create deephdc/deep-oc-generic-container
+$ udocker run -p 5000:5000  deephdc/deep-oc-generic-container</code></pre>
         </div>
         <div class="four columns">
             <h4>3. Browse the API</h3>
