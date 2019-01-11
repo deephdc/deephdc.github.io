@@ -1,13 +1,31 @@
 <div class="row run">
     <h3>Run locally on your computer</h3>
+    <h4>Using Docker</h4>
     <p>
 		You can run this model directly on your computer, assuming that you
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>docker pull {{ article.dockerhub }}
-docker run -ti -p 5000:5000 {{ article.dockerhub }}</code></pre>
+    <pre><code>$ docker pull {{ article.dockerhub }}
+$ docker run -ti -p 5000:5000 {{ article.dockerhub }}</code></pre>
  
+    <h4>Using docker</h4>
+    <p>
+        If you do not have Docker available or you do not want to install it,
+        you can use <a title="udocker repository" target="_blank"
+                       href="https://github.com/indigo-dc/udocker">udocker</a> 
+        within a Python virtualenv:
+    </p>
+            <pre><code>$ virtualenv udocker
+$ source udocker/bin/activate
+$ git clone https://github.com/indigo-dc/udocker
+$ cd udocker
+$ pip install .
+$ udocker pull {{ article.dockerhub }}
+$ udocker create {{ article.dockerhub }}
+$ udocker run -p 5000:5000  {{ article.dockerhub }}</code></pre>
+
+    <hr />
     <p>
         Once running, point your browser to <code>http://127.0.0.1:5000/</code>
         and you will see the API documentation, where you can test the model
@@ -18,7 +36,9 @@ docker run -ti -p 5000:5000 {{ article.dockerhub }}</code></pre>
         <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
            title="DEEP user documentation">user documentation</a>.
     </p>
+
 </div>
+
 {% if article.tosca %}
 <div class="row run">
     <h3>Run on our pilot e-Infrastructure</h3>
