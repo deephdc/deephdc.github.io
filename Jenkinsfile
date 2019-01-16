@@ -30,13 +30,12 @@ pipeline {
             when {
                 anyOf {
                     branch 'pelican'
-                    branch 'add_jenkinsfile'
                 }
             }
             steps {
                 withCredentials([string(credentialsId: "indigobot-github-token",
                                  variable: "GITHUB_TOKEN")]) {
-                    sh 'make html'
+                    sh 'git branch -D master'
                     sh 'git fetch origin master:master'
                     sh 'git remote set-url origin "https://indigobot:${GITHUB_TOKEN}@github.com/deephdc/deephdc.github.io"'
                     sh 'make github'
