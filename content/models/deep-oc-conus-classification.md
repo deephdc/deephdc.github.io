@@ -3,7 +3,7 @@ Title: DEEP OC Conus Classification (Theano)
 Date: 2018-07-03 10:20
 Modified: 2018-12-21
 Category: models, library/theano, library/lasagne, docker
-GitHub: https://github.com/indigo-dc/DEEP-OC-conus-classification
+GitHub: https://github.com/deephdc/DEEP-OC-conus-classification
 DockerHub: deephdc/deep-oc-conus-classification
 Training_files: https://cephrgw01.ifca.es:8080/swift/v1/conus/
 License: Apache License 2.0

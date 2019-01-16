@@ -3,7 +3,7 @@ Title: DEEP OC dogs breed determination
 Date: 2018-07-03 10:20
 Modified: 2018-11-26
 Category: models/toy, library/tensorflow, docker
-GitHub: https://github.com/indigo-dc/DEEP-OC-dogs_breed_det
+GitHub: https://github.com/deephdc/DEEP-OC-dogs_breed_det
 DockerHub: deephdc/deep-oc-dogs_breed_det
 License: Apache License 2.0
 Summary: A toy example to identify Dog's breed.
