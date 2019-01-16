@@ -46,15 +46,22 @@ $ udocker run -p 5000:5000  {{ article.dockerhub }}</code></pre>
         In order to execute this model in our pilot e-Infrastructure you would
         need to be registered in the 
         <a href="https://iam.deep-hybrid-datacloud.eu/"
-           title="DEEP Identity and Access Management">DEEP IAM</a>.
+           title="DEEP Identity and Access Management">DEEP IAM</a>. <br>
+        The following instructions make use of the <a href="https://github.com/indigo-dc/orchent">orchent</a> CLI. You would need to 
+        install and configure orchent as shown in this <a href="https://github.com/maricaantonacci/deep-tutorials/blob/master/orchent_tutorial.md">tutorial</a>.
     </p>
-  {% for title, link in article.tosca.items() %}
-    <h4>{{ title }}</h4>
-    <pre><code>curl -o {{ article.slug }}.tosca \
-    {{ link }}
-orchent {{ article.slug }}.tosca ...</code></pre>
+  {% for tosca in article.tosca %}
+    <h4>{{ tosca.title }}</h4>
+    <pre><code>$ curl -o {{ article.slug }}.yml \
+    {{ tosca.url }}
+$ orchent {{ article.slug }}.yml {% if tosca.inputs %} {%raw%}'{{%endraw%}{% for input in tosca.inputs %}"{{input|trim()}}"="..."{%if not loop.last%}, {%endif%}{%endfor%}{%raw%}}'{%endraw%}{% else %}{%raw%}'{}'{%endraw%}{%endif%}</code></pre>
   {% endfor %}
-    <p>Once running...</p>
+    <hr />
+    <p>Check the status of your job</p>
+    <pre><code>$ orchent depshow &lt;Deployment UUID&gt;</code></pre>
+    <p>Once its state is CREATE_COMPLETE, you will get the endpoint to access the service, e.g: </p>
+    <pre><code>"endpoint": "mesos-lb.recas.ba.infn.it:10002"</pre></code>
+    Point your browser to the provided URL.
     <p>
         For more information, refer to the 
         <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
