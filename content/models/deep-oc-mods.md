@@ -7,7 +7,14 @@ DockerHub: deephdc/deep-oc-mods
 License: Apache License 2.0
 Summary: Massive Online Data Streams analysis.
 Tosca:
-    Mesos (CPU): https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-mods-mesos-cpu.yml
+   - title: Mesos (CPU)
+     url: https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-mods-mesos-cpu.yml
+     inputs:
+       - rclone_conf
+       - rclone_url
+       - rclone_vendor
+       - rclone_user
+       - rclone_pass
 ---
 
 

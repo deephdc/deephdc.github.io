@@ -10,9 +10,15 @@ Training_files: https://cephrgw01.ifca.es:8080/swift/v1/Plants/
 License: Apache License 2.0
 Summary: A trained ResNet50 on Theano to classify European plants.
 Tosca:
-    Mesos (CPU): https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-plants-mesos-cpu.yml
+   - title: Mesos (CPU)
+     url: https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-plants-mesos-cpu.yml
+     inputs:
+       - rclone_conf
+       - rclone_url
+       - rclone_vendor
+       - rclone_user
+       - rclone_pass
 ---
-
 
 [![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-plant-classification-theano/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-plant-classification-theano/job/master)
 
