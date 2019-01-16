@@ -34,11 +34,13 @@ pipeline {
                 }
             }
             steps {
-                sh 'make html'
-                sh 'git config user.name "indigobot"'
-                sh 'git config user.email "orviz@cern.ch"'
-                sh 'git fetch origin master:master'
-                sh 'make github'
+                withCredentials([string(credentialsId: "indigobot-github-token",
+                                 variable: "GITHUB_TOKEN")]) {
+                    sh 'make html'
+                    sh 'git fetch origin master:master'
+                    sh 'git remote set-url origin "https://indigobot:${GITHUB_TOKEN}@github.com/deephdc/deephdc.github.io"'
+                    sh 'make github'
+                }
             }
         }
     }
