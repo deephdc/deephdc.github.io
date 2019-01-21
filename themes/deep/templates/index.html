@@ -41,19 +41,20 @@
         </div>
         <div class="five columns">
             <h4>2. Download &amp; execute</h3>
-            With Docker:
+            With <a title="Docker install" target="_blank" href="https://docs.docker.com/install/#supported-platforms">Docker</a>:
             <pre><code>$ docker search deephdc
-$ docker pull deephdc/deep-oc-generic-container
 $ docker run -ti -p 5000:5000 deephdc/deep-oc-generic-container</code></pre>
-            No Docker available? Try <a title="udocker repository" target="_blank" href="https://github.com/indigo-dc/udocker">udocker</a> instead!
-            <pre><code>$ virtualenv udocker
-$ source udocker/bin/activate
-$ git clone https://github.com/indigo-dc/udocker
-$ cd udocker
-$ pip install .
-$ udocker pull deephdc/deep-oc-generic-container
-$ udocker create deephdc/deep-oc-generic-container
+            No Docker possible? Try <a title="udocker install" target="_blank" href="https://github.com/indigo-dc/udocker/blob/master/doc/installation_manual.md#udocker-installation-manual">udocker</a> instead!
+            <pre><code>$ udocker search deephdc
 $ udocker run -p 5000:5000  deephdc/deep-oc-generic-container</code></pre>
+            <p>Need GPU access?</p>
+            Use <a title="nvidia-docker install" target="_blank" href="https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)">nvidia-docker</a> together with Docker:
+            <pre><code>$ nvidia-docker run -ti -p 5000:5000 deephdc/deep-oc-generic-container</code></pre>
+            Or udocker way:
+            <pre><code>$ udocker pull deephdc/deep-oc-generic-container
+$ udocker create --name=deep-oc-generic-container deephdc/deep-oc-generic-container
+$ udocker setup --nvidia deep-oc-generic-container
+$ udocker run -p 5000:5000  deep-oc-generic-container</code></pre>                
         </div>
         <div class="four columns">
             <h4>3. Browse the API</h3>
