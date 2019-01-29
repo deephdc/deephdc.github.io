@@ -5,7 +5,7 @@ Category: models, library/tensorflow, library/keras, docker
 GitHub: https://github.com/deephdc/DEEP-OC-image-classification-tf
 DockerHub: deephdc/deep-oc-image-classification-tf
 License: Apache License 2.0
-Summary: A tool to train an image classifier on your data
+Summary: A model to train an image classifier on your data
 ---
 
 [![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/image-classification-tf/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/image-classification-tf/job/master/)
@@ -21,7 +21,7 @@ dataset. It is a highly customizable tool  that let's you choose between tens of
 arquitectures](https://github.com/keras-team/keras-applications) and training parameters.
 
 
-### References
+**References**
 
 [1]: Yann LeCun, Yoshua Bengio, and Geofrey Hinton. [Deep learning](https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf). Nature, 521(7553):436–444, may 2015.
 
