@@ -1,5 +1,5 @@
 ---
-Title: DEEP OC Seeds Classification (Theano)
+Title: DEEP OC Seed Classification (Theano)
 Date: 2018-09-16
 Category: deprecated/services, library/theano, library/lasagne, docker
 GitHub: https://github.com/deephdc/DEEP-OC-seeds-classification
@@ -9,7 +9,7 @@ License: Apache License 2.0
 Summary: A trained ResNet50 on Theano to seeds.
 ---
 
-[![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-seeds-classification/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-seeds-classification/job/master)
+[![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-seed-classification/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-seed-classification/job/master)
 
 This service is deprecated. Please refer to the [newer Tensorflow version](./deep-oc-seed-classification.html)
 
