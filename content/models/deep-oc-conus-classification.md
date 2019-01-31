@@ -3,13 +3,13 @@ Title: DEEP OC Conus Classification
 Date: 2019-01-01
 Category: services, library/tensorflow, library/lasagne, docker
 GitHub: https://github.com/deephdc/DEEP-OC-image-classification-tf
-DockerHub: 
-Training_files: 
+DockerHub: deephdc/deep-oc-conus-classification-tf
+Training_files: https://cephrgw01.ifca.es:8080/swift/v1/conus-tf/
 License: Apache License 2.0
 Summary: A trained Xception net on Tensorflow/Keras to classify conus marine snails.
 ---
 
-[![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-plant-classification-theano/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-conus-classification/job/master)
+[![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-conus-classification-tf/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-conus-classification-tf/job/master)
 
 Citizen science has become a powerful force for scientific inquiry, providing researchers with access to a vast array of
 data points while connecting non scientists to the real process of science. 
