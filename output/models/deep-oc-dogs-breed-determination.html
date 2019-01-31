@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>DEEP Open Catalog - Model "DEEP OC dogs breed determination"</title>
+        <meta charset="utf-8" />
+
+        <link rel="stylesheet" type="text/css" href="../theme/css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="../theme/css/skeleton.css" />
+        <link rel="stylesheet" type="text/css" href="../theme/css/screen.css" />
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+        <link rel="icon" type="image/png" href="../favicon.ico" />
+        
+
+
+
+</head>
+
+<body>
+<nav class="navbar">
+<div class="container">
+    <div class="row">
+        <div class="nine columns">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a class="navbar-link" href="/">DEEP Open Catalog</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="https://deep-hybrid-datacloud.eu/">Project page</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="https://docs.deep-hybrid-datacloud.eu/">Docs</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="../models/index.html">Models</a></li>
+                <li class="navbar-item">
+                    <div class="popover-wrapper">
+                        <a class="navbar-link" href="#">Categories</a>
+                        <div class="push popover-content">
+                            <ul class="popover-list">
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../categories.html">All categories</a>
+                                </li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/deprecated.html">deprecated</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/deprecated/services.html">deprecated/services</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/docker.html">docker</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/library.html">library</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/library/keras.html">library/keras</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/library/lasagne.html">library/lasagne</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/library/tensorflow.html">library/tensorflow</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/library/theano.html">library/theano</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/models.html">models</a></li>
+                                <li class="popover-item active">
+                                    <a class="popover-link" href="../category/models/toy.html">models/toy</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/services.html">services</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/services/toy.html">services/toy</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/test modules.html">test modules</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="three columns logo">
+            <img src="images/logo-deep.png" class="logo"/>
+        </div>
+    </div>
+</div>
+</nav>    
+<section id="model-entry">
+<div class="container model-entry">
+    <div class="header">
+        <div class="row">
+            <h2 class="entry-title" >DEEP OC dogs breed determination</h2>
+             
+        </div>
+        <div class="row">
+            <a class="button" title="GitHub repository" href="https://github.com/deephdc/DEEP-OC-dogs_breed_det"><span class="fab fa-github"></span> Get this model</a>
+            <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/deephdc/deep-oc-dogs_breed_det"><span class="fab fa-docker"></span> deephdc/deep-oc-dogs_breed_det</a>
+        </div>
+        <div class="row">
+            <p>
+                    By
+    <!--                    <a class="url fn" href="../author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a> -->
+                        DEEP-Hybrid-DataCloud Consortium
+                |                 Created: <time class="published" datetime="2018-07-03T10:20:00+02:00">
+                    mar 03 julio 2018
+                </time>
+                - Updated: <time class="modified" datetime="2018-11-26T00:00:00+01:00">
+                    lun 26 noviembre 2018
+                </time>
+            </p>
+            <p>
+                <span class="fas fa-folder"></span>
+                    <a href="../category/models/toy.html">models/toy</a>, 
+                    <a href="../category/services/toy.html">services/toy</a>, 
+                    <a href="../category/library/tensorflow.html">library/tensorflow</a>, 
+                    <a href="../category/docker.html">docker</a>
+            </p>
+            <p>
+                License:  Apache License 2.0             </p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="seven  columns">
+                <p><a href="https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/dogs_breed_det/job/master/"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/dogs_breed_det/master"></a></p>
+<p>A toy example to identify Dog's breed, "Dogs breed detector", as example for <a href="https://github.com/indigo-dc/DEEPaaS">DEEPaaS API</a>.</p>
+<p>Dogs breed detector is originally forked from <a href="https://github.com/udacity/dog-project">udacity/dogs-project</a>, dataset comes from <a href="https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip">dog dataset</a>.</p>
+<p>The project applies Transfer learning for dog's breed identification, implemented with Tensorflow and Keras:</p>
+<p>From a pre-trained model (VGG16 | VGG19 | Resnet50 | InceptionV3 | Xception) the last layer is removed, then a new FC classification layer is added, which is trained. All images first pass through the pre-trained network and converted into the tensor with the shape of the 'before-last' layer of the pre-trained network, into so-called 'bottleneck_features'. These bottleneck_features are used then as input for the FC classification network.</p>
+            </div>
+            <div class="five columns">
+<div class="row run">
+    <h3>Run locally on your computer</h3>
+    <h4>Using Docker</h4>
+    <p>
+		You can run this model directly on your computer, assuming that you
+		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
+		installed, by following these steps:
+    </p>
+    <pre><code>$ docker pull deephdc/deep-oc-dogs_breed_det
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-dogs_breed_det</code></pre>
+ 
+    <h4>Using udocker</h4>
+    <p>
+        If you do not have Docker available or you do not want to install it,
+        you can use <a title="udocker repository" target="_blank"
+                       href="https://github.com/indigo-dc/udocker">udocker</a> 
+        within a Python virtualenv:
+    </p>
+            <pre><code>$ virtualenv udocker
+$ source udocker/bin/activate
+$ git clone https://github.com/indigo-dc/udocker
+$ cd udocker
+$ pip install .
+$ udocker pull deephdc/deep-oc-dogs_breed_det
+$ udocker create deephdc/deep-oc-dogs_breed_det
+$ udocker run -p 5000:5000  deephdc/deep-oc-dogs_breed_det</code></pre>
+
+    <hr />
+    <p>
+        Once running, point your browser to <code>http://127.0.0.1:5000/</code>
+        and you will see the API documentation, where you can test the model
+        functionality, as well as perform other actions (such as training).
+    </p>
+    <p>
+        For more information, refer to the 
+        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
+           title="DEEP user documentation">user documentation</a>.
+    </p>
+
+</div>
+
+<div class="row run">
+    <h3>Run on our pilot e-Infrastructure</h3>
+    <p>
+        In order to execute this model in our pilot e-Infrastructure you would
+        need to be registered in the 
+        <a href="https://iam.deep-hybrid-datacloud.eu/"
+           title="DEEP Identity and Access Management">DEEP IAM</a>. <br>
+        The following instructions make use of the <a href="https://github.com/indigo-dc/orchent">orchent</a> CLI. You would need to 
+        install and configure orchent as shown in this <a href="https://github.com/maricaantonacci/deep-tutorials/blob/master/orchent_tutorial.md">tutorial</a>.
+    </p>
+    <h4>Mesos (GPU)</h4>
+    <pre><code>$ curl -o deep-oc-dogs-breed-determination.yml \
+    https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-dogs_breed-mesos-gpu.yml
+$ orchent deep-oc-dogs-breed-determination.yml  '{"rclone_conf"="...", "rclone_url"="...", "rclone_vendor"="...", "rclone_user"="...", "rclone_pass"="..."}'</code></pre>
+    <h4>Mesos (CPU)</h4>
+    <pre><code>$ curl -o deep-oc-dogs-breed-determination.yml \
+    https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-dogs_breed-mesos-cpu.yml
+$ orchent deep-oc-dogs-breed-determination.yml  '{"rclone_conf"="...", "rclone_url"="...", "rclone_vendor"="...", "rclone_user"="...", "rclone_pass"="..."}'</code></pre>
+    <hr />
+    <p>Check the status of your job</p>
+    <pre><code>$ orchent depshow &lt;Deployment UUID&gt;</code></pre>
+    <p>Once its state is CREATE_COMPLETE, you will get the endpoint to access the service, e.g: </p>
+    <pre><code>"endpoint": "mesos-lb.recas.ba.infn.it:10002"</pre></code>
+    Point your browser to the provided URL.
+    <p>
+        For more information, refer to the 
+        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
+           title="DEEP user documentation">user documentation</a>.
+    </p>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+        
+<footer id="contentinfo" class="body">
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="one column">
+                    <img src="images/ec-logo.png" />
+                </div>
+                <div class="four columns">
+                    This project has received funding from the European Union’s
+                    Horizon 2020 research and innovation programme under grant
+                    agreement No 777435.
+                </div>
+                <div class="four columns">
+                    <ul class="">
+                        <li>
+                            <a href="https://docs.deep-hybrid-datacloud.eu" title="Documentation">
+                                <span class="fas fa-book"></span>
+                                Documentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/deephdc/" title="Github Profile">
+                                <span class="fab fa-github"></span>
+                                GitHub 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://hub.docker.com/u/deephdc/" title="DockerHub organization">
+                                <span class="fab fa-docker"></span>
+                                DockerHub 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/DEEP_eu" title="Twitter Profile">
+                                <span class="fab fa-twitter"></span>
+                                Twitter 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.researchgate.net/project/DEEP-Hybrid-DataCloud" title="ResearchGate Project page">
+                                <span class="fab fa-researchgate"></span>
+                                ResearchGate 
+                            </a>
+                        </li>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132194067-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-132194067-2');
+</script></body>
+</html>

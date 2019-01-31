@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>DEEP Open Catalog - Model "DEEP OC Massive Online Data Streams"</title>
+        <meta charset="utf-8" />
+
+        <link rel="stylesheet" type="text/css" href="../theme/css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="../theme/css/skeleton.css" />
+        <link rel="stylesheet" type="text/css" href="../theme/css/screen.css" />
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+        <link rel="icon" type="image/png" href="../favicon.ico" />
+        
+
+
+
+</head>
+
+<body>
+<nav class="navbar">
+<div class="container">
+    <div class="row">
+        <div class="nine columns">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a class="navbar-link" href="/">DEEP Open Catalog</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="https://deep-hybrid-datacloud.eu/">Project page</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="https://docs.deep-hybrid-datacloud.eu/">Docs</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="../models/index.html">Models</a></li>
+                <li class="navbar-item">
+                    <div class="popover-wrapper">
+                        <a class="navbar-link" href="#">Categories</a>
+                        <div class="push popover-content">
+                            <ul class="popover-list">
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../categories.html">All categories</a>
+                                </li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/deprecated.html">deprecated</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/deprecated/services.html">deprecated/services</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/docker.html">docker</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/library.html">library</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/library/keras.html">library/keras</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/library/lasagne.html">library/lasagne</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/library/tensorflow.html">library/tensorflow</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/library/theano.html">library/theano</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/models.html">models</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/models/toy.html">models/toy</a></li>
+                                <li class="popover-item active">
+                                    <a class="popover-link" href="../category/services.html">services</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/services/toy.html">services/toy</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="../category/test modules.html">test modules</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="three columns logo">
+            <img src="images/logo-deep.png" class="logo"/>
+        </div>
+    </div>
+</div>
+</nav>    
+<section id="model-entry">
+<div class="container model-entry">
+    <div class="header">
+        <div class="row">
+            <h2 class="entry-title" >DEEP OC Massive Online Data Streams</h2>
+             
+        </div>
+        <div class="row">
+            <a class="button" title="GitHub repository" href="https://github.com/deephdc/DEEP-OC-mods"><span class="fab fa-github"></span> Get this model</a>
+            <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/deephdc/deep-oc-mods"><span class="fab fa-docker"></span> deephdc/deep-oc-mods</a>
+        </div>
+        <div class="row">
+            <p>
+                    By
+    <!--                    <a class="url fn" href="../author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a> -->
+                        DEEP-Hybrid-DataCloud Consortium
+                |                 Created: <time class="published" datetime="2019-01-01T00:00:00+01:00">
+                    mar 01 enero 2019
+                </time>
+            </p>
+            <p>
+                <span class="fas fa-folder"></span>
+                    <a href="../category/services.html">services</a>, 
+                    <a href="../category/docker.html">docker</a>
+            </p>
+            <p>
+                License:  Apache License 2.0             </p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="seven  columns">
+                <p><a href="https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-mods/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-mods/master"></a></p>
+<p>This use case analyzes online data streams in order to generate alerts with time-bounded constrains and in real-time.
+The main study is focused on building additional intelligent module using NN and DL techniques
+in co-function with underlying Intrusion Detection Systems (IDS) supervising traffic networks of compute centers.
+Preserving old data for historical purposes, security analysts will be able to supervise generated alerts
+and to enhance cyber security [1, 2] for such centers when large IT infrastructures and devices
+products a huge amount of data streaming continuously and dynamically.</p>
+<p>The principle of the solution is proactive time-series prediction [5] adopting NNs as well as DL to build
+prediction models capable to predict next step(s) in near future based on given current and past steps.
+The discrepancy between the prediction and the reality gives an indication of anomaly (i.e. anomaly detection).</p>
+<p>The challenge of the solution is it aims to scalable edge technologies [4] to support
+extensive data analysis and modelling as well as to improve the cyber-resilience by adopting an heuristic approach,
+that combines misuse detection in real-time with the building intelligence module using NN and DL.</p>
+<p>Current modelling approach using DL techniques [3]:
+LSTM (vanilla, stacked, bidirectional, seq2seq encoder/decoder), GRU, CNN, and MLP</p>
+<p><strong>References</strong></p>
+<p>[1]: Bhattacharyya, D.K. and Kalita, J.K., 2013. Network anomaly detection: A machine learning perspective. Chapman and Hall/CRC.</p>
+<p>[2]: Dua, S. and Du, X., 2016. Data mining and machine learning in cybersecurity. Auerbach Publications.</p>
+<p>[3]: Yann LeCun, Yoshua Bengio, and Geofrey Hinton. <a href="https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf">Deep learning</a>. Nature, 521(7553):436–444, may 2015.</p>
+<p>[4]: Nguyen, G., Nguyen, B.M., Tran, D. and Hluchy, L., 2018. A heuristics approach to mine behavioural data logs in mobile malware detection system. Data &amp; Knowledge Engineering, 115, pp.129-151.</p>
+<p>[5]: Tran, N., Nguyen, T., Nguyen, B.M. and Nguyen, G., 2018. A Multivariate Fuzzy Time Series Resource Forecast Model for Clouds using LSTM and Data Correlation Analysis. Procedia Computer Science, 126, pp.636-645.</p>
+            </div>
+            <div class="five columns">
+<div class="row run">
+    <h3>Run locally on your computer</h3>
+    <h4>Using Docker</h4>
+    <p>
+		You can run this model directly on your computer, assuming that you
+		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
+		installed, by following these steps:
+    </p>
+    <pre><code>$ docker pull deephdc/deep-oc-mods
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-mods</code></pre>
+ 
+    <h4>Using udocker</h4>
+    <p>
+        If you do not have Docker available or you do not want to install it,
+        you can use <a title="udocker repository" target="_blank"
+                       href="https://github.com/indigo-dc/udocker">udocker</a> 
+        within a Python virtualenv:
+    </p>
+            <pre><code>$ virtualenv udocker
+$ source udocker/bin/activate
+$ git clone https://github.com/indigo-dc/udocker
+$ cd udocker
+$ pip install .
+$ udocker pull deephdc/deep-oc-mods
+$ udocker create deephdc/deep-oc-mods
+$ udocker run -p 5000:5000  deephdc/deep-oc-mods</code></pre>
+
+    <hr />
+    <p>
+        Once running, point your browser to <code>http://127.0.0.1:5000/</code>
+        and you will see the API documentation, where you can test the model
+        functionality, as well as perform other actions (such as training).
+    </p>
+    <p>
+        For more information, refer to the 
+        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
+           title="DEEP user documentation">user documentation</a>.
+    </p>
+
+</div>
+
+<div class="row run">
+    <h3>Run on our pilot e-Infrastructure</h3>
+    <p>
+        In order to execute this model in our pilot e-Infrastructure you would
+        need to be registered in the 
+        <a href="https://iam.deep-hybrid-datacloud.eu/"
+           title="DEEP Identity and Access Management">DEEP IAM</a>. <br>
+        The following instructions make use of the <a href="https://github.com/indigo-dc/orchent">orchent</a> CLI. You would need to 
+        install and configure orchent as shown in this <a href="https://github.com/maricaantonacci/deep-tutorials/blob/master/orchent_tutorial.md">tutorial</a>.
+    </p>
+    <h4>Mesos (CPU)</h4>
+    <pre><code>$ curl -o deep-oc-massive-online-data-streams.yml \
+    https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-mods-mesos-cpu.yml
+$ orchent deep-oc-massive-online-data-streams.yml  '{"rclone_conf"="...", "rclone_url"="...", "rclone_vendor"="...", "rclone_user"="...", "rclone_pass"="..."}'</code></pre>
+    <hr />
+    <p>Check the status of your job</p>
+    <pre><code>$ orchent depshow &lt;Deployment UUID&gt;</code></pre>
+    <p>Once its state is CREATE_COMPLETE, you will get the endpoint to access the service, e.g: </p>
+    <pre><code>"endpoint": "mesos-lb.recas.ba.infn.it:10002"</pre></code>
+    Point your browser to the provided URL.
+    <p>
+        For more information, refer to the 
+        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
+           title="DEEP user documentation">user documentation</a>.
+    </p>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+        
+<footer id="contentinfo" class="body">
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="one column">
+                    <img src="images/ec-logo.png" />
+                </div>
+                <div class="four columns">
+                    This project has received funding from the European Union’s
+                    Horizon 2020 research and innovation programme under grant
+                    agreement No 777435.
+                </div>
+                <div class="four columns">
+                    <ul class="">
+                        <li>
+                            <a href="https://docs.deep-hybrid-datacloud.eu" title="Documentation">
+                                <span class="fas fa-book"></span>
+                                Documentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/deephdc/" title="Github Profile">
+                                <span class="fab fa-github"></span>
+                                GitHub 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://hub.docker.com/u/deephdc/" title="DockerHub organization">
+                                <span class="fab fa-docker"></span>
+                                DockerHub 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/DEEP_eu" title="Twitter Profile">
+                                <span class="fab fa-twitter"></span>
+                                Twitter 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.researchgate.net/project/DEEP-Hybrid-DataCloud" title="ResearchGate Project page">
+                                <span class="fab fa-researchgate"></span>
+                                ResearchGate 
+                            </a>
+                        </li>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132194067-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-132194067-2');
+</script></body>
+</html>
