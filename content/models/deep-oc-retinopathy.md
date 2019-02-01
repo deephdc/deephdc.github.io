@@ -1,7 +1,7 @@
 ---
 Title: DEEP OC Retinopathy
 Date: 2019-01-01
-Category: models, docker
+Category: services, docker
 GitHub: https://github.com/itokeiic/retinopathy_test
 DockerHub: itokeiic/deep-oc-retinopathy_test
 Dataset: https://www.kaggle.com/c/diabetic-retinopathy-detection/data
@@ -29,6 +29,8 @@ Look into the "response body" window.  For example,
 
 means that the classification for the tested image is category 'dr4' with a probability of about 0.89.
 
-References
+**References**
+
 [Yau2012] https://doi.org/10.2337/dc11-1909
+
 [Eul2017] https://doi.org/10.1038/s41467-017-00623-3

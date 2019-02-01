@@ -1,15 +1,18 @@
 ---
-Title: DEEP OC Conus Classification
-Date: 2019-01-01
-Category: services, library/tensorflow, library/lasagne, docker
-GitHub: https://github.com/deephdc/DEEP-OC-image-classification-tf
-DockerHub: deephdc/deep-oc-conus-classification-tf
-Training_files: https://cephrgw01.ifca.es:8080/swift/v1/conus-tf/
+Title: DEEP OC Conus Classification (Theano)
+Date: 2018-07-03
+Modified: 2018-12-21
+Category: deprecated/services, library/theano, library/lasagne, docker
+GitHub: https://github.com/deephdc/DEEP-OC-conus-classification
+DockerHub: deephdc/deep-oc-conus-classification
+Training_files: https://cephrgw01.ifca.es:8080/swift/v1/conus/
 License: Apache License 2.0
-Summary: A trained Xception net on Tensorflow/Keras to classify conus marine snails.
+Summary: A trained ResNet50 on Theano to classify conus marine snails.
 ---
 
-[![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-conus-classification-tf/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-conus-classification-tf/job/master)
+[![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-conus-classification-theano/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-conus-classification/job/master)
+
+This service is deprecated. Please refer to the [newer Tensorflow version](./deep-oc-conus-classification.html)
 
 Citizen science has become a powerful force for scientific inquiry, providing researchers with access to a vast array of
 data points while connecting non scientists to the real process of science. 
@@ -20,13 +23,11 @@ The taxonomy of these snails has changed significantly several times during rece
 Learning techniques allowing to classify them is a very valuable tool for the experts.
 
 This Docker container contains a trained Convolutional Neural network optimized for conus snails identification using images.
-The architecture used is an Xception [3] network using Keras on top of Tensorflow.
+The architecture used is a Resnet50 [3] using Lasagne on top of Theano.
 
 The training dataset has been provided by the Museo de Ciencias Naturales de Madrid and it consists on a dataset 
 containing images of 68 species of conus covering three different regions: Panamic region South African region Western atlantic
 and mediterranean region.
-
-This service is based in the [Image Classification with Tensorflow](./deep-oc-image-classification-tensorflow.html) model.
 
 
 **References**
@@ -35,4 +36,4 @@ This service is based in the [Image Classification with Tensorflow](./deep-oc-im
 
 [2]: http://www.mncn.csic.es/
 
-[3]: Chollet, François. [Xception: Deep learning with depthwise separable convolutions](https://arxiv.org/abs/1610.02357) arXiv preprint (2017): 1610-02357.
+[3]: He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 770-778)

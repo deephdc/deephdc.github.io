@@ -1,7 +1,7 @@
 ---
 Title: DEEP OC Massive Online Data Streams
 Date: 2019-01-01
-Category: models, docker
+Category: services, docker
 GitHub: https://github.com/deephdc/DEEP-OC-mods
 DockerHub: deephdc/deep-oc-mods
 License: Apache License 2.0
@@ -17,9 +17,7 @@ Tosca:
        - rclone_pass
 ---
 
-
 [![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-mods/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-mods/job/master)
-
 
 This use case analyzes online data streams in order to generate alerts with time-bounded constrains and in real-time.
 The main study is focused on building additional intelligent module using NN and DL techniques
@@ -40,7 +38,7 @@ Current modelling approach using DL techniques [3]:
 LSTM (vanilla, stacked, bidirectional, seq2seq encoder/decoder), GRU, CNN, and MLP
 
 
-## References
+**References**
 
 [1]: Bhattacharyya, D.K. and Kalita, J.K., 2013. Network anomaly detection: A machine learning perspective. Chapman and Hall/CRC.
 
@@ -51,4 +49,3 @@ LSTM (vanilla, stacked, bidirectional, seq2seq encoder/decoder), GRU, CNN, and M
 [4]: Nguyen, G., Nguyen, B.M., Tran, D. and Hluchy, L., 2018. A heuristics approach to mine behavioural data logs in mobile malware detection system. Data & Knowledge Engineering, 115, pp.129-151.
 
 [5]: Tran, N., Nguyen, T., Nguyen, B.M. and Nguyen, G., 2018. A Multivariate Fuzzy Time Series Resource Forecast Model for Clouds using LSTM and Data Correlation Analysis. Procedia Computer Science, 126, pp.636-645.
-
