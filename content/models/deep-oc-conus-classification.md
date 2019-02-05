@@ -2,7 +2,7 @@
 Title: DEEP OC Conus Classification
 Date: 2019-01-01
 Category: services, library/tensorflow, library/lasagne, docker
-GitHub: https://github.com/deephdc/DEEP-OC-image-classification-tf
+GitHub: https://github.com/deephdc/DEEP-OC-conus-classification-tf
 DockerHub: deephdc/deep-oc-conus-classification-tf
 Training_files: https://cephrgw01.ifca.es:8080/swift/v1/conus-tf/
 License: Apache License 2.0
@@ -15,7 +15,7 @@ Citizen science has become a powerful force for scientific inquiry, providing re
 data points while connecting non scientists to the real process of science. 
 This citizen-researcher relationship creates a very interesting synergy, allowing for the creation, execution, and analysis
 of research projects. With this in mind, a Convolutional Neural Network using ResNet50 has been trained to identify conus
-marine snails at species level [1] in collaboration with the Museo de Ciencias Naturales in Madrid [2].
+marine snails at species level [1] in collaboration with the Natural Science Museum in Madrid [2].
 The taxonomy of these snails has changed significantly several times during recent years and the introduction of Deep
 Learning techniques allowing to classify them is a very valuable tool for the experts.
 
@@ -33,6 +33,6 @@ This service is based in the [Image Classification with Tensorflow](./deep-oc-im
 
 [1]: Puillandre, N.; Duda, T.F.; Meyer, C.; Olivera, B.M.; Bouchet, P. (2014). "One, four or 100 genera? A new classification of the cone snails". Journal of Molluscan Studies. 81 (1): 1–23.  doi:10.1093/mollus/eyu055. PMC 4541476. PMID 26300576.
 
-[2]: http://www.mncn.csic.es/
+[2]: Natural Science Museum of Madrid: http://www.mncn.csic.es/
 
 [3]: Chollet, François. [Xception: Deep learning with depthwise separable convolutions](https://arxiv.org/abs/1610.02357) arXiv preprint (2017): 1610-02357.

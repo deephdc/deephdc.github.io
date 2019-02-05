@@ -10,7 +10,7 @@ License: Apache License 2.0
 Summary: A trained ResNet50 on Theano to classify conus marine snails.
 ---
 
-[![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-conus-classification-theano/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-conus-classification/job/master)
+[![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-conus-classification/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-conus-classification/job/master)
 
 This service is deprecated. Please refer to the [newer Tensorflow version](./deep-oc-conus-classification.html)
 
