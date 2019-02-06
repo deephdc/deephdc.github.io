@@ -1,7 +1,7 @@
-<ul class="model-list">
+<ul class="module-list">
 {% for article in articles_page.object_list %}
     <li class="six columns">
-        <div class="model-list-entry">
+        <div class="module-list-entry">
             <header>
                 <h3 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3>
             </header>

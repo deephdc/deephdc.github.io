@@ -10,10 +10,10 @@
         </p>
         <p>
         DEEP-Hybrid-DataCloud is a project that aims to deliver a framework
-        to easily develop Machine Learning and Deep Learning models on top of
+        to easily develop Machine Learning and Deep Learning modules on top of
         e-Infrastructures.
-        In the DEEP Open Catalog you can find ready to use models in a
-        variety of domains. These models can be executed on your local laptop,
+        In the DEEP Open Catalog you can find ready to use modules in a
+        variety of domains. These modules can be executed on your local laptop,
         on a production server or on top of e-Infrastrucutres supporting the DEEP-Hybrid-DataCloud stack.
         </p>
     </div>
@@ -31,11 +31,11 @@
     
     <div class="row">
         <div class="three columns">
-            <h4>1. Choose a model</h3>
-            <p>Browse the <a href="#model-list">list of available models</a>
+            <h4>1. Choose a module</h3>
+            <p>Browse the <a href="#module-list">list of available modules</a>
             and pick the one of your choice.</p>
             <p>The <a href="{{ SITEURL
-                }}/models/deep-generic-container.html">DEEP Generic
+                }}/modules/deep-generic-container.html">DEEP Generic
                 Container</a> is a good starting point to see how the API looks
             like (but it does not provide any functionality at all).</p>
         </div>
@@ -62,23 +62,23 @@ $ udocker run -p 5000:5000  deep-oc-generic-container</code></pre>
                 <li>
                     Open your browser and visit <code>http://127.0.0.1:5000/</code>.
                 </li>
-                <li>Read the Swagger documentation and test the model directly.</li>
+                <li>Read the Swagger documentation and test the module directly.</li>
             </ul>
         </div>
     </div>
 </div>
 </section>
 
-<section id="model-list">
+<section id="module-list">
 <div class="container section">
     <div class="row">
         {% block content_title %}
-        <h2>Browse all models</h2>
+        <h2>Browse all modules</h2>
         {% endblock %}
     </div>
 
     <div class="row">
-        {% include '_includes/model-list.html' %}
+        {% include '_includes/module-list.html' %}
     </div>
     {% if articles_page.has_other_pages() %}
     <div class="row">
