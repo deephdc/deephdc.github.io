@@ -9,6 +9,8 @@ License: Apache License 2.0
 Summary:
 ---
 
+[![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/retinopathy_test/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/retinopathy_test/job/master)
+
 This use case is concerned with the classification of biomedical images (of the retina) into five disease categories or stages (from healthy to severe) using a deep learning approach.  This is a TensorFlow example implementation. The network is a standard residual network model with 50 layers (ResNet50). The model used in this use case was made available by Niklas Köhler: https://gitlab.com/niklaskoehler/retinopathy_model
 
 Retinopathy is a fast-growing cause of blindness worldwide, over 400 million people at risk from diabetic retinopathy alone [Yau2012]. The disease can be successfully treated if it is detected early. Colour fundus retinal photography uses a fundus camera (a specialized low power microscope with an attached camera) to record color images of the condition of the interior surface of the eye, in order to document the presence of disorders and monitor their change over time. Specialized medical experts interpret such images and are able to detect the presence and stage of retinal eye disease such as diabetic retinopathy. However, due to a lack of suitably qualified medical specialists in many parts of the world a comprehensive detection and treatment of the disease is difficult. This use case focuses on a deep learning approach to automated classification of retinopathy based on color fundus retinal photography images [Eul2017].
