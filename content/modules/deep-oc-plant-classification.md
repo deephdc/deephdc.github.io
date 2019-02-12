@@ -32,6 +32,8 @@ license. It consists of around 250K images belonging to more than 6K plant
 species of Western Europe. These species are distributed in 1500 genera and 200
 families.
 
+<img class="fit" src="../images/plants.png"/>
+
 A detailed article about this network and the results obtained with it can be found in [6].
 
 This service is based in the [Image Classification with Tensorflow](./deep-oc-image-classification-tensorflow.html) model.

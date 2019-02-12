@@ -26,6 +26,8 @@ The training dataset has been provided by the [Natural Science Museum of Madrid]
 containing images of 68 species of conus covering three different regions: the Panamic region; the South African region;
 and the Western atlantic and mediterranean region.
 
+<img class="fit" src="../images/conus.png"/>
+
 This service is based in the [Image Classification with Tensorflow](./deep-oc-image-classification-tensorflow.html) model.
 
 

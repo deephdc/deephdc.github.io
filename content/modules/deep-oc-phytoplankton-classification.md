@@ -24,6 +24,8 @@ The architecture used is an Xception [1] network using Keras on top of Tensorflo
 As training dataset we have used a collection of images from the [Vlaams Instituut voor de Zee](http://www.vliz.be/)
 which consists of around 650K images from 60 classes of phytoplankton.
 
+<img class="fit" src="../images/phytoplankton.png"/>
+
 This service is based in the [Image Classification with Tensorflow](./deep-oc-image-classification-tensorflow.html) model.
 
 

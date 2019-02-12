@@ -24,6 +24,8 @@ The architecture used is an Xception [3] network using Keras on top of Tensorflo
 As training dataset we have used a collection of images from the [Spanish Royal Botanical Garden](http://www.rjb.csic.es)
 which consists of around 28K images from 743 species and 493 genera.
 
+<img class="fit" src="../images/seeds.png"/>
+
 This service is based in the [Image Classification with Tensorflow](./deep-oc-image-classification-tensorflow.html) model.
 
 
