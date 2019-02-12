@@ -2,14 +2,14 @@
 Title: DEEP OC Plant Classification
 Date: 2019-01-01
 Category: services, library/tensorflow, library/lasagne, docker
-GitHub: https://github.com/deephdc/DEEP-OC-image-classification-tf
-DockerHub: deephdc/deep-oc-plant-classification-tf
+GitHub: https://github.com/deephdc/DEEP-OC-plants-classification-tf
+DockerHub: deephdc/deep-oc-plants-classification-tf
 Training_files: https://cephrgw01.ifca.es:8080/swift/v1/plants-tf/
 License: Apache License 2.0
 Summary: A trained Xception net on Tensorflow/Keras to classify plants.
 ---
 
-[![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-plant-classification-tf/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-plant-classification-tf/job/master)
+[![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-plants-classification-tf/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-plants-classification-tf/job/master)
 
 The deep learning revolution has brought significant advances in a number of
 fields [1], primarily linked to image and speech recognition. The
