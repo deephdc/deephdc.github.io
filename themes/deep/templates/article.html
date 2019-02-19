@@ -11,11 +11,11 @@
 
 {% endblock %}
 
-{% block title %} - Model "{{ article.title|striptags }}"{% endblock %}
+{% block title %} - Module "{{ article.title|striptags }}"{% endblock %}
 
 {% block content %}
-<section id="model-entry">
-<div class="container model-entry">
+<section id="module-entry">
+<div class="container module-entry">
     <div class="header">
         <div class="row">
             <h2 class="entry-title" >{{ article.title }}</h2>
@@ -23,10 +23,10 @@
              {{ translations.translations_for(article) }}
         </div>
         <div class="row">
-            <a class="button" title="GitHub repository" href="{{ article.github }}"><span class="fab fa-github"></span> Get this model</a>
+            <a class="button" title="GitHub repository" href="{{ article.github }}"><span class="fab fa-github"></span> Get this module</a>
             <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/{{ article.dockerhub }}"><span class="fab fa-docker"></span> {{ article.dockerhub }}</a>
             {% if article.cite %}
-            <a class="button" title="Model citation" href="{{ article.cite }}"><span class="fa fa-quote-left"></span> Cite this model</a>
+            <a class="button" title="Module citation" href="{{ article.cite }}"><span class="fa fa-quote-left"></span> Cite this module</a>
             {% endif %}
             {% if article.dataset %}
             <a class="button" title="Dataset" href="{{ article.dataset }}"><span class="fa fa-quote-left"></span> Dataset</a>
@@ -70,7 +70,7 @@
                 {{ article.content }}
             </div>
             <div class="five columns">
-                {% include "_includes/model_execution_instructions.html" %}
+                {% include "_includes/module_execution_instructions.html" %}
             </div>
         </div>
     </div>

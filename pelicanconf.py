@@ -30,9 +30,9 @@ DISPLAY_CATEGORIES_ON_MENU = True
 
 USE_FOLDER_AS_CATEGORY = True
 
-ARTICLE_URL = "models/{slug}.html"
-ARTICLE_SAVE_AS = 'models/{slug}.html'
-ARCHIVES_SAVE_AS = "models/index.html"
+ARTICLE_URL = "modules/{slug}.html"
+ARTICLE_SAVE_AS = 'modules/{slug}.html'
+ARCHIVES_SAVE_AS = "modules/index.html"
 
 PLUGIN_PATHS = ["plugins"]
 PLUGINS = [

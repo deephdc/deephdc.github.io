@@ -77,18 +77,18 @@ code {
 .header {
 }
 
-/* Model list */
+/* Module list */
 
-.model-list {
+.module-list {
     list-style: none;
 }
 
-.model-list li {
+.module-list li {
     padding: 1em;
     margin: 0px;
 }
 
-.model-list-entry {
+.module-list-entry {
     padding: 1em;
     border: 1px solid #d1d1d1;
     background: #f1f1f2;
@@ -102,40 +102,40 @@ code {
 
 /* Larger than tablet */
 @media (min-width: 750px) {
-    .model-list-entry {
+    .module-list-entry {
         min-height: 420px;
     }
 }
 
 /* Larger than desktop */
 @media (min-width: 1000px) {
-    .model-list-entry {
+    .module-list-entry {
         min-height: 200px;
     }
 }
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
-    .model-list-entry {
+    .module-list-entry {
         min-height: 200px;
     }
 }
 
-/* Model entries */
+/* Module entries */
 
-.model-entry {
+.module-entry {
     padding-top:200px;
     margin-top: 7rem;
     margin-bottom: 7rem;
 }
-.model-entry .button {
+.module-entry .button {
     background: #fff;
 }
-.model-entry .header {
+.module-entry .header {
     background: #f1f1f2;
 }
-.model-entry .header,
-.model-entry .content {
+.module-entry .header,
+.module-entry .content {
     padding:5em;
 }
 

@@ -3,14 +3,14 @@
 {% block title %} - Category {{ category }}{% endblock %}
 
 {% block content %}
-<section id="model-list">
+<section id="module-list">
 <div class="container section">
     <div class="row">
-        <h2>Models in the '{{ category }}' category</h2>
+        <h2>Modules in the '{{ category }}' category</h2>
     </div>
 
     <div class="row">
-            {% include '_includes/model-list.html' %}
+            {% include '_includes/module-list.html' %}
     </div>
     {% if articles_page.has_other_pages() %}
     <div class="row">
