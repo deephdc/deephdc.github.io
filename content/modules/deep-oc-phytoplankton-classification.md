@@ -11,23 +11,25 @@ Summary: A trained Xception net on Tensorflow/Keras to classify phytoplankton.
 
 [![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-phytoplankton-classification-tf/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-phytoplankton-classification-tf/job/master)
 
-The deep learning revolution has brought significant advances in a number of
-fields [1], primarily linked to image and speech recognition. The
-standardization of image classification tasks like the [ImageNet Large Scale
-Visual Recognition Challenge](http://www.image-net.org/challenges/LSVRC/) [2]
-has resulted in a reliable way to compare top performing architectures.
+Citizen science has become a powerful force for scientific inquiry, providing researchers with access to a vast array of
+data points while connecting non scientists to the real process of science. 
+This citizen-researcher relationship creates a very interesting synergy, allowing for the creation, execution, and analysis
+of research projects. With this in mind, a Convolutional Neural Network has been trained to identify phytoplankton in
+collaboration with the [Vlaams Instituut voor de Zee](http://www.vliz.be/).
 
 This Docker container contains a trained Convolutional Neural network optimized
 for phytoplankton identification using images.
-The architecture used is an Xception [3] network using Keras on top of Tensorflow.
+The architecture used is an Xception [1] network using Keras on top of Tensorflow.
+
+As training dataset we have used a collection of images from the [Vlaams Instituut voor de Zee](http://www.vliz.be/)
+which consists of around 650K images from 60 classes of phytoplankton.
+
+<img class="fit" src="../images/phytoplankton.png"/>
 
 This service is based in the [Image Classification with Tensorflow](./deep-oc-image-classification-tensorflow.html) model.
 
 
 **References**
 
-[1]: Yann LeCun, Yoshua Bengio, and Geofrey Hinton. [Deep learning](https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf). Nature, 521(7553):436–444, may 2015.
-
-[2]: Olga Russakovsky et al. [ImageNet Large Scale Visual Recognition Challenge](https://arxiv.org/abs/1409.0575). International Journal of Computer Vision (IJCV), 115(3):211–252, 2015.
-
-[3]: Chollet, François. [Xception: Deep learning with depthwise separable convolutions](https://arxiv.org/abs/1610.02357) arXiv preprint (2017): 1610-02357.
+[1]: Chollet, François. [Xception: Deep learning with depthwise separable convolutions](https://arxiv.org/abs/1610.02357)
+arXiv preprint (2017): 1610-02357.
