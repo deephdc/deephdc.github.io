@@ -1,7 +1,7 @@
 ---
 Title: DEEP OC Seeds Classification
 Date: 2019-01-01
-Category: services, library/tensorflow, library/lasagne, docker
+Category: services, library/tensorflow, library/keras, docker
 GitHub: https://github.com/deephdc/DEEP-OC-seeds-classification-tf
 DockerHub: deephdc/deep-oc-seeds-classification-tf
 Training_files: https://cephrgw01.ifca.es:8080/swift/v1/seeds-tf/

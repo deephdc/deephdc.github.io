@@ -1,7 +1,7 @@
 ---
 Title: DEEP OC Phytoplankton
 Date: 2019-01-01
-Category: services, library/tensorflow, library/lasagne, docker
+Category: services, library/tensorflow, library/keras, docker
 GitHub: https://github.com/deephdc/DEEP-OC-phytoplankton-classification-tf
 DockerHub: deephdc/deep-oc-phytoplankton-classification-tf
 Training_files: https://cephrgw01.ifca.es:8080/swift/v1/phytoplankton-tf/
