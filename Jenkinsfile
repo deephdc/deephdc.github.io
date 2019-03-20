@@ -27,6 +27,9 @@ pipeline {
         }
 
         stage('Generate markdown from applications metadata') {
+            when {
+                branch 'pelican'
+            }
             steps {
                 iterateOverProjects()
                 sh 'git status --porcelain=v1'
@@ -35,9 +38,7 @@ pipeline {
 
         stage('Generate and publish Pelican site to Github Pages') {
             when {
-                anyOf {
-                    branch 'pelican'
-                }
+                branch 'pelican'
             }
             steps {
                 withCredentials([string(
@@ -87,7 +88,6 @@ void iterateOverProjects() {
             }
             catch(e) {
                 // Continue even if it fails
-                env.pipeline_status = 'UNSTABLE'
                 currentBuild.result = 'SUCCESS'
             }
         }
