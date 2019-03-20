@@ -29,6 +29,7 @@ pipeline {
         stage('Generate markdown from applications metadata') {
             steps {
 				iterateOverProjects()
+                sh 'git status --porcelain=v1'
             }
         }
 
