@@ -28,7 +28,7 @@ pipeline {
 
         stage('Generate markdown from applications metadata') {
             steps {
-				iterateOverProjects()
+                iterateOverProjects()
                 sh 'git status --porcelain=v1'
             }
         }
@@ -40,8 +40,9 @@ pipeline {
                 }
             }
             steps {
-                withCredentials([string(credentialsId: "indigobot-github-token",
-                                 variable: "GITHUB_TOKEN")]) {
+                withCredentials([string(
+                        credentialsId: "indigobot-github-token",
+                        variable: "GITHUB_TOKEN")]) {
                     sh 'git fetch origin master:master -f'
                     sh 'git remote set-url origin "https://indigobot:${GITHUB_TOKEN}@github.com/deephdc/deephdc.github.io"'
                     sh 'make github'
