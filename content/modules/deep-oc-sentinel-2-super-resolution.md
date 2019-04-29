@@ -1,7 +1,7 @@
 ---
 Title: DEEP OC Sentinel 2 super resolution
 Date: 2019-01-01
-Category: services, library/tensorflow, library/keras, docker
+Category: deprecated/services, library/tensorflow, library/keras, docker
 GitHub: https://github.com/deephdc/DEEP-OC-sen2sr
 DockerHub: deephdc/deep-oc-sen2sr
 Cite: https://doi.org/10.1016/j.isprsjprs.2018.09.018
@@ -10,6 +10,12 @@ Summary: A trained network to super resolve low resolution bands (20m and 60m) f
 ---
 
 [![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-sen2sr/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-sen2sr/job/master)
+
+---
+
+**This service is deprecated. Please refer to the [newer version](./deep-oc-satellite-super-resolution.html)**
+
+---
 
 With the latest missions launched by the European Space Agency (ESA), such as Sentinel, equipped with the latest technologies
 in multi-spectral sensors, we face an unprecedented amount of data with spatial and temporal resolutions never reached before.

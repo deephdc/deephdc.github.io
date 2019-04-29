@@ -22,7 +22,11 @@ Tosca:
 
 [![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-plant-classification-theano/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-plant-classification-theano/job/master)
 
-This service is deprecated. Please refer to the [newer Tensorflow version](./deep-oc-plant-classification.html)
+---
+
+**This service is deprecated. Please refer to the [newer Tensorflow version](./deep-oc-plant-classification.html)**
+
+---
 
 The deep learning revolution has brought significant advances in a number of
 fields [1], primarily linked to image and speech recognition. The

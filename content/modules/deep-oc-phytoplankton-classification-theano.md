@@ -11,7 +11,11 @@ Summary: A trained ResNet50 on Theano to classify phytoplankton species.
 
 [![Build Status](https://jenkins.indigo-datacloud.eu:8080/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-phytoplankton-classification/master)](https://jenkins.indigo-datacloud.eu:8080/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-phytoplankton-classification/job/master)
 
-This service is deprecated. Please refer to the [newer Tensorflow version](./deep-oc-phytoplankton-classification.html)
+---
+
+**This service is deprecated. Please refer to the [newer Tensorflow version](./deep-oc-phytoplankton-classification.html)**
+
+---
 
 The deep learning revolution has brought significant advances in a number of
 fields [1], primarily linked to image and speech recognition. The
