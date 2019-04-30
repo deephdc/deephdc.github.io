@@ -10,6 +10,7 @@ RUN apt-get update \
 
 ADD requirements.txt $REQS_PATH
 RUN pip install -r $REQS_PATH
+RUN pip install git+https://github.com/deephdc/schema4apps
 
 # Standard SSH port
 EXPOSE 22
