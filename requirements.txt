@@ -2,6 +2,6 @@ pelican>=4.0.1
 ghp-import>=0.5.5
 Markdown>=3.0.1
 PyYAML>=3.13
-git+https://github.com/deephdc/schema4apps
 simplejson
 jinja2
+git+https://github.com/deephdc/schema4apps
