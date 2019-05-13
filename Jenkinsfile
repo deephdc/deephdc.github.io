@@ -33,6 +33,7 @@ pipeline {
             steps {
                 iterateOverProjects()
                 sh 'git status --porcelain=v1'
+                sh 'git diff --diff-filter=M'
             }
         }
 
