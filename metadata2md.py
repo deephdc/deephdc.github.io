@@ -21,7 +21,7 @@ License: {{ license }}
 Summary: {{ summary }}
 ---
 {% if continuous_integration is defined %}
-[![Build Status]({{ continuous_integration.build_status_badge }})](continuous_integration.build_status_url)
+[![Build Status]({{ continuous_integration.build_status_badge }})]({{ continuous_integration.build_status_url }})
 {% endif %}
 
 {{ description | join('\n') }}
