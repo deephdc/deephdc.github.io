@@ -13,7 +13,7 @@ TEMPLATE = '''
 Title: {{ title }}
 Date: {{ date_creation }}
 Modified: {{ date_modification }}
-Category: {{ keywords }}
+Category: {{ keywords|join(',') }}
 GitHub: {{ sources.code }}
 DockerHub: {{ sources.docker_registry_repo }}
 Training_files: {{ training_files_url | default('NA') }}
