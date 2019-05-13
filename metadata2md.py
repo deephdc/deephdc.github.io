@@ -41,7 +41,6 @@ def main():
                         help='DEEP application metadata')
     parser.add_argument('--output-file',
                         metavar='MARKDOWN_FILE',
-                        type=argparse.FileType('w'),
                         help='Target markdown file')
     args = parser.parse_args()
 
@@ -53,7 +52,11 @@ def main():
     jinja_env = Environment(loader=BaseLoader()).from_string(TEMPLATE)
     md_data = jinja_env.render(json_data)
     if args.output_file:
-        args.output_file.write(md_data)
+        dirn = os.path.dirname(args.output_file)
+        if not os.path.exists(dirn):
+            os.makedirs(dirn)
+        with open(args.output_file, 'w') as f:
+            f.write(md_data)
     else:
         print(md_data)
 
