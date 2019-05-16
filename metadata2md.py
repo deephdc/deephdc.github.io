@@ -17,7 +17,7 @@ Category: {{ keywords|join(',') }}
 GitHub: {{ sources.code }}
 DockerHub: {{ sources.docker_registry_repo }}
 Training_files: {{ training_files_url | default('NA') }}
-Cite: {{ cite_url }}
+Cite: {{ cite_url|default('NA') }}
 License: {{ license }}
 Summary: {{ summary }}
 ---
