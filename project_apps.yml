@@ -13,4 +13,3 @@
 - module: https://github.com/deephdc/DEEP-OC-seeds-classification
 - module: https://github.com/deephdc/DEEP-OC-seeds-classification-tf
 - module: https://github.com/deephdc/DEEP-OC-satsr 
-- module: https://github.com/deephdc/DEEP-OC-sen2sr
