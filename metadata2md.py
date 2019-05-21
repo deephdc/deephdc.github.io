@@ -22,6 +22,9 @@ Training_files: {{ training_files_url }}
 {% if cite_url is defined %}
 Cite: {{ cite_url }}
 {% endif %}
+{% if dataset_url is defined %}
+Dataset: {{ dataset_url }}
+{% endif %}
 License: {{ license }}
 Summary: {{ summary }}
 ---
