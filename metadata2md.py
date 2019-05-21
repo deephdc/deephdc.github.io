@@ -16,8 +16,12 @@ Modified: {{ date_modification }}
 Category: {{ keywords|join(',') }}
 GitHub: {{ sources.code }}
 DockerHub: {{ sources.docker_registry_repo }}
-Training_files: {{ training_files_url | default('NA') }}
-Cite: {{ cite_url|default('NA') }}
+{% if training_files_url is defined %}
+Training_files: {{ training_files_url }}
+{% endif %}
+{% if cite_url is defined %}
+Cite: {{ cite_url }}
+{% endif %}
 License: {{ license }}
 Summary: {{ summary }}
 ---
@@ -31,6 +35,7 @@ Summary: {{ summary }}
 {{ description_references }}
 {% endif %}
 '''
+
 
 def main():
     parser = argparse.ArgumentParser(description=('Render DEEP application '
@@ -60,6 +65,7 @@ def main():
             f.write(md_data)
     else:
         print(md_data)
+
 
 if __name__ == "__main__":
     main()
