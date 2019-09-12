@@ -1,5 +1,4 @@
 ---
-- module: https://github.com/deephdc/DEEP-OC-generic-container
 - module: https://github.com/deephdc/DEEP-OC-dogs_breed_det
 - module: https://github.com/deephdc/DEEP-OC-mods
 - module: https://github.com/deephdc/DEEP-OC-retinopathy_test
