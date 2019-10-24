@@ -11,3 +11,4 @@
 - module: https://github.com/deephdc/DEEP-OC-speech-to-text-tf
 - module: https://github.com/deephdc/DEEP-OC-posenet-tf
 - module: https://github.com/deephdc/DEEP-OC-audio-classification-tf
+- module: https://github.com/deephdc/DEEP-OC-semseg_vaihingen
