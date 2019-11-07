@@ -4,22 +4,45 @@
 <section id="header" class="header">
 <div class="container section">
     <div class="row">
-        <h1><a href="{{ SITEURL }}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
-        <p>
-        Welcome to the DEEP Open Catalog!
-        </p>
-        <p>
-        DEEP-Hybrid-DataCloud is a project that aims to deliver a framework
-        to easily develop Machine Learning and Deep Learning modules on top of
-        e-Infrastructures.
-        In the DEEP Open Catalog you can find ready to use modules in a
-        variety of domains. These modules can be executed on your local laptop,
-        on a production server or on top of e-Infrastrucutres supporting the DEEP-Hybrid-DataCloud stack.
-        </p>
+        <div class="four columns">
+            aa
+        </div>
+        <div class="eight columns">
+            <h1><a href="{{ SITEURL }}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
+            <p>
+            Welcome to the DEEP Open Catalog!
+            </p>
+            <p>
+            DEEP-Hybrid-DataCloud is a project that aims to deliver a framework
+            to easily develop Machine Learning and Deep Learning modules on top of
+            e-Infrastructures.
+            In the DEEP Open Catalog you can find ready to use modules in a
+            variety of domains. These modules can be executed on your local laptop,
+            on a production server or on top of e-Infrastrucutres supporting the DEEP-Hybrid-DataCloud stack.
+            </p>
+        </div>
     </div>
 </div>
 </section>
         
+<section id="module-list">
+<div class="container section">
+    <div class="row">
+        {% block content_title %}
+        <h2>Explore our marketplace!</h2>
+        {% endblock %}
+    </div>
+
+    <div class="row">
+        {% include '_includes/module-list.html' %}
+    </div>
+    {% if articles_page.has_other_pages() %}
+    <div class="row">
+            {% include '_includes/pagination.html' %}
+    </div>
+    {% endif %}
+</div>
+</section><!-- /#content -->
 
 <section id="quickstart">
 <div id="quickstart" class="container section">
@@ -69,22 +92,4 @@ $ udocker run -p 5000:5000  deep-oc-generic-container</code></pre>
 </div>
 </section>
 
-<section id="module-list">
-<div class="container section">
-    <div class="row">
-        {% block content_title %}
-        <h2>Browse all modules</h2>
-        {% endblock %}
-    </div>
-
-    <div class="row">
-        {% include '_includes/module-list.html' %}
-    </div>
-    {% if articles_page.has_other_pages() %}
-    <div class="row">
-            {% include '_includes/pagination.html' %}
-    </div>
-    {% endif %}
-</div>
-</section><!-- /#content -->
 {% endblock content %}

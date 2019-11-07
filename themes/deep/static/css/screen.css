@@ -26,7 +26,7 @@ code {
 }
 
 .section {
-    padding-top: 200px;
+    padding-top: 100px;
 }
 
 .container a {
@@ -75,6 +75,7 @@ code {
 /* Header */
 
 .header {
+    background-image: linear-gradient(to right, #212651 , #32367d);
 }
 
 /* Module list */
