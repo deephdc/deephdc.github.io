@@ -26,7 +26,7 @@ code {
 }
 
 .section {
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 .container a {
@@ -75,7 +75,6 @@ code {
 /* Header */
 
 .header {
-    padding-top: 50px;
     background: #212651;
     background-image: url("/images/network.png"); /* fallback */
     background-repeat: no-repeat;
