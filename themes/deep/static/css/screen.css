@@ -21,12 +21,20 @@ body {
     max-width: 1600px;
 }
 
+.button.button-primary {
+    background: #212651;
+    border: 1px solid #32367d;
+}
+.button.button-primary:hover {
+    background: #32367d;
+    border: 1px solid #212651;
+}
 code {
     font-size: 0.7em;
 }
 
 .section {
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 .container a {
@@ -75,7 +83,6 @@ code {
 /* Header */
 
 .header {
-    padding-top: 50px;
     background: #212651;
     background-image: url("/images/network.png"); /* fallback */
     background-repeat: no-repeat;
@@ -113,6 +120,10 @@ code {
     overflow: hidden;
 }
 
+.paginator {
+    padding-left: 2em;
+}
+
 /* Larger than tablet */
 @media (min-width: 750px) {
     .module-list-entry {
@@ -137,7 +148,7 @@ code {
 /* Module entries */
 
 .module-entry {
-    padding-top:200px;
+    padding-top: 50px;
     margin-top: 7rem;
     margin-bottom: 7rem;
 }
@@ -146,6 +157,8 @@ code {
 }
 .module-entry .header {
     background: #f1f1f2;
+    color: #000000;
+    font-weight: normal;
 }
 .module-entry .header,
 .module-entry .content {
