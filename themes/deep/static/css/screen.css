@@ -197,7 +197,7 @@ pre {
     height: 6.5rem;
     background-color: rgb(38, 39, 39);
     z-index: 99;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
 }
