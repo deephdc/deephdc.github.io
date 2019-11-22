@@ -55,48 +55,45 @@ pipeline {
 }
 
 void iterateOverProjects() {
-    data = readYaml (file: 'project_apps.yml')
-    data.each {
-        repo_name = sh(returnStdout: true, script: "basename ${it.module}")
-        repo_name = repo_name.trim()
-        
-        script {
+    checkout([
+        $class: 'GitSCM',
+        branches: [[name: '*/master']],
+        doGenerateSubmoduleConfigurations: false,
+        extensions: [[
+            $class: 'SubmoduleOption',
+            disableSubmodules: false,
+            parentCredentials: false,
+            recursiveSubmodules: true,
+            reference: '',
+            trackingSubmodules: false
+        ]],
+        submoduleCfg: [],
+        userRemoteConfigs: [[url: 'https://github.com/deephdc/deep-oc']]]
+    )
+    
+    any_build_failure = false
+    data = readYaml (file: 'MODULES.yml')
+    data.each{
+        repo_name = sh(returnStdout: true, script: "basename ${it.module}").trim()
+        dir(repo_name) {
             try {
-                stage("Application: ${repo_name}") {
-                    checkout([
-                        $class: 'GitSCM',
-                        branches: [[name: '*/master']],
-                        doGenerateSubmoduleConfigurations: false,
-                        extensions: [
-                        [
-                            $class: 'RelativeTargetDirectory',
-                            relativeTargetDir: "${repo_name}"
-                        ], 
-                        [
-                            $class: 'CleanBeforeCheckout'
-                        ],
-                        [
-                            $class: 'WipeWorkspace'
-                        ]],
-                        submoduleCfg: [],
-                        userRemoteConfigs: [[url: it.module]]])
-
-                    dir(repo_name) {
-                        // TEST: Validate metadata according to DEEP schema
-                        sh 'deep-app-schema-validator metadata.json'
-                        // TEST: Search for non-ascii characters
-                        sh 'python -c "open(\'metadata.json\').read().encode(\'ascii\')"'
-                        // Generate markdown file from metadata
-                        def markdown_file = [repo_name, 'md'].join('.').toLowerCase()
-                        //sh "${WORKSPACE}/deephdc.github.io/metadata2md.py metadata.json --output-file ${WORKSPACE}/deephdc.github.io/content/modules/${markdown_file}"
-                        sh "${WORKSPACE}/metadata2md.py metadata.json --output-file ${WORKSPACE}/content/modules/${markdown_file}"
-                    }
-                }
+                // TEST: Validate metadata according to DEEP schema
+                sh 'deep-app-schema-validator metadata.json'
+                // TEST: Search for non-ascii characters
+                sh 'python -c "open(\'metadata.json\').read().encode(\'utf8\')"'
+                // Generate markdown file from metadata
+                def markdown_file = [repo_name, 'md'].join('.').toLowerCase()
+                sh "${WORKSPACE}/metadata2md.py metadata.json --output-file ${WORKSPACE}/content/modules/${markdown_file}"
             }
-            catch(e) {
-                // Continue even if it fails
-                currentBuild.result = 'SUCCESS'
+            catch (e) {
+                echo "An error occurred while building DEEP module <${repo_name}>"
+                any_build_failure = true
             }
         }
+    }
+    
+    if (any_build_failure) {
+        echo "There were errors building DEEP modules. Setting the build status as UNSTABLE"
+        currentBuild.result = 'UNSTABLE'
     }
 }
