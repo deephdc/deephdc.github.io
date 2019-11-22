@@ -72,9 +72,12 @@ void iterateOverProjects() {
     )
     
     any_build_failure = false
-    data = readYaml (file: 'MODULES.yml')
+    data = sh(
+        script: 'git submodule | awk \'{print $2}\'',
+        returnStdout: true
+    ).trim().split()
     data.each{
-        repo_name = sh(returnStdout: true, script: "basename ${it.module}").trim()
+        repo_name = sh(returnStdout: true, script: "basename ${it}").trim()
         dir(repo_name) {
             try {
                 // TEST: Validate metadata according to DEEP schema
