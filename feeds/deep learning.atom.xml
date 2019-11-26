@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>DEEP Open Catalog - deep learning</title><link href="https://marketplace.deep-hybrid-datacloud.eu/" rel="alternate"></link><link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/deep%20learning.atom.xml" rel="self"></link><id>https://marketplace.deep-hybrid-datacloud.eu/</id><updated>2019-11-26T10:56:32+01:00</updated><entry><title>Train an audio classifier</title><link href="https://marketplace.deep-hybrid-datacloud.eu/modules/train-an-audio-classifier.html" rel="alternate"></link><published>2019-09-01T00:00:00+02:00</published><updated>2019-11-26T10:56:32+01:00</updated><author><name>DEEP-Hybrid-DataCloud Consortium</name></author><id>tag:marketplace.deep-hybrid-datacloud.eu,2019-09-01:/modules/train-an-audio-classifier.html</id><summary type="html">&lt;p&gt;Train your own audio classifier with your custom dataset. It comes also pretrained on the 527 AudioSet classes.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-audio-classification-tf/job/master"&gt;&lt;img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-audio-classification-tf/master"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is a plug-and-play tool to perform audio classification with Deep Learning.
+It allows the user to classify their samples of audio as well as training their
+own classifier for a custom problem.&lt;/p&gt;
+&lt;p&gt;The classifier is currently pretrained on the 527 high-level classes from the
+&lt;a href="https://research.google.com/audioset/"&gt;AudioSet&lt;/a&gt; dataset.&lt;/p&gt;
+&lt;p&gt;The PREDICT method expects an audio file as input (or the url of a audio file) and will return a JSON with 
+the top 5 predictions. Most audio file formats are supported (see &lt;a href="https://www.ffmpeg.org/"&gt;FFMPEG&lt;/a&gt; compatible formats).&lt;/p&gt;
+&lt;p&gt;&lt;img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-audio-classification-tf/master/images/demo.png'/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Jort F. Gemmeke, Daniel P. W. Ellis, Dylan Freedman, Aren Jansen, Wade Lawrence, R. Channing Moore, Manoj Plakal, Marvin Ritter,&lt;a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45857.pdf"&gt;'Audio set: An ontology and human-labeled dataset for audio events'&lt;/a&gt;, IEEE ICASSP, 2017.&lt;/p&gt;
+&lt;p&gt;Qiuqiang Kong, Yong Xu, Wenwu Wang, Mark D. Plumbley,&lt;a href="https://arxiv.org/pdf/1711.00927.pdf"&gt;'Audio Set classification with attention model: A probabilistic perspective.'&lt;/a&gt; arXiv preprint arXiv:1711.00927 (2017).&lt;/p&gt;
+&lt;p&gt;Changsong Yu, Karim Said Barsim, Qiuqiang Kong, Bin Yang ,&lt;a href="https://arxiv.org/pdf/1803.02353.pdf"&gt;'Multi-level Attention Model for Weakly Supervised Audio Classification.'&lt;/a&gt; arXiv preprint arXiv:1803.02353 (2018).&lt;/p&gt;
+&lt;p&gt;S. Hershey, S. Chaudhuri, D. P. W. Ellis, J. F. Gemmeke, A. Jansen, R. C. Moore, M. Plakal, D. Platt, R. A. Saurous, B. Seybold et  al., &lt;a href="https://arxiv.org/pdf/1609.09430.pdf"&gt;'CNN architectures for large-scale audio classification,'&lt;/a&gt; arXiv preprint arXiv:1609.09430, 2016.&lt;/p&gt;</content><category term="models"></category></entry><entry><title>Conus species classifier</title><link href="https://marketplace.deep-hybrid-datacloud.eu/modules/conus-species-classifier.html" rel="alternate"></link><published>2019-01-01T00:00:00+01:00</published><updated>2019-11-26T10:56:25+01:00</updated><author><name>DEEP-Hybrid-DataCloud Consortium</name></author><id>tag:marketplace.deep-hybrid-datacloud.eu,2019-01-01:/modules/conus-species-classifier.html</id><summary type="html">&lt;p&gt;Classify conus images among 70 species&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-conus-classification-tf/job/master"&gt;&lt;img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-conus-classification-tf/master"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Citizen science has become a powerful force for scientific inquiry, providing researchers with access to a vast array
+of data points while connecting non scientists to the real process of science. This citizen-researcher relationship
+creates a very interesting synergy, allowing for the creation, execution, and analysis of research projects.
+With this in mind, a Convolutional Neural Network has been trained to identify conus marine snails at species
+level [1] in collaboration with the &lt;a href="http://www.mncn.csic.es/"&gt;Natural Science Museum of Madrid&lt;/a&gt;. The taxonomy
+of these snails has changed significantly several times during recent years and the introduction of Deep Learning
+techniques allowing to classify them is a very valuable tool for the experts.&lt;/p&gt;
+&lt;p&gt;This Docker container contains a trained Convolutional Neural network optimized for conus identification using
+images. The architecture used is an Xception [2] network using Keras on top of Tensorflow.&lt;/p&gt;
+&lt;p&gt;The PREDICT method expects an RGB image as input (or the url of an RGB image) and will return a JSON with 
+the top 5 predictions.&lt;/p&gt;
+&lt;p&gt;The training dataset has been provided by the &lt;a href="http://www.mncn.csic.es/"&gt;Natural Science Museum of Madrid&lt;/a&gt; and
+it consists on a dataset containing images of 68 species of conus covering three different regions: the Panamic
+region; the South African region; and the Western Atlantic and Mediterranean region.&lt;/p&gt;
+&lt;p&gt;&lt;img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-conus-classification-tf/master/images/conus.png'/&gt;&lt;/p&gt;
+&lt;p&gt;This service is based in the &lt;a href="./deep-oc-image-classification-tensorflow.html"&gt;Image Classification with Tensorflow&lt;/a&gt; model.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: Puillandre, N.; Duda, T.F.; Meyer, C.; Olivera, B.M.; Bouchet, P. (2014). &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4541476/"&gt;One, four or 100 genera? A new classification of the cone snails&lt;/a&gt;. Journal of Molluscan Studies. 81 (1): 1-23.&lt;/p&gt;
+&lt;p&gt;[2]: Chollet, Francois. &lt;a href="https://arxiv.org/abs/1610.02357"&gt;Xception: Deep learning with depthwise separable convolutions&lt;/a&gt; arXiv preprint (2017): 1610-02357.&lt;/p&gt;</content><category term="services"></category></entry><entry><title>Phytoplankton species classifier</title><link href="https://marketplace.deep-hybrid-datacloud.eu/modules/phytoplankton-species-classifier.html" rel="alternate"></link><published>2019-01-01T00:00:00+01:00</published><updated>2019-11-26T10:56:27+01:00</updated><author><name>DEEP-Hybrid-DataCloud Consortium</name></author><id>tag:marketplace.deep-hybrid-datacloud.eu,2019-01-01:/modules/phytoplankton-species-classifier.html</id><summary type="html">&lt;p&gt;Classify phytoplankton images among 60 classes&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-phytoplankton-classification-tf/job/master"&gt;&lt;img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-phytoplankton-classification-tf/master"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Citizen science has become a powerful force for scientific inquiry, providing researchers with access to a vast array of
+data points while connecting non scientists to the real process of science. This citizen-researcher relationship
+creates a very interesting synergy, allowing for the creation, execution, and analysis of research projects. 
+With this in mind, a Convolutional Neural Network has been trained to identify phytoplankton in collaboration
+with the &lt;a href="http://www.vliz.be/"&gt;Vlaams Instituut voor de Zee&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This Docker container contains a trained Convolutional Neural network optimized for phytoplankton identification using
+images. The architecture used is an Xception [1] network using Keras on top of Tensorflow.&lt;/p&gt;
+&lt;p&gt;The PREDICT method expects an RGB image as input (or the url of an RGB image) and will return a JSON with 
+the top 5 predictions.&lt;/p&gt;
+&lt;p&gt;As training dataset we have used a collection of images from the &lt;a href="http://www.vliz.be/"&gt;Vlaams Instituut voor de Zee&lt;/a&gt;
+which consists of around 650K images from 60 classes of phytoplankton.&lt;/p&gt;
+&lt;p&gt;&lt;img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-phytoplankton-classification-tf/master/images/phytoplankton.png'/&gt;&lt;/p&gt;
+&lt;p&gt;This service is based in the &lt;a href="./deep-oc-image-classification-tensorflow.html"&gt;Image Classification with Tensorflow&lt;/a&gt; model.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: Chollet, Francois. &lt;a href="https://arxiv.org/abs/1610.02357"&gt;Xception: Deep learning with depthwise separable convolutions&lt;/a&gt; arXiv preprint (2017): 1610-02357.&lt;/p&gt;</content><category term="services"></category></entry><entry><title>Plants species classifier</title><link href="https://marketplace.deep-hybrid-datacloud.eu/modules/plants-species-classifier.html" rel="alternate"></link><published>2019-01-01T00:00:00+01:00</published><updated>2019-11-26T10:56:24+01:00</updated><author><name>DEEP-Hybrid-DataCloud Consortium</name></author><id>tag:marketplace.deep-hybrid-datacloud.eu,2019-01-01:/modules/plants-species-classifier.html</id><summary type="html">&lt;p&gt;Classify plant images among 10K species from the iNaturalist dataset&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-plants-classification-tf/job/master"&gt;&lt;img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-plants-classification-tf/master"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The deep learning revolution has brought significant advances in a number of fields [1], primarily linked to
+image and speech recognition. The standardization of image classification tasks like the &lt;a href="http://www.image-net.org/challenges/LSVRC/"&gt;ImageNet Large Scale
+Visual Recognition Challenge&lt;/a&gt; [2] has resulted in a reliable way to
+compare top performing architectures.&lt;/p&gt;
+&lt;p&gt;The use of deep learning for plant classification is not novel [3, 4] but has mainly focused in leaves and has
+been restricted to a limited amount of species, therefore making it of limited use for large-scale biodiversity
+monitoring purposes.&lt;/p&gt;
+&lt;p&gt;This Docker container contains a trained Convolutional Neural network optimized for plant identification using
+images. The architecture used is an Xception [5] network using Keras on top of Tensorflow. A detailed article
+about this network and the results obtained with it can be found in [6].&lt;/p&gt;
+&lt;p&gt;The PREDICT method expects an RGB image as input (or the url of an RGB image) and will return a JSON with 
+the top 5 predictions.&lt;/p&gt;
+&lt;p&gt;The original training dataset was the great collection of images which are available in &lt;a href="https://identify.plantnet.org/"&gt;PlantNet&lt;/a&gt; under a 
+Creative-Common AttributionShareAlike 2.0 license. It consists of around 250K images belonging to more than 6K
+plant species of Western Europe. These species are distributed in 1500 genera and 200 families.&lt;/p&gt;
+&lt;p&gt;A new iteration of the application has been trained using plant images from &lt;a href="https://www.inaturalist.org/"&gt;iNaturalist&lt;/a&gt;.
+This dataset has around 4.4M observations with 7M images from 58K worldwide species.
+We have restricted our training to the 10K most popular species.&lt;/p&gt;
+&lt;p&gt;&lt;img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-plants-classification-tf/master/images/plants.png'/&gt;&lt;/p&gt;
+&lt;p&gt;This service is based in the &lt;a href="./deep-oc-image-classification-tensorflow.html"&gt;Image Classification with Tensorflow&lt;/a&gt; model.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: Yann LeCun, Yoshua Bengio, and Geofrey Hinton. &lt;a href="https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf"&gt;Deep learning&lt;/a&gt;. Nature, 521(7553):436-444, May 2015.&lt;/p&gt;
+&lt;p&gt;[2]: Olga Russakovsky et al. &lt;a href="https://arxiv.org/abs/1409.0575"&gt;ImageNet Large Scale Visual Recognition Challenge&lt;/a&gt;. International Journal of Computer Vision (IJCV), 115(3):211-252, 2015.&lt;/p&gt;
+&lt;p&gt;[3]: Sue Han Lee, Chee Seng Chan, Paul Wilkin, and Paolo Remagnino. &lt;a href="https://arxiv.org/abs/1506.08425"&gt;Deep-plant: Plant identification with convolutional neural networks&lt;/a&gt;, 2015.&lt;/p&gt;
+&lt;p&gt;[4]: Mads Dyrmann, Henrik Karstoft, and Henrik Skov Midtiby. &lt;a href="https://www.sciencedirect.com/science/article/pii/S1537511016301465"&gt;Plant species classification using deep convolutional neural network.&lt;/a&gt; Biosystems Engineering, 151:72-80, 2016.&lt;/p&gt;
+&lt;p&gt;[5]: Chollet, Francois. &lt;a href="https://arxiv.org/abs/1610.02357"&gt;Xception: Deep learning with depthwise separable convolutions&lt;/a&gt; arXiv preprint (2017): 1610-02357.&lt;/p&gt;
+&lt;p&gt;[6]: Heredia, Ignacio. &lt;a href="https://arxiv.org/abs/1706.03736"&gt;Large-scale plant classification with deep neural networks.&lt;/a&gt; Proceedings of the Computing Frontiers Conference. ACM, 2017.&lt;/p&gt;</content><category term="services"></category></entry><entry><title>Seed species classifier</title><link href="https://marketplace.deep-hybrid-datacloud.eu/modules/seed-species-classifier.html" rel="alternate"></link><published>2019-01-01T00:00:00+01:00</published><updated>2019-11-26T10:56:29+01:00</updated><author><name>DEEP-Hybrid-DataCloud Consortium</name></author><id>tag:marketplace.deep-hybrid-datacloud.eu,2019-01-01:/modules/seed-species-classifier.html</id><summary type="html">&lt;p&gt;Classify seeds images among 700K species&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-seeds-classification-tf/job/master"&gt;&lt;img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-seeds-classification-tf/master"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Citizen science has become a powerful force for scientific inquiry, providing researchers with access to a vast array of
+data points while connecting non scientists to the real process of science. This citizen-researcher relationship
+creates a very interesting synergy, allowing for the creation, execution, and analysis of research projects. 
+With this in mind, a Convolutional Neural Network has been trained to identify seed images in collaboration 
+with &lt;a href="http://www.rjb.csic.es"&gt;Spanish Royal Botanical Garden&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This Docker container contains a trained Convolutional Neural network optimized for seeds identification using
+images. The architecture used is an Xception [1] network using Keras on top of Tensorflow.&lt;/p&gt;
+&lt;p&gt;The PREDICT method expects an RGB image as input (or the url of an RGB image) and will return a JSON with 
+the top 5 predictions.&lt;/p&gt;
+&lt;p&gt;As training dataset we have used a collection of images from the &lt;a href="http://www.rjb.csic.es"&gt;Spanish Royal Botanical Garden&lt;/a&gt;
+which consists of around 28K images from 743 species and 493 genera.&lt;/p&gt;
+&lt;p&gt;&lt;img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-seeds-classification-tf/master/images/seeds.png'/&gt;&lt;/p&gt;
+&lt;p&gt;This service is based in the &lt;a href="./deep-oc-image-classification-tensorflow.html"&gt;Image Classification with Tensorflow&lt;/a&gt; model.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: Chollet, Francois. &lt;a href="https://arxiv.org/abs/1610.02357"&gt;Xception: Deep learning with depthwise separable convolutions&lt;/a&gt; arXiv preprint (2017): 1610-02357.&lt;/p&gt;</content><category term="services"></category></entry><entry><title>Train an image classifier</title><link href="https://marketplace.deep-hybrid-datacloud.eu/modules/train-an-image-classifier.html" rel="alternate"></link><published>2019-01-01T00:00:00+01:00</published><updated>2019-11-26T10:56:22+01:00</updated><author><name>DEEP-Hybrid-DataCloud Consortium</name></author><id>tag:marketplace.deep-hybrid-datacloud.eu,2019-01-01:/modules/train-an-image-classifier.html</id><summary type="html">&lt;p&gt;Train your own image classifier with your custom dataset. It comes also pretrained on the 1K ImageNet classes.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-image-classification-tf/job/master"&gt;&lt;img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-image-classification-tf/master"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The deep learning revolution has brought significant advances in a number of fields [1], primarily linked to
+image and speech recognition. The standardization of image classification tasks like the &lt;a href="http://www.image-net.org/challenges/LSVRC/"&gt;ImageNet Large Scale
+Visual Recognition Challenge&lt;/a&gt; [2] has resulted in a reliable way to
+compare top performing architectures.&lt;/p&gt;
+&lt;p&gt;This Docker container contains the tools to train an image classifier on your personal dataset. It is a highly
+customizable tool  that let's you choose between tens of different &lt;a href="https://github.com/keras-team/keras-applications"&gt;top performing architectures&lt;/a&gt;
+and training parameters.&lt;/p&gt;
+&lt;p&gt;The container also comes with a pretrained general-purpose image classifier trained on ImageNet.&lt;/p&gt;
+&lt;p&gt;The PREDICT method expects an RGB image as input (or the url of an RGB image) and will return a JSON with 
+the top 5 predictions.&lt;/p&gt;
+&lt;p&gt;&lt;img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-image-classification-tf/master/images/imagenet.png'/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: Yann LeCun, Yoshua Bengio, and Geofrey Hinton. &lt;a href="https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf"&gt;Deep learning&lt;/a&gt;. Nature, 521(7553):436-444, May 2015.&lt;/p&gt;
+&lt;p&gt;[2]: Olga Russakovsky et al. &lt;a href="https://arxiv.org/abs/1409.0575"&gt;ImageNet Large Scale Visual Recognition Challenge&lt;/a&gt;. International Journal of Computer Vision (IJCV), 115(3):211-252, 2015.&lt;/p&gt;</content><category term="models"></category></entry><entry><title>Upscale multispectral satellites images</title><link href="https://marketplace.deep-hybrid-datacloud.eu/modules/upscale-multispectral-satellites-images.html" rel="alternate"></link><published>2019-01-01T00:00:00+01:00</published><updated>2019-11-26T10:56:30+01:00</updated><author><name>DEEP-Hybrid-DataCloud Consortium</name></author><id>tag:marketplace.deep-hybrid-datacloud.eu,2019-01-01:/modules/upscale-multispectral-satellites-images.html</id><summary type="html">&lt;p&gt;Upscale (superresolve) low resolution bands to high resolution in multispectral satellite imagery.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-satsr/job/master"&gt;&lt;img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-satsr/master"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;With the latest missions launched by the European Space Agency (ESA) and National Aeronautics and Space Administration (NASA)
+equipped with the latest technologies in multi-spectral sensors, we face an unprecedented amount of data with spatial and
+temporal resolutions never reached before. Exploring the potential of this data with state-of-the-art AI techniques like
+Deep Learning, could potentially change the way we think about and protect our planet's resources.&lt;/p&gt;
+&lt;p&gt;This Docker container contains  a plug-and-play tool to perform super-resolution on satellite imagery.
+It uses Deep Learning to provide a better performing alternative to classical pansharpening (more details in [1]).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Minimum requirements&lt;/strong&gt; Working with satellite imagery is a memory intensive task, so an absolute minimum is
+16 GB of RAM memory. But if you want to work with full images (not small patches) you will probably need in the
+order of 50 GB. If memory requirements are not met, weird Tensorflow shape errors can appear.&lt;/p&gt;
+&lt;p&gt;The PREDICT method expects a compressed file (zip or tar) containing a complete tile of the satellite. These
+tiles are different for each satellite type and can be downloaded in the respective official satellite's
+repositories. We provide nevertheless &lt;a href="https://github.com/deephdc/satsr/blob/master/reports/additional_notes.md"&gt;some samples&lt;/a&gt;
+for each satellite so that the user can test the module.
+The output is a GeoTiff file with the super-resolved region.&lt;/p&gt;
+&lt;p&gt;Right now we are supporting super-resolution for the following satellites:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-2"&gt;Sentinel 2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://landsat.gsfc.nasa.gov/landsat-8/"&gt;Landsat 8&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ncc.nesdis.noaa.gov/VIIRS/"&gt;VIIRS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://terra.nasa.gov/about/terra-instruments/modis"&gt;MODIS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More information on the satellites and processing levels that are supported can be found &lt;a href="https://github.com/deephdc/satsr/blob/master/reports/additional_notes.md"&gt;here&lt;/a&gt;
+along with some &lt;a href="https://github.com/deephdc/satsr/tree/master/reports/figures"&gt;demo images&lt;/a&gt; of the super-resolutions performed in non-training data.&lt;/p&gt;
+&lt;p&gt;If you want to perform super-resolution on another satellite, go to the &lt;a href="https://github.com/deephdc/satsr#train-other-satellites"&gt;training section&lt;/a&gt;
+to see how you can easily add support for additional satellites. We are happy to accept PRs!&lt;/p&gt;
+&lt;p&gt;&lt;img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-satsr/master/images/satsr.png'/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: Lanaras, C., Bioucas-Dias, J., Galliani, S., Baltsavias, E., &amp;amp; Schindler, K. (2018). &lt;a href="https://arxiv.org/abs/1803.04271"&gt;Super-resolution of Sentinel-2 images: Learning a globally applicable deep neural network&lt;/a&gt;. ISPRS Journal of Photogrammetry and Remote Sensing, 146, 305-319.&lt;/p&gt;</content><category term="models"></category></entry></feed>
