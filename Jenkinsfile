@@ -4,9 +4,7 @@
 
 pipeline {
     agent {
-        dockerfile {
-            filename 'Dockerfile.build'
-        }
+        label 'deep-oc'
     }
 
     stages {
