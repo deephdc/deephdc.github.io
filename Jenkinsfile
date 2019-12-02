@@ -1,6 +1,6 @@
 #!/usr/bin/groovy
 
-@Library(['github.com/indigo-dc/jenkins-pipeline-library']) _
+@Library(['github.com/indigo-dc/jenkins-pipeline-library@release/1.4.0']) _
 
 pipeline {
     agent {
@@ -29,6 +29,11 @@ pipeline {
                 branch 'pelican'
             }
             steps {
+                // Get last version of DEEP-OC modules 
+                JenkinsBuildJob(
+                    "Pipeline-as-code/deep-oc/master",
+                    [booleanParam(name: 'disable_oc_build', value: true)])
+
                 iterateOverProjects()
                 sh 'git status --porcelain=v1'
                 sh 'git diff --diff-filter=M'
