@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog - Module "Phytoplankton species classifier"</title>
+          <title>DEEP Open Catalog - Module "Speech keywords classifier"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -83,25 +83,23 @@
 <div class="container module-entry">
     <div class="header">
         <div class="row">
-            <h2 class="entry-title" >Phytoplankton species classifier</h2>
+            <h2 class="entry-title" >Speech keywords classifier</h2>
              
         </div>
         <div class="row">
-            <a class="button" title="GitHub repository" href="https://github.com/deephdc/image-classification-tf"><span class="fab fa-github"></span> Get this module</a>
-            <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/deephdc/deep-oc-phytoplankton-classification-tf"><span class="fab fa-docker"></span> deephdc/deep-oc-phytoplankton-classification-tf</a>
-            <a class="button" title="Module citation" href="http://digital.csic.es/handle/10261/194553"><span class="fa fa-quote-left"></span> Cite this module</a>
-            <a class="button" title="Dataset" href="http://www.vliz.be"><span class="fa fa-quote-left"></span> Dataset</a>
-            <a class="button" title="Training files" href="https://cephrgw01.ifca.es:8080/swift/v1/phytoplankton-tf/"><span class="fa fa-quote-left"></span> Training files</a>
+            <a class="button" title="GitHub repository" href="https://github.com/deephdc/speech-to-text-tf"><span class="fab fa-github"></span> Get this module</a>
+            <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/deephdc/deep-oc-speech-to-text-tf"><span class="fab fa-docker"></span> deephdc/deep-oc-speech-to-text-tf</a>
+            <a class="button" title="Module citation" href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43969.pdf"><span class="fa fa-quote-left"></span> Cite this module</a>
         </div>
         <div class="row">
             <p>
                     By
     <!--                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a> -->
                         DEEP-Hybrid-DataCloud Consortium
-                |                 Created: <time class="published" datetime="2019-01-01T00:00:00+01:00">
-                    Tue 01 January 2019
+                |                 Created: <time class="published" datetime="2019-07-31T00:00:00+02:00">
+                    Wed 31 July 2019
                 </time>
-                - Updated: <time class="modified" datetime="2019-12-02T12:05:02+01:00">
+                - Updated: <time class="modified" datetime="2019-12-02T12:05:12+01:00">
                     Mon 02 December 2019
                 </time>
             </p>
@@ -109,10 +107,8 @@
                 <span class="fas fa-folder"></span>
                     <a href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a>, 
                     <a href="https://marketplace.deep-hybrid-datacloud.eu/category/library/tensorflow.html">library/tensorflow</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/library/keras.html">library/keras</a>, 
                     <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>
             </p>
             <p>
                 License:  Apache 2.0             </p>
@@ -121,22 +117,15 @@
     <div class="content">
         <div class="row">
             <div class="seven  columns">
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-phytoplankton-classification-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-phytoplankton-classification-tf/master"></a></p>
-<p>Citizen science has become a powerful force for scientific inquiry, providing researchers with access to a vast array of
-data points while connecting non scientists to the real process of science. This citizen-researcher relationship
-creates a very interesting synergy, allowing for the creation, execution, and analysis of research projects. 
-With this in mind, a Convolutional Neural Network has been trained to identify phytoplankton in collaboration
-with the <a href="http://www.vliz.be/">Vlaams Instituut voor de Zee</a>.</p>
-<p>This Docker container contains a trained Convolutional Neural network optimized for phytoplankton identification using
-images. The architecture used is an Xception [1] network using Keras on top of Tensorflow.</p>
-<p>The PREDICT method expects an RGB image as input (or the url of an RGB image) and will return a JSON with 
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-speech-to-text-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-speech-to-text-tf/master"></a></p>
+<p>This is a plug-and-play tool to train and evaluate a speech-to-text tool using deep neural networks. The network architecture is based on one of the tutorials provided by Tensorflow <a href="https://www.tensorflow.org/tutorials/sequences/audio_recognition">1</a>.
+The architecture used in this tutorial is based on some described in the paper Convolutional Neural Networks for Small-footprint Keyword Spotting <a href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43969.pdf">2</a>.</p>
+<p>There are lots of different approaches to building neural network models to work with audio including recurrent networks or dilated convolutions. This model is based on the kind of convolutional network that will feel very familiar to anyone who's worked with image recognition. That may seem surprising at first though, since audio is inherently a one-dimensional continuous signal across time, not a 2D spatial problem. We define a window of time we believe our spoken words should fit into, and converting the audio signal in that window into an image. This is done by grouping the incoming audio samples into short segments, just a few milliseconds long, and calculating the strength of the frequencies across a set of bands. Each set of frequency strengths from a segment is treated as a vector of numbers, and those vectors are arranged in time order to form a two-dimensional array. This array of values can then be treated like a single-channel image and is known as a spectrogram. These spectrograms will be the input for the training.
+The container does not come with any pretrained model, it has to be trained first on a dataset to be used for prediction.</p>
+<p>The PREDICT method expects an audio files as input (or the url of an audio file) and will return a JSON with 
 the top 5 predictions.</p>
-<p>As training dataset we have used a collection of images from the <a href="http://www.vliz.be/">Vlaams Instituut voor de Zee</a>
-which consists of around 650K images from 60 classes of phytoplankton.</p>
-<p><img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-phytoplankton-classification-tf/master/images/phytoplankton.png'/></p>
-<p>This service is based in the <a href="./deep-oc-image-classification-tensorflow.html">Image Classification with Tensorflow</a> model.</p>
+<p><img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-speech-to-text-tf/master/images/speech-to-text.png'/></p>
 <p><strong>References</strong></p>
-<p>[1]: Chollet, Francois. <a href="https://arxiv.org/abs/1610.02357">Xception: Deep learning with depthwise separable convolutions</a> arXiv preprint (2017): 1610-02357.</p>
             </div>
             <div class="five columns">
 <div class="row run">
@@ -147,8 +136,8 @@ which consists of around 650K images from 60 classes of phytoplankton.</p>
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/deep-oc-phytoplankton-classification-tf
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-phytoplankton-classification-tf</code></pre>
+    <pre><code>$ docker pull deephdc/deep-oc-speech-to-text-tf
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-speech-to-text-tf</code></pre>
  
     <h4>Using udocker</h4>
     <p>
@@ -162,9 +151,9 @@ $ source udocker/bin/activate
 $ git clone https://github.com/indigo-dc/udocker
 $ cd udocker
 $ pip install .
-$ udocker pull deephdc/deep-oc-phytoplankton-classification-tf
-$ udocker create deephdc/deep-oc-phytoplankton-classification-tf
-$ udocker run -p 5000:5000  deephdc/deep-oc-phytoplankton-classification-tf</code></pre>
+$ udocker pull deephdc/deep-oc-speech-to-text-tf
+$ udocker create deephdc/deep-oc-speech-to-text-tf
+$ udocker run -p 5000:5000  deephdc/deep-oc-speech-to-text-tf</code></pre>
 
     <hr />
     <p>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog - Module "DEEP OC Speech to Text"</title>
+          <title>DEEP Open Catalog - Module "Body pose detection"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -38,11 +38,17 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/categories.html">All categories</a>
                                 </li>
                                 <li class="popover-item ">
+                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v1.html">api-v1</a></li>
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/cnn.html">cnn</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a></li>
                                 <li class="popover-item ">
+                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/development.html">development</a></li>
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/library.html">library</a></li>
                                 <li class="popover-item ">
@@ -77,12 +83,12 @@
 <div class="container module-entry">
     <div class="header">
         <div class="row">
-            <h2 class="entry-title" >DEEP OC Speech to Text</h2>
+            <h2 class="entry-title" >Body pose detection</h2>
              
         </div>
         <div class="row">
-            <a class="button" title="GitHub repository" href="https://github.com/deephdc/mods"><span class="fab fa-github"></span> Get this module</a>
-            <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/deephdc/deep-oc-speech-to-text-tf"><span class="fab fa-docker"></span> deephdc/deep-oc-speech-to-text-tf</a>
+            <a class="button" title="GitHub repository" href="https://github.com/deephdc/posenet-tf"><span class="fab fa-github"></span> Get this module</a>
+            <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/deephdc/deep-oc-posenet-tf"><span class="fab fa-docker"></span> deephdc/deep-oc-posenet-tf</a>
         </div>
         <div class="row">
             <p>
@@ -92,14 +98,18 @@
                 |                 Created: <time class="published" datetime="2019-07-31T00:00:00+02:00">
                     Wed 31 July 2019
                 </time>
-                - Updated: <time class="modified" datetime="2019-12-01T20:20:41+01:00">
-                    Sun 01 December 2019
+                - Updated: <time class="modified" datetime="2019-12-02T12:05:13+01:00">
+                    Mon 02 December 2019
                 </time>
             </p>
             <p>
                 <span class="fas fa-folder"></span>
                     <a href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/library/tensorflow.html">library/tensorflow</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v1.html">api-v1</a>
             </p>
             <p>
                 License:  Apache 2.0             </p>
@@ -108,10 +118,11 @@
     <div class="content">
         <div class="row">
             <div class="seven  columns">
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-speech-to-text-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-speech-to-text-tf/master"></a></p>
-<p>This is a plug-and-play tool to train and evaluate a speech to text tool using deep neural networks. The network architecture is based in one of the tutorials provided by Tensorflow<a href="https://www.tensorflow.org/tutorials/sequences/audio_recognition">1</a>.
-The architecture used in this tutorial is based on some described in the paper Convolutional Neural Networks for Small-footprint Keyword Spotting<a href="https://www.tensorflow.org/tutorials/sequences/audio_recognition">1</a>. 
-There are lots of different approaches to building neural network models to work with audio including recurrent networks or dilated convolutions. This model is based on the kind of convolutional network that will feel very familiar to anyone who's worked with image recognition. That may seem surprising at first though, since audio is inherently a one-dimensional continuous signal across time, not a 2D spatial problem. We define a window of time we believe our spoken words should fit into, and converting the audio signal in that window into an image. This is done by grouping the incoming audio samples into short segments, just a few milliseconds long, and calculating the strength of the frequencies across a set of bands. Each set of frequency strengths from a segment is treated as a vector of numbers, and those vectors are arranged in time order to form a two-dimensional array. This array of values can then be treated like a single-channel image and is known as a spectrogram. These spectograms will be the input for the training.</p>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-posenet-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-posenet-tf/master"></a></p>
+<p>This is a plug-and-play tool for real-time pose estimation using deep neural networks. The original model, weights, code, etc. was created by Google and can be found at https://github.com/tensorflow/tfjs-models/tree/master/posenet. </p>
+<p>PoseNet can be used to estimate either a single pose or multiple poses, meaning there is a version of the algorithm that can detect only one person in an image/video and another version that can detect multiple persons in an image/video. </p>
+<p>The PREDICT method expects an RGB image as input (or the url of an image) and returns as output the different body keypoints with the corresponding coordinates and the associated key score
+<img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-posenet-tf/master/images/posenet.png'/></p>
             </div>
             <div class="five columns">
 <div class="row run">
@@ -122,8 +133,8 @@ There are lots of different approaches to building neural network models to work
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/deep-oc-speech-to-text-tf
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-speech-to-text-tf</code></pre>
+    <pre><code>$ docker pull deephdc/deep-oc-posenet-tf
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-posenet-tf</code></pre>
  
     <h4>Using udocker</h4>
     <p>
@@ -137,9 +148,9 @@ $ source udocker/bin/activate
 $ git clone https://github.com/indigo-dc/udocker
 $ cd udocker
 $ pip install .
-$ udocker pull deephdc/deep-oc-speech-to-text-tf
-$ udocker create deephdc/deep-oc-speech-to-text-tf
-$ udocker run -p 5000:5000  deephdc/deep-oc-speech-to-text-tf</code></pre>
+$ udocker pull deephdc/deep-oc-posenet-tf
+$ udocker create deephdc/deep-oc-posenet-tf
+$ udocker run -p 5000:5000  deephdc/deep-oc-posenet-tf</code></pre>
 
     <hr />
     <p>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog - Module "DEEP OC Posenet"</title>
+          <title>DEEP Open Catalog - Module "Development Docker image"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -38,11 +38,17 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/categories.html">All categories</a>
                                 </li>
                                 <li class="popover-item ">
+                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v1.html">api-v1</a></li>
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/cnn.html">cnn</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a></li>
+                                <li class="popover-item active">
+                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/development.html">development</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/library.html">library</a></li>
                                 <li class="popover-item ">
@@ -53,7 +59,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/models.html">models</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/semantic segmentation.html">semantic segmentation</a></li>
-                                <li class="popover-item active">
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a></li>
@@ -77,41 +83,41 @@
 <div class="container module-entry">
     <div class="header">
         <div class="row">
-            <h2 class="entry-title" >DEEP OC Posenet</h2>
+            <h2 class="entry-title" >Development Docker image</h2>
              
         </div>
         <div class="row">
-            <a class="button" title="GitHub repository" href="https://github.com/deephdc/posenet-tf"><span class="fab fa-github"></span> Get this module</a>
-            <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/deephdc/deep-oc-posenet-tf"><span class="fab fa-docker"></span> deephdc/deep-oc-posenet-tf</a>
+            <a class="button" title="GitHub repository" href="http://github.com/deephdc/DEEP-OC-generic-dev"><span class="fab fa-github"></span> Get this module</a>
+            <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/deephdc/deep-oc-generic-dev"><span class="fab fa-docker"></span> deephdc/deep-oc-generic-dev</a>
         </div>
         <div class="row">
             <p>
                     By
     <!--                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a> -->
                         DEEP-Hybrid-DataCloud Consortium
-                |                 Created: <time class="published" datetime="2019-07-31T00:00:00+02:00">
-                    Wed 31 July 2019
+                |                 Created: <time class="published" datetime="2019-03-01T00:00:00+01:00">
+                    Fri 01 March 2019
                 </time>
-                - Updated: <time class="modified" datetime="2019-12-01T20:20:42+01:00">
-                    Sun 01 December 2019
+                - Updated: <time class="modified" datetime="2019-12-02T12:05:20+01:00">
+                    Mon 02 December 2019
                 </time>
             </p>
             <p>
                 <span class="fas fa-folder"></span>
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/development.html">development</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/library/tensorflow.html">library/tensorflow</a>, 
                     <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>
             </p>
             <p>
-                License:  Apache 2.0             </p>
+                License:  MIT             </p>
         </div>
     </div>
     <div class="content">
         <div class="row">
             <div class="seven  columns">
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-posenet-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-posenet-tf/master"></a></p>
-<p>This is a plug-and-play tool for real-time pose estimation using deep neural networks. The original model, weights, code, etc. was created by Google and can be found at https://github.com/tensorflow/tfjs-models/tree/master/posenet.
-PoseNet can be used to estimate either a single pose or multiple poses, meaning there is a version of the algorithm that can detect only one person in an image/video and one version that can detect multiple persons in an image/video.
-The module implemented here works on pictures (either uploaded or using an URL) and gives as output the different body keypoints with the corresponding coordinates and the associated key score</p>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-generic-dev/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-generic-dev/master"></a></p>
+<p>This is a Docker image for developing new modules. It comes preinstalled with DEEPaaS, Jupyter Lab, Tensorflow, and a number of other tools
+As you have access to the terminal of Jupyter Lab you can develop and debug your application, add your preferred tools.</p>
             </div>
             <div class="five columns">
 <div class="row run">
@@ -122,8 +128,8 @@ The module implemented here works on pictures (either uploaded or using an URL) 
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/deep-oc-posenet-tf
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-posenet-tf</code></pre>
+    <pre><code>$ docker pull deephdc/deep-oc-generic-dev
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-generic-dev</code></pre>
  
     <h4>Using udocker</h4>
     <p>
@@ -137,9 +143,9 @@ $ source udocker/bin/activate
 $ git clone https://github.com/indigo-dc/udocker
 $ cd udocker
 $ pip install .
-$ udocker pull deephdc/deep-oc-posenet-tf
-$ udocker create deephdc/deep-oc-posenet-tf
-$ udocker run -p 5000:5000  deephdc/deep-oc-posenet-tf</code></pre>
+$ udocker pull deephdc/deep-oc-generic-dev
+$ udocker create deephdc/deep-oc-generic-dev
+$ udocker run -p 5000:5000  deephdc/deep-oc-generic-dev</code></pre>
 
     <hr />
     <p>
