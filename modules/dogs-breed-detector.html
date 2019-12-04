@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog - Module "DEEP OC Dogs breed detection"</title>
+          <title>DEEP Open Catalog - Module "Dogs breed detector"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -45,7 +45,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/development.html">development</a></li>
-                                <li class="popover-item active">
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/image classification.html">image classification</a></li>
@@ -63,7 +63,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/semantic segmentation.html">semantic segmentation</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a></li>
-                                <li class="popover-item ">
+                                <li class="popover-item active">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a></li>
@@ -83,12 +83,13 @@
 <div class="container module-entry">
     <div class="header">
         <div class="row">
-            <h2 class="entry-title" >DEEP OC Dogs breed detection</h2>
+            <h2 class="entry-title" >Dogs breed detector</h2>
              
         </div>
         <div class="row">
             <a class="button" title="GitHub repository" href="https://github.com/deephdc/dogs_breed_det"><span class="fab fa-github"></span> Get this module</a>
             <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/deephdc/deep-oc-dogs_breed_det"><span class="fab fa-docker"></span> deephdc/deep-oc-dogs_breed_det</a>
+            <a class="button" title="Dataset" href="https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip"><span class="fa fa-quote-left"></span> Dataset</a>
         </div>
         <div class="row">
             <p>
@@ -98,15 +99,19 @@
                 |                 Created: <time class="published" datetime="2018-11-18T00:00:00+01:00">
                     Sun 18 November 2018
                 </time>
-                - Updated: <time class="modified" datetime="2019-12-04T17:21:05+01:00">
+                - Updated: <time class="modified" datetime="2019-12-04T17:45:11+01:00">
                     Wed 04 December 2019
                 </time>
             </p>
             <p>
                 <span class="fas fa-folder"></span>
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
                     <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/cnn.html">cnn</a>
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/image classification.html">image classification</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/cnn.html">cnn</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v1.html">api-v1</a>
             </p>
             <p>
                 License:  MIT             </p>
@@ -116,28 +121,29 @@
         <div class="row">
             <div class="seven  columns">
                 <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-dogs_breed_det/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-dogs_breed_det/master"></a></p>
-<p>This test application applies Transfer learning for dog's breed identification,
-which is implemented by means of Tensorflow and Keras: </p>
-<p>From a pre-trained CNN model 
-(VGG16 | VGG19 | Resnet50 | InceptionV3) <a href="">1</a> the last layer is removed, 
-then two new Fully Connected (FC) layers are added, which are trained on the dog's dataset. </p>
-<p>The original dataset [2] consists of 8351 dog's images for 133 breeds divided into 
-training set (6680 pictures), validation set (835), and test set (836), and amounts for 1080 MB in zipped format.</p>
-<p><strong>References</strong></p>
+<p>The application applies Transfer learning for dog's breed identification, which is implemented by the means of Tensorflow and Keras:</p>
+<p>From a pre-trained CNN model (VGG16 | VGG19 | Resnet50 | InceptionV3 [1]) the last layer is removed,
+then new Fully Connected (FC) layers are added, which are trained on the dog's dataset.</p>
+<p>The original dataset ([2]) consists of 8351 dog's images for 133 breeds divided into: </p>
 <ul>
-<li>
-<p>VGG: Simonyan, K., Zisserman, A.: Very deep convolutional networks for large-scale image recognition. CoRR abs/1409.1556 (2014); http://arxiv.org/abs/1409.1556 </p>
-</li>
-<li>
-<p>Resnet: He, Kaiming, Xiangyu Zhang, Shaoqing Ren, and Jian Sun: Deep residual learning for image recognition. 
-In Proceedings of the IEEE conference on computer vision and pattern recognition, pp. 770-778. 2016. https://arxiv.org/abs/1512.03385 </p>
-</li>
-<li>
-<p>InceptionV3: Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jon Shlens, Zbigniew Wojna; The IEEE Conference on Computer Vision 
-and Pattern Recognition (CVPR), 2016, pp. 2818-2826. https://arxiv.org/abs/1512.00567 </p>
-</li>
+<li>training set (6680 pictures)</li>
+<li>validation set (835)</li>
+<li>test set (836)</li>
 </ul>
-<p>[2]: Dogs dataset: https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip</p>
+<p>and amounts for <strong>1080 MB</strong> in zipped format (see the dataset link).</p>
+<p><strong>N.B.:</strong> pre-trained weights can be found <a href=https://nc.deep-hybrid-datacloud.eu/s/D7DLWcDsRoQmRMN>here</a></p>
+<p><strong>References</strong></p>
+<p>[1] CNN articles:</p>
+<ul>
+<li>VGG: Simonyan, K., Zisserman, A.: Very deep convolutional networks for large-scale image recognition.
+ CoRR abs/1409.1556 (2014); http://arxiv.org/abs/1409.1556</li>
+<li>Resnet: He, Kaiming, Xiangyu Zhang, Shaoqing Ren, and Jian Sun: Deep residual learning for image recognition. 
+In Proceedings of the IEEE conference on computer vision and pattern recognition, pp. 770-778. 2016. https://arxiv.org/abs/1512.03385</li>
+<li>InceptionV3: Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jon Shlens, Zbigniew Wojna; The IEEE Conference on Computer Vision
+and Pattern Recognition (CVPR), 2016, pp. 2818-2826. https://arxiv.org/abs/1512.00567</li>
+</ul>
+<p>[2] Dogs dataset: <a href=https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip>
+https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip</a></p>
             </div>
             <div class="five columns">
 <div class="row run">
