@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>DEEP Open Catalog - Category vaihingen dataset</title>
+          <title>DEEP Open Catalog - Module "semseg_vaihingen"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -14,6 +14,9 @@
 
         <link rel="icon" type="image/png" href="https://marketplace.deep-hybrid-datacloud.eu/favicon.ico" />
         
+
+
+
 </head>
 
 <body>
@@ -49,6 +52,8 @@
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a></li>
                                 <li class="popover-item ">
+                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/jupyterlab.html">jupyterlab</a></li>
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/library.html">library</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/library/tensorflow.html">library/tensorflow</a></li>
@@ -58,12 +63,10 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/semantic segmentation.html">semantic segmentation</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a></li>
-                                <li class="popover-item ">
+                                <li class="popover-item active">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a></li>
-                                <li class="popover-item active">
-                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/vaihingen dataset.html">vaihingen dataset</a></li>
                             </ul>
                         </div>
                     </div>
@@ -76,48 +79,111 @@
     </div>
 </div>
 </nav>    
-<section id="module-list">
-<div class="container section">
-    <div class="row">
-        <h2>Modules in the 'vaihingen dataset' category</h2>
-    </div>
-
-    <div class="row">
-<ul class="module-list">
-    <li class="six columns">
-        <div class="module-list-entry">
-            <header>
-                <h3 class="entry-title"><a href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-oc-semseg_vaihingen.html" rel="bookmark" title="Permalink to DEEP OC semseg_vaihingen">DEEP OC semseg_vaihingen</a></h3>
-            </header>
-            <div class="row">
-                <div class="one column">
-                </div>
-                <div class="ten columns">
-                    <p class="post-info">
-                        <span class="fas fa-folder"></span>
-                            <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
-                            <a href="https://marketplace.deep-hybrid-datacloud.eu/category/semantic segmentation.html">semantic segmentation</a>, 
-                            <a href="https://marketplace.deep-hybrid-datacloud.eu/category/cnn.html">cnn</a>, 
-                            <a href="https://marketplace.deep-hybrid-datacloud.eu/category/vaihingen dataset.html">vaihingen dataset</a>
-                    </p><!-- /.post-info -->
-                </div>
-            </div>
-            <!--
-                <time class="published" datetime="2019-09-30T00:00:00+02:00"> Mon 30 September 2019 </time> 
-                <address class="vcard author">By
-                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a>
-                </address>
-            -->
-            <div class="entry-content"> 
-                <p>This is semantic segmentation application using DEEPaaS API</p>
-                <a class="button button-primary" href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-oc-semseg_vaihingen.html">Know more &raquo;&raquo;</a>
-            </div><!-- /.entry-content -->
+<section id="module-entry">
+<div class="container module-entry">
+    <div class="header">
+        <div class="row">
+            <h2 class="entry-title" >semseg_vaihingen</h2>
+             
         </div>
-    </li>
+        <div class="row">
+            <a class="button" title="GitHub repository" href="https://github.com/deephdc/semseg_vaihingen"><span class="fab fa-github"></span> Get this module</a>
+            <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/deephdc/deep-oc-semseg_vaihingen"><span class="fab fa-docker"></span> deephdc/deep-oc-semseg_vaihingen</a>
+            <a class="button" title="Dataset" href="http://www2.isprs.org/commissions/comm3/wg4/2d-sem-label-vaihingen.html"><span class="fa fa-quote-left"></span> Dataset</a>
+        </div>
+        <div class="row">
+            <p>
+                    By
+    <!--                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a> -->
+                        DEEP-Hybrid-DataCloud Consortium
+                |                 Created: <time class="published" datetime="2019-09-30T00:00:00+02:00">
+                    Mon 30 September 2019
+                </time>
+                - Updated: <time class="modified" datetime="2019-12-04T14:57:37+01:00">
+                    Wed 04 December 2019
+                </time>
+            </p>
+            <p>
+                <span class="fas fa-folder"></span>
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/semantic segmentation.html">semantic segmentation</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/cnn.html">cnn</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
+                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v1.html">api-v1</a>
+            </p>
+            <p>
+                License:  MIT             </p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="seven  columns">
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-semseg_vaihingen/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-semseg_vaihingen/master"></a></p>
+<p>Example application for ISPRS 2D Semantic Labeling Contest [1]:</p>
+<p>2D semantic segmentation (Vaihingen dataset [2]) that assigns labels to multiple object categories.</p>
+<p><strong>Vaihingen dataset</strong></p>
+<ul>
+<li>33 patches of different sizes with 9 cm spatial resolution</li>
+<li>Manually classified into six land cover classes:</li>
+<li>Impervious surfaces, Building, Low vegetation, Tree, Clutter/background</li>
+<li>The groundtruth is provided for only 16 patches</li>
+<li>For the remaining scenes it is unreleased and used for evaluation of submitted results</li>
 </ul>
+<p><strong>N.B.:</strong> pre-trained weights can be found <a href=https://nc.deep-hybrid-datacloud.eu/s/eTqJexZ5PcBxXR6>here</a> (unzip before use!)</p>
+<p><strong>References</strong></p>
+<p>[1] <a href=http://www2.isprs.org/commissions/comm3/wg4/semantic-labeling.html>http://www2.isprs.org/commissions/comm3/wg4/semantic-labeling.html</a> </p>
+<p>[2] M. Cramer: The DGPF-Test on Digital Airborne Camera Evaluation Overview and Test Design, 
+PFG Photogrammetrie, Fernerkundung, Geoinformation, vol. 2010, no. 2, pp. 73-82, 2010.</p>
+            </div>
+            <div class="five columns">
+<div class="row run">
+    <h3>Run locally on your computer</h3>
+    <h4>Using Docker</h4>
+    <p>
+		You can run this module directly on your computer, assuming that you
+		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
+		installed, by following these steps:
+    </p>
+    <pre><code>$ docker pull deephdc/deep-oc-semseg_vaihingen
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-semseg_vaihingen</code></pre>
+ 
+    <h4>Using udocker</h4>
+    <p>
+        If you do not have Docker available or you do not want to install it,
+        you can use <a title="udocker repository" target="_blank"
+                       href="https://github.com/indigo-dc/udocker">udocker</a> 
+        within a Python virtualenv:
+    </p>
+            <pre><code>$ virtualenv udocker
+$ source udocker/bin/activate
+$ git clone https://github.com/indigo-dc/udocker
+$ cd udocker
+$ pip install .
+$ udocker pull deephdc/deep-oc-semseg_vaihingen
+$ udocker create deephdc/deep-oc-semseg_vaihingen
+$ udocker run -p 5000:5000  deephdc/deep-oc-semseg_vaihingen</code></pre>
+
+    <hr />
+    <p>
+        Once running, point your browser to <code>http://127.0.0.1:5000/</code>
+        and you will see the API documentation, where you can test the module
+        functionality, as well as perform other actions (such as training).
+    </p>
+    <p>
+        For more information, refer to the 
+        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
+           title="DEEP user documentation">user documentation</a>.
+    </p>
+
+</div>
+
+            </div>
+        </div>
     </div>
 </div>
-</section><!-- /#content -->
+</section>
         
 <footer id="contentinfo" class="body">
     <div class="footer">
