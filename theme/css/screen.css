@@ -106,18 +106,26 @@ code {
 .module-list li {
     padding: 1em;
     margin: 0px;
-}
-
-.module-list-entry {
+    min-height: 350px;
+    min-width: 300px;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
     padding: 1em;
     border: 1px solid #d1d1d1;
     background: #f1f1f2;
+    position: relative;
+}
+
+.module-list-entry .button {
+    right: 0;
+    bottom: 0;
+    margin: 2em;
+    position: absolute;
 }
 
 .entry-title {
-    white-space: nowrap;
     width: 100%;
-    overflow: hidden;
+    font-size: 2em;
 }
 
 .paginator {
@@ -148,8 +156,8 @@ code {
 /* Module entries */
 
 .module-entry {
-    padding-top: 50px;
-    margin-top: 7rem;
+    padding-top: 0;
+    margin-top: 65px;
     margin-bottom: 7rem;
 }
 .module-entry .button {
@@ -161,16 +169,31 @@ code {
     font-weight: normal;
 }
 .module-entry .header,
-.module-entry .content {
-    padding:5em;
+.module-entry .buttons,
+.module-entry .run {
+    padding: 3em;
 }
 
-.row .run {
-     border: 1px solid #f1f1f2;
-     background: #f1eafc;
-     margin-bottom: 1em;
-     padding: 2em 2em 0 2em;
+.module-entry .row .content ,
+.module-entry .row .run{
+    padding: 2em 3em 0 3em;
 }
+
+.module-entry .buttons {
+    background: #212651;
+    color: #ffffff;
+}
+
+.module-entry .button {
+    min-width: 15em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.module-entry .buttons li{
+    list-style: none;
+}
+
 
 
 pre {

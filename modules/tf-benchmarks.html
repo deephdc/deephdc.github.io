@@ -77,44 +77,36 @@
     </div>
 </div>
 </nav>    
+
 <section id="module-entry">
 <div class="container module-entry">
-    <div class="header">
-        <div class="row">
-            <h2 class="entry-title" >TF Benchmarks</h2>
-             
-        </div>
-        <div class="row">
-            <a class="button" title="GitHub repository" href="https://github.com/deephdc/benchmarks_cnn_api"><span class="fab fa-github"></span> Get this module</a>
-            <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/deephdc/deep-oc-benchmarks_cnn"><span class="fab fa-docker"></span> deephdc/deep-oc-benchmarks_cnn</a>
-        </div>
-        <div class="row">
-            <p>
-                    By
-    <!--                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a> -->
-                        DEEP-Hybrid-DataCloud Consortium
-                |                 Created: <time class="published" datetime="2019-12-19T00:00:00+01:00">
-                    Thu 19 December 2019
-                </time>
-                - Updated: <time class="modified" datetime="2020-01-10T14:50:54+01:00">
-                    Fri 10 January 2020
-                </time>
-            </p>
-            <p>
-                <span class="fas fa-folder"></span>
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/cnn.html">cnn</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v1.html">api-v1</a>
-            </p>
-            <p>
-                License:  MIT             </p>
-        </div>
-    </div>
-    <div class="content">
-        <div class="row">
-            <div class="seven  columns">
+
+
+    <div class="row">
+        <div class="eight columns">
+            <div class="row header">
+                <h2 class="entry-title" >TF Benchmarks</h2>
+                
+                
+                <p>tf_cnn_benchmarks accessed via DEEPaaS API</p>
+                
+                <hr>
+                <p>
+                    Published by
+                    DEEP-Hybrid-DataCloud Consortium
+                    <br>
+                    Created: 
+                        <time class="published" datetime="2019-12-19T00:00:00+01:00">
+                            Thu 19 December 2019
+                        </time>
+                        - Updated: 
+                        <time class="modified" datetime="2020-01-20T17:12:47+01:00">
+                            Mon 20 January 2020
+                        </time>
+                </p>
+            </div>
+            <div class="row content">
+                <h3>Module description</h3>
                 <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-benchmarks_api/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-benchmarks_api/master"></a></p>
 <p><a href="https://github.com/tensorflow/benchmarks/tree/master/scripts/tf_cnn_benchmarks">tf_cnn_benchmarks</a>
 from TensorFlow team accessed via DEEPaaS API</p>
@@ -126,10 +118,12 @@ See the <a href="https://www.tensorflow.org/performance/performance_models">High
 <p><strong>References</strong></p>
 <p>[1] TF CNN Benchmarks: <a href=https://github.com/tensorflow/benchmarks/tree/master/scripts/tf_cnn_benchmarks>https://github.com/tensorflow/benchmarks/tree/master/scripts/tf_cnn_benchmarks</a></p>
             </div>
-            <div class="five columns">
 <div class="row run">
-    <h3>Run locally on your computer</h3>
-    <h4>Using Docker</h4>
+    <h3>Test this module</h3>
+    <p>
+        You can test and execute this module in various ways.
+    </p>
+    <h4>Excecute locally on your computer using Docker</h4>
     <p>
 		You can run this module directly on your computer, assuming that you
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
@@ -138,7 +132,7 @@ See the <a href="https://www.tensorflow.org/performance/performance_models">High
     <pre><code>$ docker pull deephdc/deep-oc-benchmarks_cnn
 $ docker run -ti -p 5000:5000 deephdc/deep-oc-benchmarks_cnn</code></pre>
  
-    <h4>Using udocker</h4>
+    <h4>Execute on your computer using udocker</h4>
     <p>
         If you do not have Docker available or you do not want to install it,
         you can use <a title="udocker repository" target="_blank"
@@ -155,10 +149,12 @@ $ udocker create deephdc/deep-oc-benchmarks_cnn
 $ udocker run -p 5000:5000  deephdc/deep-oc-benchmarks_cnn</code></pre>
 
     <hr />
+
     <p>
-        Once running, point your browser to <code>http://127.0.0.1:5000/</code>
-        and you will see the API documentation, where you can test the module
-        functionality, as well as perform other actions (such as training).
+        In either case, once the module is running, point your browser to
+        <code>http://127.0.0.1:5000/</code> and you will see the API
+        documentation, where you can test the module functionality, as well as
+        perform other actions (such as training).
     </p>
     <p>
         For more information, refer to the 
@@ -168,10 +164,66 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-benchmarks_cnn</code></pre>
 
 </div>
 
+<div class="row run">
+    <h3>Train this module</h3>
+    <p>
+        You can train this model using the DEEP framework. In order to execute
+        this module in our pilot e-Infrastructure you would need to be
+        registered in the <a href="https://iam.deep-hybrid-datacloud.eu/"
+                             title="DEEP Identity and Access Management">DEEP
+                             IAM</a>.
+    </p>
+    <p>Once you are registedered, you can go to our 
+        <a title="Train module using DEEP Framework" 
+            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-benchmarks-cnn">
+            training dashboard
+        </a>
+        to configure and train it.
+    </p>
+    <p>
+        For more information, refer to the 
+        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
+           title="DEEP user documentation">user documentation</a>.
+    </p>
+</div>
+        </div>
+
+        <div class="four columns buttons">
+            <div class="row">
+                <h3>Categories</h3>
+                <p>
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/cnn.html">cnn</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v1.html">api-v1</a>
+                </p>
+                <h3>License</h3>
+                <p>
+                    License: MIT
+                </p>
+            </div>
+            <div class="row">
+                <h3>Configure and train</h3>
+                <ul>
+                    <li>
+                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-benchmarks-cnn"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <h3>Get the code</h3>
+                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/benchmarks_cnn_api"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-benchmarks_cnn"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+
             </div>
         </div>
     </div>
 </div>
+
+
+
+    
 </section>
         
 <footer id="contentinfo" class="body">

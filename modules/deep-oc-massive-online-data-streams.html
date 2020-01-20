@@ -77,42 +77,36 @@
     </div>
 </div>
 </nav>    
+
 <section id="module-entry">
 <div class="container module-entry">
-    <div class="header">
-        <div class="row">
-            <h2 class="entry-title" >DEEP OC Massive Online Data Streams</h2>
-             
-        </div>
-        <div class="row">
-            <a class="button" title="GitHub repository" href="https://github.com/deephdc/mods"><span class="fab fa-github"></span> Get this module</a>
-            <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/deephdc/deep-oc-mods"><span class="fab fa-docker"></span> deephdc/deep-oc-mods</a>
-        </div>
-        <div class="row">
-            <p>
-                    By
-    <!--                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a> -->
-                        DEEP-Hybrid-DataCloud Consortium
-                |                 Created: <time class="published" datetime="2019-02-19T00:00:00+01:00">
-                    Tue 19 February 2019
-                </time>
-                - Updated: <time class="modified" datetime="2020-01-10T14:50:30+01:00">
-                    Fri 10 January 2020
-                </time>
-            </p>
-            <p>
-                <span class="fas fa-folder"></span>
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
-            </p>
-            <p>
-                License:  Apache 2.0             </p>
-        </div>
-    </div>
-    <div class="content">
-        <div class="row">
-            <div class="seven  columns">
+
+
+    <div class="row">
+        <div class="eight columns">
+            <div class="row header">
+                <h2 class="entry-title" >DEEP OC Massive Online Data Streams</h2>
+                
+                
+                <p>Massive Online Data Streams analysis</p>
+                
+                <hr>
+                <p>
+                    Published by
+                    DEEP-Hybrid-DataCloud Consortium
+                    <br>
+                    Created: 
+                        <time class="published" datetime="2019-02-19T00:00:00+01:00">
+                            Tue 19 February 2019
+                        </time>
+                        - Updated: 
+                        <time class="modified" datetime="2020-01-20T17:12:22+01:00">
+                            Mon 20 January 2020
+                        </time>
+                </p>
+            </div>
+            <div class="row content">
+                <h3>Module description</h3>
                 <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-mods/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-mods/master"></a></p>
 <p>This use case analyzes online data streams in order to generate alerts with time-bounded constrains and in real-time.
 The main study is focused on building additional intelligent module using NN and DL techniques
@@ -135,10 +129,12 @@ LSTM (vanilla, stacked, bidirectional, seq2seq encoder/decoder), GRU, CNN, and M
 <p>[4]: Nguyen, G., Nguyen, B.M., Tran, D. and Hluchy, L., 2018. A heuristics approach to mine behavioural data logs in mobile malware detection system. Data &amp; Knowledge Engineering, 115, pp.129-151.</p>
 <p>[5]: Tran, N., Nguyen, T., Nguyen, B.M. and Nguyen, G., 2018. A Multivariate Fuzzy Time Series Resource Forecast Model for Clouds using LSTM and Data Correlation Analysis. Procedia Computer Science, 126, pp.636-645.</p>
             </div>
-            <div class="five columns">
 <div class="row run">
-    <h3>Run locally on your computer</h3>
-    <h4>Using Docker</h4>
+    <h3>Test this module</h3>
+    <p>
+        You can test and execute this module in various ways.
+    </p>
+    <h4>Excecute locally on your computer using Docker</h4>
     <p>
 		You can run this module directly on your computer, assuming that you
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
@@ -147,7 +143,7 @@ LSTM (vanilla, stacked, bidirectional, seq2seq encoder/decoder), GRU, CNN, and M
     <pre><code>$ docker pull deephdc/deep-oc-mods
 $ docker run -ti -p 5000:5000 deephdc/deep-oc-mods</code></pre>
  
-    <h4>Using udocker</h4>
+    <h4>Execute on your computer using udocker</h4>
     <p>
         If you do not have Docker available or you do not want to install it,
         you can use <a title="udocker repository" target="_blank"
@@ -164,10 +160,12 @@ $ udocker create deephdc/deep-oc-mods
 $ udocker run -p 5000:5000  deephdc/deep-oc-mods</code></pre>
 
     <hr />
+
     <p>
-        Once running, point your browser to <code>http://127.0.0.1:5000/</code>
-        and you will see the API documentation, where you can test the module
-        functionality, as well as perform other actions (such as training).
+        In either case, once the module is running, point your browser to
+        <code>http://127.0.0.1:5000/</code> and you will see the API
+        documentation, where you can test the module functionality, as well as
+        perform other actions (such as training).
     </p>
     <p>
         For more information, refer to the 
@@ -177,10 +175,34 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-mods</code></pre>
 
 </div>
 
+        </div>
+
+        <div class="four columns buttons">
+            <div class="row">
+                <h3>Categories</h3>
+                <p>
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
+                </p>
+                <h3>License</h3>
+                <p>
+                    License: Apache 2.0
+                </p>
+            </div>
+            <div class="row">
+                <h3>Get the code</h3>
+                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/mods"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-mods"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+
             </div>
         </div>
     </div>
 </div>
+
+
+
+    
 </section>
         
 <footer id="contentinfo" class="body">

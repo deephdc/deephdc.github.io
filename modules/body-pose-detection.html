@@ -77,55 +77,48 @@
     </div>
 </div>
 </nav>    
+
 <section id="module-entry">
 <div class="container module-entry">
-    <div class="header">
-        <div class="row">
-            <h2 class="entry-title" >Body pose detection</h2>
-             
-        </div>
-        <div class="row">
-            <a class="button" title="GitHub repository" href="https://github.com/deephdc/posenet-tf"><span class="fab fa-github"></span> Get this module</a>
-            <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/deephdc/deep-oc-posenet-tf"><span class="fab fa-docker"></span> deephdc/deep-oc-posenet-tf</a>
-        </div>
-        <div class="row">
-            <p>
-                    By
-    <!--                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a> -->
-                        DEEP-Hybrid-DataCloud Consortium
-                |                 Created: <time class="published" datetime="2019-07-31T00:00:00+02:00">
-                    Wed 31 July 2019
-                </time>
-                - Updated: <time class="modified" datetime="2020-01-10T14:50:48+01:00">
-                    Fri 10 January 2020
-                </time>
-            </p>
-            <p>
-                <span class="fas fa-folder"></span>
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
-                    <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v1.html">api-v1</a>
-            </p>
-            <p>
-                License:  Apache 2.0             </p>
-        </div>
-    </div>
-    <div class="content">
-        <div class="row">
-            <div class="seven  columns">
+
+
+    <div class="row">
+        <div class="eight columns">
+            <div class="row header">
+                <h2 class="entry-title" >Body pose detection</h2>
+                
+                
+                <p>Detect body poses in images.</p>
+                
+                <hr>
+                <p>
+                    Published by
+                    DEEP-Hybrid-DataCloud Consortium
+                    <br>
+                    Created: 
+                        <time class="published" datetime="2019-07-31T00:00:00+02:00">
+                            Wed 31 July 2019
+                        </time>
+                        - Updated: 
+                        <time class="modified" datetime="2020-01-20T17:12:40+01:00">
+                            Mon 20 January 2020
+                        </time>
+                </p>
+            </div>
+            <div class="row content">
+                <h3>Module description</h3>
                 <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-posenet-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-posenet-tf/master"></a></p>
 <p>This is a plug-and-play tool for real-time pose estimation using deep neural networks. The original model, weights, code, etc. was created by Google and can be found at https://github.com/tensorflow/tfjs-models/tree/master/posenet. </p>
 <p>PoseNet can be used to estimate either a single pose or multiple poses, meaning there is a version of the algorithm that can detect only one person in an image/video and another version that can detect multiple persons in an image/video. </p>
 <p>The PREDICT method expects an RGB image as input (or the url of an image) and returns as output the different body keypoints with the corresponding coordinates and the associated key score
 <img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-posenet-tf/master/images/posenet.png'/></p>
             </div>
-            <div class="five columns">
 <div class="row run">
-    <h3>Run locally on your computer</h3>
-    <h4>Using Docker</h4>
+    <h3>Test this module</h3>
+    <p>
+        You can test and execute this module in various ways.
+    </p>
+    <h4>Excecute locally on your computer using Docker</h4>
     <p>
 		You can run this module directly on your computer, assuming that you
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
@@ -134,7 +127,7 @@
     <pre><code>$ docker pull deephdc/deep-oc-posenet-tf
 $ docker run -ti -p 5000:5000 deephdc/deep-oc-posenet-tf</code></pre>
  
-    <h4>Using udocker</h4>
+    <h4>Execute on your computer using udocker</h4>
     <p>
         If you do not have Docker available or you do not want to install it,
         you can use <a title="udocker repository" target="_blank"
@@ -151,10 +144,12 @@ $ udocker create deephdc/deep-oc-posenet-tf
 $ udocker run -p 5000:5000  deephdc/deep-oc-posenet-tf</code></pre>
 
     <hr />
+
     <p>
-        Once running, point your browser to <code>http://127.0.0.1:5000/</code>
-        and you will see the API documentation, where you can test the module
-        functionality, as well as perform other actions (such as training).
+        In either case, once the module is running, point your browser to
+        <code>http://127.0.0.1:5000/</code> and you will see the API
+        documentation, where you can test the module functionality, as well as
+        perform other actions (such as training).
     </p>
     <p>
         For more information, refer to the 
@@ -164,10 +159,37 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-posenet-tf</code></pre>
 
 </div>
 
+        </div>
+
+        <div class="four columns buttons">
+            <div class="row">
+                <h3>Categories</h3>
+                <p>
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v1.html">api-v1</a>
+                </p>
+                <h3>License</h3>
+                <p>
+                    License: Apache 2.0
+                </p>
+            </div>
+            <div class="row">
+                <h3>Get the code</h3>
+                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/posenet-tf"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-posenet-tf"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+
             </div>
         </div>
     </div>
 </div>
+
+
+
+    
 </section>
         
 <footer id="contentinfo" class="body">
