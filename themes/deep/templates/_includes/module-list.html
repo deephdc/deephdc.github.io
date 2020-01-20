@@ -1,6 +1,6 @@
 <ul class="module-list">
 {% for article in articles_page.object_list %}
-    <li class="six columns">
+    <li class="one-third column">
         <div class="module-list-entry">
             <header>
                 <h3 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3>
@@ -11,10 +11,19 @@
                 <div class="ten columns">
                     <p class="post-info">
                         <span class="fas fa-folder"></span>
+                        Model
                         {% for cat in article.categories or [article.category] %}
-                            <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>{{ ', ' if not loop.last }}
+                        {% if cat.name == "inferece" %}
+                        | <a href="{{ SITEURL }}/{{ cat.url }}">Inference</a>
+                        {% endif %}
+                        {% if cat.name == "trainable" %}
+                        | <a href="{{ SITEURL }}/{{ cat.url }}">Trainable</a>
+                        {% endif %}
+                        {% if cat.name == "pre-trained" %}
+                        | <a href="{{ SITEURL }}/{{ cat.url }}">Pre-trained</a>
+                        {% endif %}
                         {% endfor %}
-                    </p><!-- /.post-info -->
+                    </p>
                 </div>
             </div>
             <!--

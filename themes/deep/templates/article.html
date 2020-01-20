@@ -14,66 +14,104 @@
 {% block title %} - Module "{{ article.title|striptags }}"{% endblock %}
 
 {% block content %}
+
 <section id="module-entry">
 <div class="container module-entry">
-    <div class="header">
-        <div class="row">
-            <h2 class="entry-title" >{{ article.title }}</h2>
-             {% import 'translations.html' as translations with context %}
-             {{ translations.translations_for(article) }}
-        </div>
-        <div class="row">
-            <a class="button" title="GitHub repository" href="{{ article.github }}"><span class="fab fa-github"></span> Get this module</a>
-            <a class="button" title="Deploy from DockerHub" href="https://hub.docker.com/r/{{ article.dockerhub }}"><span class="fab fa-docker"></span> {{ article.dockerhub }}</a>
-            {% if article.cite %}
-            <a class="button" title="Module citation" href="{{ article.cite }}"><span class="fa fa-quote-left"></span> Cite this module</a>
-            {% endif %}
-            {% if article.dataset %}
-            <a class="button" title="Dataset" href="{{ article.dataset }}"><span class="fa fa-quote-left"></span> Dataset</a>
-            {% endif %}
-            {% if article.training_files %}
-            <a class="button" title="Training files" href="{{ article.training_files }}"><span class="fa fa-quote-left"></span> Training files</a>
-            {% endif %}
-        </div>
-        <div class="row">
-            <p>
+
+{% set ns = namespace(trainable=false) %}
+{% for cat in article.categories or [article.category] %}
+    {% if cat.name == "trainable" %}
+    {% set ns.trainable = true %}
+    {% endif %}
+{% endfor %}
+
+    <div class="row">
+        <div class="eight columns">
+            <div class="row header">
+                <h2 class="entry-title" >{{ article.title }}</h2>
+                {% import 'translations.html' as translations with context %}
+                {{ translations.translations_for(article) }}
+                
+                {{ article.summary }}
+                
+                <hr>
+                <p>
                 {% if article.authors %}
-                    By
-                    {% for author in article.authors %}
-    <!--                    <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> -->
-                        {{ author }}
-                    {% endfor %}
-                | {% endif %}
-                Created: <time class="published" datetime="{{ article.date.isoformat() }}">
-                    {{ article.locale_date }}
-                </time>
-                {% if article.modified %}
-                - Updated: <time class="modified" datetime="{{ article.modified.isoformat() }}">
-                    {{ article.locale_modified }}
-                </time>
+                    Published by
+                  {% for author in article.authors %}
+                    {{ author }}
+                  {% endfor %}
                 {% endif %}
-            </p>
-            <p>
-                <span class="fas fa-folder"></span>
-                {% for cat in article.categories or [article.category] %}
-                    <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>{{ ', ' if not loop.last }}
-                {% endfor %}
-            </p>
-            <p>
-                License: {% if article.license %} {{ article.license }} {% else %} - {% endif %}
-            </p>
-        </div>
-    </div>
-    <div class="content">
-        <div class="row">
-            <div class="seven  columns">
+                    <br>
+                    Created: 
+                        <time class="published" datetime="{{ article.date.isoformat() }}">
+                            {{ article.locale_date }}
+                        </time>
+                     {% if article.modified %}
+                        - Updated: 
+                        <time class="modified" datetime="{{ article.modified.isoformat() }}">
+                            {{ article.locale_modified }}
+                        </time>
+                      {% endif %}
+                </p>
+            </div>
+            <div class="row content">
+                <h3>Module description</h3>
                 {{ article.content }}
             </div>
-            <div class="five columns">
-                {% include "_includes/module_execution_instructions.html" %}
+            {% include "_includes/module_execution_instructions.html" %}
+        </div>
+
+        <div class="four columns buttons">
+            <div class="row">
+                <h3>Categories</h3>
+                <p>
+                    {% for cat in article.categories or [article.category] %}
+                        <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>{{ ', ' if not loop.last }}
+                    {% endfor %}
+                </p>
+              {% if article.license %}
+                <h3>License</h3>
+                <p>
+                    License: {{ article.license }}
+                </p>
+              {% endif %}
+            </div>
+          {% if ns.trainable %}
+            <div class="row">
+                <h3>Configure and train</h3>
+                <ul>
+                    <li>
+                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/{{article.dockerhub | replace("deephdc/", "") | replace("_", "-") | lower}}"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
+                    </li>
+                </ul>
+            </div>
+          {% endif %}
+            <div class="row">
+                <h3>Get the code</h3>
+                    <a class="button" title="GitHub repository"  target="_blank" href="{{ article.github }}"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/{{ article.dockerhub }}"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+
+              {% if article.dataset or article.training_files %}
+                <h3>Get the data</h3>
+                  {% if article.dataset %}
+                    <a class="button" title="Dataset"  target="_blank" href="{{ article.dataset }}"><span class="fa fa-quote-left"></span> Dataset <span class="fas fa-arrow-circle-right"></span></a>
+                  {% endif %}
+                  {% if article.training_files %}
+                    <a class="button" title="Training files"  target="_blank" href="{{ article.training_files }}"><span class="fa fa-quote-left"></span> Training files <span class="fas fa-arrow-circle-right"></span></a>
+                  {% endif %}
+              {% endif %}
+              {% if article.cite %}
+                <h3>Citing this module</h3>
+                    <a class="button" title="Module citation"  target="_blank" href="{{ article.cite }}"><span class="fa fa-quote-left"></span> Citation <span class="fas fa-arrow-circle-right"></span></a>
+              {% endif %}
             </div>
         </div>
     </div>
 </div>
+
+
+
+    
 </section>
 {% endblock %}

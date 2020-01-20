@@ -1,6 +1,9 @@
 <div class="row run">
-    <h3>Run locally on your computer</h3>
-    <h4>Using Docker</h4>
+    <h3>Test this module</h3>
+    <p>
+        You can test and execute this module in various ways.
+    </p>
+    <h4>Excecute locally on your computer using Docker</h4>
     <p>
 		You can run this module directly on your computer, assuming that you
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
@@ -9,7 +12,7 @@
     <pre><code>$ docker pull {{ article.dockerhub }}
 $ docker run -ti -p 5000:5000 {{ article.dockerhub }}</code></pre>
  
-    <h4>Using udocker</h4>
+    <h4>Execute on your computer using udocker</h4>
     <p>
         If you do not have Docker available or you do not want to install it,
         you can use <a title="udocker repository" target="_blank"
@@ -26,10 +29,12 @@ $ udocker create {{ article.dockerhub }}
 $ udocker run -p 5000:5000  {{ article.dockerhub }}</code></pre>
 
     <hr />
+
     <p>
-        Once running, point your browser to <code>http://127.0.0.1:5000/</code>
-        and you will see the API documentation, where you can test the module
-        functionality, as well as perform other actions (such as training).
+        In either case, once the module is running, point your browser to
+        <code>http://127.0.0.1:5000/</code> and you will see the API
+        documentation, where you can test the module functionality, as well as
+        perform other actions (such as training).
     </p>
     <p>
         For more information, refer to the 
@@ -39,29 +44,23 @@ $ udocker run -p 5000:5000  {{ article.dockerhub }}</code></pre>
 
 </div>
 
-{% if article.tosca %}
+{% if ns.trainable %}
 <div class="row run">
-    <h3>Run on our pilot e-Infrastructure</h3>
+    <h3>Train this module</h3>
     <p>
-        In order to execute this module in our pilot e-Infrastructure you would
-        need to be registered in the 
-        <a href="https://iam.deep-hybrid-datacloud.eu/"
-           title="DEEP Identity and Access Management">DEEP IAM</a>. <br>
-        The following instructions make use of the <a href="https://github.com/indigo-dc/orchent">orchent</a> CLI. You would need to 
-        install and configure orchent as shown in this <a href="https://github.com/maricaantonacci/deep-tutorials/blob/master/orchent_tutorial.md">tutorial</a>.
+        You can train this model using the DEEP framework. In order to execute
+        this module in our pilot e-Infrastructure you would need to be
+        registered in the <a href="https://iam.deep-hybrid-datacloud.eu/"
+                             title="DEEP Identity and Access Management">DEEP
+                             IAM</a>.
     </p>
-  {% for tosca in article.tosca %}
-    <h4>{{ tosca.title }}</h4>
-    <pre><code>$ curl -o {{ article.slug }}.yml \
-    {{ tosca.url }}
-$ orchent {{ article.slug }}.yml {% if tosca.inputs %} {%raw%}'{{%endraw%}{% for input in tosca.inputs %}"{{input|trim()}}"="..."{%if not loop.last%}, {%endif%}{%endfor%}{%raw%}}'{%endraw%}{% else %}{%raw%}'{}'{%endraw%}{%endif%}</code></pre>
-  {% endfor %}
-    <hr />
-    <p>Check the status of your job</p>
-    <pre><code>$ orchent depshow &lt;Deployment UUID&gt;</code></pre>
-    <p>Once its state is CREATE_COMPLETE, you will get the endpoint to access the service, e.g: </p>
-    <pre><code>"endpoint": "mesos-lb.recas.ba.infn.it:10002"</pre></code>
-    Point your browser to the provided URL.
+    <p>Once you are registedered, you can go to our 
+        <a title="Train module using DEEP Framework" 
+            href="https://train.deep-hybrid-datacloud.eu/module/{{article.dockerhub | replace("deephdc/", "") | replace("_", "-") | lower}}">
+            training dashboard
+        </a>
+        to configure and train it.
+    </p>
     <p>
         For more information, refer to the 
         <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
