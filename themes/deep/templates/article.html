@@ -19,9 +19,19 @@
 <div class="container module-entry">
 
 {% set ns = namespace(trainable=false) %}
+{% set ns = namespace(pretrained=false) %}
+{% set ns = namespace(v2=false) %}
 {% for cat in article.categories or [article.category] %}
     {% if cat.name == "trainable" %}
     {% set ns.trainable = true %}
+    {% endif %}
+
+    {% if cat.name == "pre-trained" %}
+    {% set ns.pretrained = true %}
+    {% endif %}
+
+    {% if cat.name == "api-v2" %}
+    {% set ns.v2 = true %}
     {% endif %}
 {% endfor %}
 
@@ -77,6 +87,29 @@
                 </p>
               {% endif %}
             </div>
+
+          {% if ns.pretrained and ns.v2 %}
+            <div class="row">
+                <h3>Try it live!
+                <img src="https://img.shields.io/badge/-beta-yellow">
+                </h3>
+                <ul>
+                    <li>
+                        <a class="button" title="Try using the swagger UI" target="_blank"
+                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/{{article.dockerhub | replace("deephdc/deep-oc-", "") | replace("_", "-") | lower}}/swagger.json">
+                            <span class="fas fa-window-maximize"></span> Web UI <span class="fas fa-arrow-circle-right"></span></a>
+                        <a class="button" title="API endpoint" target="_blank"
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/{{article.dockerhub | replace("deephdc/deep-oc-", "") | replace("_", "-") | lower}}/">
+                            <span class="fas fa-code"></span> API <span class="fas fa-arrow-circle-right"></span></a>
+                    </li>
+                    <li>
+                        <a class="button" title="Swagger specification" target="_blank"
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/{{article.dockerhub | replace("deephdc/deep-oc-", "") | replace("_", "-") | lower}}/swagger.json">
+                            <span class="fas fa-code"></span> API specification <span class="fas fa-arrow-circle-right"></span></a>
+                    </li>
+                </ul>
+            </div>
+          {% endif %}
           {% if ns.trainable %}
             <div class="row">
                 <h3>Configure and train</h3>
