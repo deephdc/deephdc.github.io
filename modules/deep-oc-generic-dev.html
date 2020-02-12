@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog - Module "Train an image classifier"</title>
+          <title>DEEP Open Catalog - Module "Development Docker image"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -45,7 +45,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/cnn.html">cnn</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a></li>
-                                <li class="popover-item ">
+                                <li class="popover-item active">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/development.html">development</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a></li>
@@ -63,7 +63,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/semantic segmentation.html">semantic segmentation</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a></li>
-                                <li class="popover-item active">
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a></li>
@@ -92,21 +92,13 @@
 
 
 
-
-
-
-
-
-
-
-
     <div class="row">
         <div class="eight columns">
             <div class="row header">
-                <h2 class="entry-title" >Train an image classifier</h2>
+                <h2 class="entry-title" >Development Docker image</h2>
                 
                 
-                <p>Train your own image classifier with your custom dataset. It comes also pretrained on the 1K ImageNet classes.</p>
+                <p>This is a Docker image for developing new modules</p>
                 
                 <hr>
                 <p>
@@ -114,32 +106,20 @@
                     DEEP-Hybrid-DataCloud Consortium
                     <br>
                     Created: 
-                        <time class="published" datetime="2019-01-01T00:00:00+01:00">
-                            Tue 01 January 2019
+                        <time class="published" datetime="2019-03-01T00:00:00+01:00">
+                            Fri 01 March 2019
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2020-02-11T16:42:26+01:00">
-                            Tue 11 February 2020
+                        <time class="modified" datetime="2020-02-12T13:09:43+01:00">
+                            Wed 12 February 2020
                         </time>
                 </p>
             </div>
             <div class="row content">
                 <h3>Module description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-image-classification-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-image-classification-tf/master"></a></p>
-<p>The deep learning revolution has brought significant advances in a number of fields [1], primarily linked to
-image and speech recognition. The standardization of image classification tasks like the <a href="http://www.image-net.org/challenges/LSVRC/">ImageNet Large Scale
-Visual Recognition Challenge</a> [2] has resulted in a reliable way to
-compare top performing architectures.</p>
-<p>This Docker container contains the tools to train an image classifier on your personal dataset. It is a highly
-customizable tool  that let's you choose between tens of different <a href="https://github.com/keras-team/keras-applications">top performing architectures</a>
-and training parameters.</p>
-<p>The container also comes with a pretrained general-purpose image classifier trained on ImageNet.</p>
-<p>The PREDICT method expects an RGB image as input (or the url of an RGB image) and will return a JSON with 
-the top 5 predictions.</p>
-<p><img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-image-classification-tf/master/images/imagenet.png'/></p>
-<p><strong>References</strong></p>
-<p>[1]: Yann LeCun, Yoshua Bengio, and Geofrey Hinton. <a href="https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf">Deep learning</a>. Nature, 521(7553):436-444, May 2015.</p>
-<p>[2]: Olga Russakovsky et al. <a href="https://arxiv.org/abs/1409.0575">ImageNet Large Scale Visual Recognition Challenge</a>. International Journal of Computer Vision (IJCV), 115(3):211-252, 2015.</p>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-generic-dev/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-generic-dev/master"></a></p>
+<p>This is a Docker image for developing new modules. It comes preinstalled with DEEPaaS, Jupyter Lab, Tensorflow, and a number of other tools (see <a href="http://github.com/deephdc/DEEP-OC-generic-dev">here</a>)
+As you have access to the terminal of Jupyter Lab, you can develop and debug your application, add your preferred tools.</p>
             </div>
 <div class="row run">
     <h3>Test this module</h3>
@@ -152,8 +132,8 @@ the top 5 predictions.</p>
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/deep-oc-image-classification-tf
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-image-classification-tf</code></pre>
+    <pre><code>$ docker pull deephdc/deep-oc-generic-dev
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-generic-dev</code></pre>
  
     <h4>Execute on your computer using udocker</h4>
     <p>
@@ -167,9 +147,9 @@ $ source udocker/bin/activate
 $ git clone https://github.com/indigo-dc/udocker
 $ cd udocker
 $ pip install .
-$ udocker pull deephdc/deep-oc-image-classification-tf
-$ udocker create deephdc/deep-oc-image-classification-tf
-$ udocker run -p 5000:5000  deephdc/deep-oc-image-classification-tf</code></pre>
+$ udocker pull deephdc/deep-oc-generic-dev
+$ udocker create deephdc/deep-oc-generic-dev
+$ udocker run -p 5000:5000  deephdc/deep-oc-generic-dev</code></pre>
 
     <hr />
 
@@ -187,87 +167,28 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-image-classification-tf</code></pre>
 
 </div>
 
-<div class="row run">
-    <h3>Train this module</h3>
-    <p>
-        You can train this model using the DEEP framework. In order to execute
-        this module in our pilot e-Infrastructure you would need to be
-        registered in the <a href="https://iam.deep-hybrid-datacloud.eu/"
-                             title="DEEP Identity and Access Management">DEEP
-                             IAM</a>.
-    </p>
-    <p>Once you are registedered, you can go to our 
-        <a title="Train module using DEEP Framework" 
-            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-image-classification-tf">
-            training dashboard
-        </a>
-        to configure and train it.
-    </p>
-    <p>
-        For more information, refer to the 
-        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
-           title="DEEP user documentation">user documentation</a>.
-    </p>
-</div>
         </div>
 
         <div class="four columns buttons">
             <div class="row">
                 <h3>Categories</h3>
                 <p>
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/development.html">development</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/image classification.html">image classification</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/jupyterlab.html">jupyterlab</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
                 </p>
                 <h3>License</h3>
                 <p>
-                    License: Apache 2.0
+                    License: MIT
                 </p>
             </div>
 
             <div class="row">
-                <h3>Try it live!
-                <img src="https://img.shields.io/badge/-beta-yellow">
-                </h3>
-                <ul>
-                    <li>
-                        <a class="button" title="Try using the swagger UI" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/image-classification-tf/swagger.json">
-                            <span class="fas fa-window-maximize"></span> Web UI <span class="fas fa-arrow-circle-right"></span></a>
-                        <a class="button" title="API endpoint" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/image-classification-tf/">
-                            <span class="fas fa-code"></span> API <span class="fas fa-arrow-circle-right"></span></a>
-                    </li>
-                    <li>
-                        <a class="button" title="Swagger specification" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/image-classification-tf/swagger.json">
-                            <span class="fas fa-code"></span> API specification <span class="fas fa-arrow-circle-right"></span></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="row">
-                <h3>Configure and train</h3>
-                <ul>
-                    <li>
-                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-image-classification-tf"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="row">
                 <h3>Get the code</h3>
-                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/image-classification-tf"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-image-classification-tf"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="GitHub repository"  target="_blank" href="http://github.com/deephdc/DEEP-OC-generic-dev"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-generic-dev"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
 
-                <h3>Get the data</h3>
-                    <a class="button" title="Dataset"  target="_blank" href="http://www.image-net.org/challenges/LSVRC/"><span class="fa fa-quote-left"></span> Dataset <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Training files"  target="_blank" href="https://cephrgw01.ifca.es:8080/swift/v1/imagenet-tf/"><span class="fa fa-quote-left"></span> Training files <span class="fas fa-arrow-circle-right"></span></a>
-                <h3>Citing this module</h3>
-                    <a class="button" title="Module citation"  target="_blank" href="http://digital.csic.es/handle/10261/194498"><span class="fa fa-quote-left"></span> Citation <span class="fas fa-arrow-circle-right"></span></a>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog - Module "Speech keywords classifier"</title>
+          <title>DEEP Open Catalog - Module "Seed species classifier"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -96,13 +96,17 @@
 
 
 
+
+
+
+
     <div class="row">
         <div class="eight columns">
             <div class="row header">
-                <h2 class="entry-title" >Speech keywords classifier</h2>
+                <h2 class="entry-title" >Seed species classifier</h2>
                 
                 
-                <p>Train a speech classifier to classify audio files between different keywords.</p>
+                <p>Classify seeds images among 700K species.</p>
                 
                 <hr>
                 <p>
@@ -110,26 +114,33 @@
                     DEEP-Hybrid-DataCloud Consortium
                     <br>
                     Created: 
-                        <time class="published" datetime="2019-07-31T00:00:00+02:00">
-                            Wed 31 July 2019
+                        <time class="published" datetime="2019-01-01T00:00:00+01:00">
+                            Tue 01 January 2019
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2020-02-11T16:42:38+01:00">
-                            Tue 11 February 2020
+                        <time class="modified" datetime="2020-02-12T13:09:32+01:00">
+                            Wed 12 February 2020
                         </time>
                 </p>
             </div>
             <div class="row content">
                 <h3>Module description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-speech-to-text-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-speech-to-text-tf/master"></a></p>
-<p>This is a plug-and-play tool to train and evaluate a speech-to-text tool using deep neural networks. The network architecture is based on one of the tutorials provided by Tensorflow <a href="https://www.tensorflow.org/tutorials/sequences/audio_recognition">1</a>.
-The architecture used in this tutorial is based on some described in the paper Convolutional Neural Networks for Small-footprint Keyword Spotting <a href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43969.pdf">2</a>.</p>
-<p>There are lots of different approaches to building neural network models to work with audio including recurrent networks or dilated convolutions. This model is based on the kind of convolutional network that will feel very familiar to anyone who's worked with image recognition. That may seem surprising at first though, since audio is inherently a one-dimensional continuous signal across time, not a 2D spatial problem. We define a window of time we believe our spoken words should fit into, and converting the audio signal in that window into an image. This is done by grouping the incoming audio samples into short segments, just a few milliseconds long, and calculating the strength of the frequencies across a set of bands. Each set of frequency strengths from a segment is treated as a vector of numbers, and those vectors are arranged in time order to form a two-dimensional array. This array of values can then be treated like a single-channel image and is known as a spectrogram. These spectrograms will be the input for the training.
-The container does not come with any pretrained model, it has to be trained first on a dataset to be used for prediction.</p>
-<p>The PREDICT method expects an audio files as input (or the url of an audio file) and will return a JSON with 
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-seeds-classification-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-seeds-classification-tf/master"></a></p>
+<p>Citizen science has become a powerful force for scientific inquiry, providing researchers with access to a vast array of
+data points while connecting non scientists to the real process of science. This citizen-researcher relationship
+creates a very interesting synergy, allowing for the creation, execution, and analysis of research projects. 
+With this in mind, a Convolutional Neural Network has been trained to identify seed images in collaboration 
+with <a href="http://www.rjb.csic.es">Spanish Royal Botanical Garden</a>.</p>
+<p>This Docker container contains a trained Convolutional Neural network optimized for seeds identification using
+images. The architecture used is an Xception [1] network using Keras on top of Tensorflow.</p>
+<p>The PREDICT method expects an RGB image as input (or the url of an RGB image) and will return a JSON with 
 the top 5 predictions.</p>
-<p><img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-speech-to-text-tf/master/images/speech-to-text.png'/></p>
+<p>As training dataset we have used a collection of images from the <a href="http://www.rjb.csic.es">Spanish Royal Botanical Garden</a>
+which consists of around 28K images from 743 species and 493 genera.</p>
+<p><img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-seeds-classification-tf/master/images/seeds.png'/></p>
+<p>This service is based in the <a href="./deep-oc-image-classification-tensorflow.html">Image Classification with Tensorflow</a> model.</p>
 <p><strong>References</strong></p>
+<p>[1]: Chollet, Francois. <a href="https://arxiv.org/abs/1610.02357">Xception: Deep learning with depthwise separable convolutions</a> arXiv preprint (2017): 1610-02357.</p>
             </div>
 <div class="row run">
     <h3>Test this module</h3>
@@ -142,8 +153,8 @@ the top 5 predictions.</p>
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/deep-oc-speech-to-text-tf
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-speech-to-text-tf</code></pre>
+    <pre><code>$ docker pull deephdc/deep-oc-seeds-classification-tf
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-seeds-classification-tf</code></pre>
  
     <h4>Execute on your computer using udocker</h4>
     <p>
@@ -157,9 +168,9 @@ $ source udocker/bin/activate
 $ git clone https://github.com/indigo-dc/udocker
 $ cd udocker
 $ pip install .
-$ udocker pull deephdc/deep-oc-speech-to-text-tf
-$ udocker create deephdc/deep-oc-speech-to-text-tf
-$ udocker run -p 5000:5000  deephdc/deep-oc-speech-to-text-tf</code></pre>
+$ udocker pull deephdc/deep-oc-seeds-classification-tf
+$ udocker create deephdc/deep-oc-seeds-classification-tf
+$ udocker run -p 5000:5000  deephdc/deep-oc-seeds-classification-tf</code></pre>
 
     <hr />
 
@@ -188,7 +199,7 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-speech-to-text-tf</code></pre>
     </p>
     <p>Once you are registedered, you can go to our 
         <a title="Train module using DEEP Framework" 
-            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-speech-to-text-tf">
+            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-seeds-classification-tf">
             training dashboard
         </a>
         to configure and train it.
@@ -210,6 +221,8 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-speech-to-text-tf</code></pre>
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/image classification.html">image classification</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
                 </p>
                 <h3>License</h3>
@@ -219,20 +232,43 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-speech-to-text-tf</code></pre>
             </div>
 
             <div class="row">
+                <h3>Try it live!
+                <img src="https://img.shields.io/badge/-beta-yellow">
+                </h3>
+                <ul>
+                    <li>
+                        <a class="button" title="Try using the swagger UI" target="_blank"
+                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/seeds-classification-tf/swagger.json">
+                            <span class="fas fa-window-maximize"></span> Web UI <span class="fas fa-arrow-circle-right"></span></a>
+                        <a class="button" title="API endpoint" target="_blank"
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/seeds-classification-tf/">
+                            <span class="fas fa-code"></span> API <span class="fas fa-arrow-circle-right"></span></a>
+                    </li>
+                    <li>
+                        <a class="button" title="Swagger specification" target="_blank"
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/seeds-classification-tf/swagger.json">
+                            <span class="fas fa-code"></span> API specification <span class="fas fa-arrow-circle-right"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
                 <h3>Configure and train</h3>
                 <ul>
                     <li>
-                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-speech-to-text-tf"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
+                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-seeds-classification-tf"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
                     </li>
                 </ul>
             </div>
             <div class="row">
                 <h3>Get the code</h3>
-                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/speech-to-text-tf"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-speech-to-text-tf"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/image-classification-tf"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-seeds-classification-tf"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
 
+                <h3>Get the data</h3>
+                    <a class="button" title="Dataset"  target="_blank" href="http://www.rjb.csic.es/jardinbotanico/jardin/"><span class="fa fa-quote-left"></span> Dataset <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Training files"  target="_blank" href="https://cephrgw01.ifca.es:8080/swift/v1/seeds-tf/"><span class="fa fa-quote-left"></span> Training files <span class="fas fa-arrow-circle-right"></span></a>
                 <h3>Citing this module</h3>
-                    <a class="button" title="Module citation"  target="_blank" href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43969.pdf"><span class="fa fa-quote-left"></span> Citation <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Module citation"  target="_blank" href="http://digital.csic.es/handle/10261/194549"><span class="fa fa-quote-left"></span> Citation <span class="fas fa-arrow-circle-right"></span></a>
             </div>
         </div>
     </div>

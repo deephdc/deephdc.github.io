@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog - Module "Dogs breed detector"</title>
+          <title>DEEP Open Catalog - Module "Conus species classifier"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -98,13 +98,15 @@
 
 
 
+
+
     <div class="row">
         <div class="eight columns">
             <div class="row header">
-                <h2 class="entry-title" >Dogs breed detector</h2>
+                <h2 class="entry-title" >Conus species classifier</h2>
                 
                 
-                <p>Identify a dogs breed on the image (133 known breeds)</p>
+                <p>Classify conus images among 70 species.</p>
                 
                 <hr>
                 <p>
@@ -112,41 +114,37 @@
                     DEEP-Hybrid-DataCloud Consortium
                     <br>
                     Created: 
-                        <time class="published" datetime="2018-11-18T00:00:00+01:00">
-                            Sun 18 November 2018
+                        <time class="published" datetime="2019-01-01T00:00:00+01:00">
+                            Tue 01 January 2019
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2020-02-11T16:42:21+01:00">
-                            Tue 11 February 2020
+                        <time class="modified" datetime="2020-02-12T13:09:29+01:00">
+                            Wed 12 February 2020
                         </time>
                 </p>
             </div>
             <div class="row content">
                 <h3>Module description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-dogs_breed_det/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-dogs_breed_det/master"></a></p>
-<p>The application applies Transfer learning for dog's breed identification, which is implemented by the means of Tensorflow and Keras:</p>
-<p>From a pre-trained CNN model (VGG16 | VGG19 | Resnet50 | InceptionV3 [1]) the last layer is removed,
-then new Fully Connected (FC) layers are added, which are trained on the dog's dataset.</p>
-<p>The original dataset ([2]) consists of 8351 dog's images for 133 breeds divided into: </p>
-<ul>
-<li>training set (6680 pictures)</li>
-<li>validation set (835)</li>
-<li>test set (836)</li>
-</ul>
-<p>and amounts for <strong>1080 MB</strong> in zipped format (see the dataset link).</p>
-<p><strong>N.B.:</strong> pre-trained weights can be found <a href=https://nc.deep-hybrid-datacloud.eu/s/D7DLWcDsRoQmRMN>here</a></p>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-conus-classification-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-conus-classification-tf/master"></a></p>
+<p>Citizen science has become a powerful force for scientific inquiry, providing researchers with access to a vast array
+of data points while connecting non scientists to the real process of science. This citizen-researcher relationship
+creates a very interesting synergy, allowing for the creation, execution, and analysis of research projects.
+With this in mind, a Convolutional Neural Network has been trained to identify conus marine snails at species
+level [1] in collaboration with the <a href="http://www.mncn.csic.es/">Natural Science Museum of Madrid</a>. The taxonomy
+of these snails has changed significantly several times during recent years and the introduction of Deep Learning
+techniques allowing to classify them is a very valuable tool for the experts.</p>
+<p>This Docker container contains a trained Convolutional Neural network optimized for conus identification using
+images. The architecture used is an Xception [2] network using Keras on top of Tensorflow.</p>
+<p>The PREDICT method expects an RGB image as input (or the url of an RGB image) and will return a JSON with 
+the top 5 predictions.</p>
+<p>The training dataset has been provided by the <a href="http://www.mncn.csic.es/">Natural Science Museum of Madrid</a> and
+it consists on a dataset containing images of 68 species of conus covering three different regions: the Panamic
+region; the South African region; and the Western Atlantic and Mediterranean region.</p>
+<p><img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-conus-classification-tf/master/images/conus.png'/></p>
+<p>This service is based in the <a href="./deep-oc-image-classification-tensorflow.html">Image Classification with Tensorflow</a> model.</p>
 <p><strong>References</strong></p>
-<p>[1] CNN articles:</p>
-<ul>
-<li>VGG: Simonyan, K., Zisserman, A.: Very deep convolutional networks for large-scale image recognition.
- CoRR abs/1409.1556 (2014); http://arxiv.org/abs/1409.1556</li>
-<li>Resnet: He, Kaiming, Xiangyu Zhang, Shaoqing Ren, and Jian Sun: Deep residual learning for image recognition. 
-In Proceedings of the IEEE conference on computer vision and pattern recognition, pp. 770-778. 2016. https://arxiv.org/abs/1512.03385</li>
-<li>InceptionV3: Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jon Shlens, Zbigniew Wojna; The IEEE Conference on Computer Vision
-and Pattern Recognition (CVPR), 2016, pp. 2818-2826. https://arxiv.org/abs/1512.00567</li>
-</ul>
-<p>[2] Dogs dataset: <a href=https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip>
-https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip</a></p>
+<p>[1]: Puillandre, N.; Duda, T.F.; Meyer, C.; Olivera, B.M.; Bouchet, P. (2014). <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4541476/">One, four or 100 genera? A new classification of the cone snails</a>. Journal of Molluscan Studies. 81 (1): 1-23.</p>
+<p>[2]: Chollet, Francois. <a href="https://arxiv.org/abs/1610.02357">Xception: Deep learning with depthwise separable convolutions</a> arXiv preprint (2017): 1610-02357.</p>
             </div>
 <div class="row run">
     <h3>Test this module</h3>
@@ -159,8 +157,8 @@ https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip</a></p
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/deep-oc-dogs_breed_det
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-dogs_breed_det</code></pre>
+    <pre><code>$ docker pull deephdc/deep-oc-conus-classification-tf
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-conus-classification-tf</code></pre>
  
     <h4>Execute on your computer using udocker</h4>
     <p>
@@ -174,9 +172,9 @@ $ source udocker/bin/activate
 $ git clone https://github.com/indigo-dc/udocker
 $ cd udocker
 $ pip install .
-$ udocker pull deephdc/deep-oc-dogs_breed_det
-$ udocker create deephdc/deep-oc-dogs_breed_det
-$ udocker run -p 5000:5000  deephdc/deep-oc-dogs_breed_det</code></pre>
+$ udocker pull deephdc/deep-oc-conus-classification-tf
+$ udocker create deephdc/deep-oc-conus-classification-tf
+$ udocker run -p 5000:5000  deephdc/deep-oc-conus-classification-tf</code></pre>
 
     <hr />
 
@@ -205,7 +203,7 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-dogs_breed_det</code></pre>
     </p>
     <p>Once you are registedered, you can go to our 
         <a title="Train module using DEEP Framework" 
-            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-dogs-breed-det">
+            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-conus-classification-tf">
             training dashboard
         </a>
         to configure and train it.
@@ -223,16 +221,17 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-dogs_breed_det</code></pre>
                 <h3>Categories</h3>
                 <p>
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/image classification.html">image classification</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/cnn.html">cnn</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/image classification.html">image classification</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
                 </p>
                 <h3>License</h3>
                 <p>
-                    License: MIT
+                    License: Apache 2.0
                 </p>
             </div>
 
@@ -243,15 +242,15 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-dogs_breed_det</code></pre>
                 <ul>
                     <li>
                         <a class="button" title="Try using the swagger UI" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/dogs-breed-det/swagger.json">
+                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/conus-classification-tf/swagger.json">
                             <span class="fas fa-window-maximize"></span> Web UI <span class="fas fa-arrow-circle-right"></span></a>
                         <a class="button" title="API endpoint" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/dogs-breed-det/">
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/conus-classification-tf/">
                             <span class="fas fa-code"></span> API <span class="fas fa-arrow-circle-right"></span></a>
                     </li>
                     <li>
                         <a class="button" title="Swagger specification" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/dogs-breed-det/swagger.json">
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/conus-classification-tf/swagger.json">
                             <span class="fas fa-code"></span> API specification <span class="fas fa-arrow-circle-right"></span></a>
                     </li>
                 </ul>
@@ -260,17 +259,20 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-dogs_breed_det</code></pre>
                 <h3>Configure and train</h3>
                 <ul>
                     <li>
-                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-dogs-breed-det"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
+                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-conus-classification-tf"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
                     </li>
                 </ul>
             </div>
             <div class="row">
                 <h3>Get the code</h3>
-                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/dogs_breed_det"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-dogs_breed_det"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/image-classification-tf"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-conus-classification-tf"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
 
                 <h3>Get the data</h3>
-                    <a class="button" title="Dataset"  target="_blank" href="https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip"><span class="fa fa-quote-left"></span> Dataset <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Dataset"  target="_blank" href="http://www.mncn.csic.es/"><span class="fa fa-quote-left"></span> Dataset <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Training files"  target="_blank" href="https://cephrgw01.ifca.es:8080/swift/v1/conus-tf/"><span class="fa fa-quote-left"></span> Training files <span class="fas fa-arrow-circle-right"></span></a>
+                <h3>Citing this module</h3>
+                    <a class="button" title="Module citation"  target="_blank" href="http://digital.csic.es/handle/10261/194548"><span class="fa fa-quote-left"></span> Citation <span class="fas fa-arrow-circle-right"></span></a>
             </div>
         </div>
     </div>

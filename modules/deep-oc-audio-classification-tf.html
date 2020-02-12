@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog - Module "Development Docker image"</title>
+          <title>DEEP Open Catalog - Module "Train an audio classifier"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -45,7 +45,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/cnn.html">cnn</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a></li>
-                                <li class="popover-item active">
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/development.html">development</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a></li>
@@ -63,7 +63,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/semantic segmentation.html">semantic segmentation</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a></li>
-                                <li class="popover-item ">
+                                <li class="popover-item active">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a></li>
@@ -92,13 +92,19 @@
 
 
 
+
+
+
+
+
+
     <div class="row">
         <div class="eight columns">
             <div class="row header">
-                <h2 class="entry-title" >Development Docker image</h2>
+                <h2 class="entry-title" >Train an audio classifier</h2>
                 
                 
-                <p>This is a Docker image for developing new modules</p>
+                <p>Train your own audio classifier with your custom dataset. It comes also pretrained on the 527 AudioSet classes.</p>
                 
                 <hr>
                 <p>
@@ -106,20 +112,31 @@
                     DEEP-Hybrid-DataCloud Consortium
                     <br>
                     Created: 
-                        <time class="published" datetime="2019-03-01T00:00:00+01:00">
-                            Fri 01 March 2019
+                        <time class="published" datetime="2019-09-01T00:00:00+02:00">
+                            Sun 01 September 2019
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2020-02-11T16:42:45+01:00">
-                            Tue 11 February 2020
+                        <time class="modified" datetime="2020-02-12T13:09:39+01:00">
+                            Wed 12 February 2020
                         </time>
                 </p>
             </div>
             <div class="row content">
                 <h3>Module description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-generic-dev/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-generic-dev/master"></a></p>
-<p>This is a Docker image for developing new modules. It comes preinstalled with DEEPaaS, Jupyter Lab, Tensorflow, and a number of other tools (see <a href="http://github.com/deephdc/DEEP-OC-generic-dev">here</a>)
-As you have access to the terminal of Jupyter Lab, you can develop and debug your application, add your preferred tools.</p>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-audio-classification-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-audio-classification-tf/master"></a></p>
+<p>This is a plug-and-play tool to perform audio classification with Deep Learning.
+It allows the user to classify their samples of audio as well as training their
+own classifier for a custom problem.</p>
+<p>The classifier is currently pretrained on the 527 high-level classes from the
+<a href="https://research.google.com/audioset/">AudioSet</a> dataset.</p>
+<p>The PREDICT method expects an audio file as input (or the url of a audio file) and will return a JSON with 
+the top 5 predictions. Most audio file formats are supported (see <a href="https://www.ffmpeg.org/">FFMPEG</a> compatible formats).</p>
+<p><img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-audio-classification-tf/master/images/demo.png'/></p>
+<p><strong>References</strong></p>
+<p>Jort F. Gemmeke, Daniel P. W. Ellis, Dylan Freedman, Aren Jansen, Wade Lawrence, R. Channing Moore, Manoj Plakal, Marvin Ritter,<a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45857.pdf">'Audio set: An ontology and human-labeled dataset for audio events'</a>, IEEE ICASSP, 2017.</p>
+<p>Qiuqiang Kong, Yong Xu, Wenwu Wang, Mark D. Plumbley,<a href="https://arxiv.org/pdf/1711.00927.pdf">'Audio Set classification with attention model: A probabilistic perspective.'</a> arXiv preprint arXiv:1711.00927 (2017).</p>
+<p>Changsong Yu, Karim Said Barsim, Qiuqiang Kong, Bin Yang ,<a href="https://arxiv.org/pdf/1803.02353.pdf">'Multi-level Attention Model for Weakly Supervised Audio Classification.'</a> arXiv preprint arXiv:1803.02353 (2018).</p>
+<p>S. Hershey, S. Chaudhuri, D. P. W. Ellis, J. F. Gemmeke, A. Jansen, R. C. Moore, M. Plakal, D. Platt, R. A. Saurous, B. Seybold et  al., <a href="https://arxiv.org/pdf/1609.09430.pdf">'CNN architectures for large-scale audio classification,'</a> arXiv preprint arXiv:1609.09430, 2016.</p>
             </div>
 <div class="row run">
     <h3>Test this module</h3>
@@ -132,8 +149,8 @@ As you have access to the terminal of Jupyter Lab, you can develop and debug you
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/deep-oc-generic-dev
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-generic-dev</code></pre>
+    <pre><code>$ docker pull deephdc/deep-oc-audio-classification-tf
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-audio-classification-tf</code></pre>
  
     <h4>Execute on your computer using udocker</h4>
     <p>
@@ -147,9 +164,9 @@ $ source udocker/bin/activate
 $ git clone https://github.com/indigo-dc/udocker
 $ cd udocker
 $ pip install .
-$ udocker pull deephdc/deep-oc-generic-dev
-$ udocker create deephdc/deep-oc-generic-dev
-$ udocker run -p 5000:5000  deephdc/deep-oc-generic-dev</code></pre>
+$ udocker pull deephdc/deep-oc-audio-classification-tf
+$ udocker create deephdc/deep-oc-audio-classification-tf
+$ udocker run -p 5000:5000  deephdc/deep-oc-audio-classification-tf</code></pre>
 
     <hr />
 
@@ -167,15 +184,40 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-generic-dev</code></pre>
 
 </div>
 
+<div class="row run">
+    <h3>Train this module</h3>
+    <p>
+        You can train this model using the DEEP framework. In order to execute
+        this module in our pilot e-Infrastructure you would need to be
+        registered in the <a href="https://iam.deep-hybrid-datacloud.eu/"
+                             title="DEEP Identity and Access Management">DEEP
+                             IAM</a>.
+    </p>
+    <p>Once you are registedered, you can go to our 
+        <a title="Train module using DEEP Framework" 
+            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-audio-classification-tf">
+            training dashboard
+        </a>
+        to configure and train it.
+    </p>
+    <p>
+        For more information, refer to the 
+        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
+           title="DEEP user documentation">user documentation</a>.
+    </p>
+</div>
         </div>
 
         <div class="four columns buttons">
             <div class="row">
                 <h3>Categories</h3>
                 <p>
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/development.html">development</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/jupyterlab.html">jupyterlab</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
                 </p>
                 <h3>License</h3>
@@ -185,10 +227,43 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-generic-dev</code></pre>
             </div>
 
             <div class="row">
+                <h3>Try it live!
+                <img src="https://img.shields.io/badge/-beta-yellow">
+                </h3>
+                <ul>
+                    <li>
+                        <a class="button" title="Try using the swagger UI" target="_blank"
+                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/audio-classification-tf/swagger.json">
+                            <span class="fas fa-window-maximize"></span> Web UI <span class="fas fa-arrow-circle-right"></span></a>
+                        <a class="button" title="API endpoint" target="_blank"
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/audio-classification-tf/">
+                            <span class="fas fa-code"></span> API <span class="fas fa-arrow-circle-right"></span></a>
+                    </li>
+                    <li>
+                        <a class="button" title="Swagger specification" target="_blank"
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/audio-classification-tf/swagger.json">
+                            <span class="fas fa-code"></span> API specification <span class="fas fa-arrow-circle-right"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <h3>Configure and train</h3>
+                <ul>
+                    <li>
+                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-audio-classification-tf"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
                 <h3>Get the code</h3>
-                    <a class="button" title="GitHub repository"  target="_blank" href="http://github.com/deephdc/DEEP-OC-generic-dev"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-generic-dev"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="GitHub repository"  target="_blank" href="http://github.com/deephdc/audio-classification-tf"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-audio-classification-tf"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
 
+                <h3>Get the data</h3>
+                    <a class="button" title="Dataset"  target="_blank" href="https://research.google.com/audioset"><span class="fa fa-quote-left"></span> Dataset <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Training files"  target="_blank" href="https://cephrgw01.ifca.es:8080/swift/v1/audio-classification-tf/"><span class="fa fa-quote-left"></span> Training files <span class="fas fa-arrow-circle-right"></span></a>
+                <h3>Citing this module</h3>
+                    <a class="button" title="Module citation"  target="_blank" href="https://arxiv.org/pdf/1803.02353.pdf"><span class="fa fa-quote-left"></span> Citation <span class="fas fa-arrow-circle-right"></span></a>
             </div>
         </div>
     </div>

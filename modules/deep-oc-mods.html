@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog - Module "Train an audio classifier"</title>
+          <title>DEEP Open Catalog - Module "DEEP OC Massive Online Data Streams"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -61,9 +61,9 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/semantic segmentation.html">semantic segmentation</a></li>
-                                <li class="popover-item ">
-                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a></li>
                                 <li class="popover-item active">
+                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a></li>
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a></li>
@@ -98,13 +98,15 @@
 
 
 
+
+
     <div class="row">
         <div class="eight columns">
             <div class="row header">
-                <h2 class="entry-title" >Train an audio classifier</h2>
+                <h2 class="entry-title" >DEEP OC Massive Online Data Streams</h2>
                 
                 
-                <p>Train your own audio classifier with your custom dataset. It comes also pretrained on the 527 AudioSet classes.</p>
+                <p>Deep learning for proactive network monitoring and security protection.</p>
                 
                 <hr>
                 <p>
@@ -112,31 +114,38 @@
                     DEEP-Hybrid-DataCloud Consortium
                     <br>
                     Created: 
-                        <time class="published" datetime="2019-09-01T00:00:00+02:00">
-                            Sun 01 September 2019
+                        <time class="published" datetime="2019-02-19T00:00:00+01:00">
+                            Tue 19 February 2019
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2020-02-11T16:42:42+01:00">
-                            Tue 11 February 2020
+                        <time class="modified" datetime="2020-02-12T13:09:22+01:00">
+                            Wed 12 February 2020
                         </time>
                 </p>
             </div>
             <div class="row content">
                 <h3>Module description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-audio-classification-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-audio-classification-tf/master"></a></p>
-<p>This is a plug-and-play tool to perform audio classification with Deep Learning.
-It allows the user to classify their samples of audio as well as training their
-own classifier for a custom problem.</p>
-<p>The classifier is currently pretrained on the 527 high-level classes from the
-<a href="https://research.google.com/audioset/">AudioSet</a> dataset.</p>
-<p>The PREDICT method expects an audio file as input (or the url of a audio file) and will return a JSON with 
-the top 5 predictions. Most audio file formats are supported (see <a href="https://www.ffmpeg.org/">FFMPEG</a> compatible formats).</p>
-<p><img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-audio-classification-tf/master/images/demo.png'/></p>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-mods/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-mods/master"></a></p>
+<p>The use case challenges proactive network monitoring for security protection of computing infrastructures [1].
+It builds an intelligent module as a machine learning application leveraging deep learning modeling 
+to enhance functionality of intrusion detection system supervising network traffic flows.
+Preserving historical data, cyber security for such centers can be enhanced in hybrid way [3,4,5] 
+using machine learning techniques, especially when large IT infrastructures and devices products 
+a huge amount of dataflows continuously and dynamically.</p>
+<p>The principle of this deep learning module (as a part of the use case) is proactive time-series forecasting. 
+It builds prediction models capable to produce a system behaviour estimation near future. 
+The discrepancy between the prediction and the reality gives an indication of anomaly (i.e. anomaly detection).</p>
+<p>The challenge of the solution is it aims to scalable edge technologies [4] to support
+extensive data analysis and modelling as well as to improve the cyber-resilience in hybrid combination
+in real-time with the building intelligence module using neural networks and deep learning.</p>
+<p>Deep learning architectures [2] available in this module are: MLP, CNN, autoencoder MLP, 
+LSTM, GRU, bidirectional LSTM, sequence to sequence LSTM, stacked LSTM, attention LSTM, TCN, and stackedTCN.</p>
 <p><strong>References</strong></p>
-<p>Jort F. Gemmeke, Daniel P. W. Ellis, Dylan Freedman, Aren Jansen, Wade Lawrence, R. Channing Moore, Manoj Plakal, Marvin Ritter,<a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45857.pdf">'Audio set: An ontology and human-labeled dataset for audio events'</a>, IEEE ICASSP, 2017.</p>
-<p>Qiuqiang Kong, Yong Xu, Wenwu Wang, Mark D. Plumbley,<a href="https://arxiv.org/pdf/1711.00927.pdf">'Audio Set classification with attention model: A probabilistic perspective.'</a> arXiv preprint arXiv:1711.00927 (2017).</p>
-<p>Changsong Yu, Karim Said Barsim, Qiuqiang Kong, Bin Yang ,<a href="https://arxiv.org/pdf/1803.02353.pdf">'Multi-level Attention Model for Weakly Supervised Audio Classification.'</a> arXiv preprint arXiv:1803.02353 (2018).</p>
-<p>S. Hershey, S. Chaudhuri, D. P. W. Ellis, J. F. Gemmeke, A. Jansen, R. C. Moore, M. Plakal, D. Platt, R. A. Saurous, B. Seybold et  al., <a href="https://arxiv.org/pdf/1609.09430.pdf">'CNN architectures for large-scale audio classification,'</a> arXiv preprint arXiv:1609.09430, 2016.</p>
+<p>[1]: Nguyen G., Dlugolinsky S., Tran V., Lopez Garcia A.: Deep learning for proactive network monitoring and security protection. IEEE Access, 2020, Volume 8, ISSN 2169-3536, DOI 10.1109/ACCESS.2020.2968718.</p>
+<p>[2]: Nguyen G., Dlugolinsky S., Bobak M., Tran V., Lopez Garcia A., Heredia I., Malik P., Hluchy L.: Machine Learning and Deep Learning frameworks and libraries for large-scale data mining: a survey. Artificial Intelligence Review, Volume 52, Issue 1, pp. 77-124, ISSN 0269-2821, DOI 10.1007/s10462-018-09679-z. Springer Nature, 2019.</p>
+<p>[3]: Nguyen G., Nguyen, M., Tran, D. and Hluchy L.: A heuristics approach to mine behavioural data logs in mobile malware detection system. Data &amp; Knowledge Engineering, Volume 115, pp. 129-151, ISSN 0169-023X, DOI 10.1016/j.datak.2018.03.002. Elsevier, 2018.</p>
+<p>[4]: Bhattacharyya, D.K. and Kalita, J.K., 2013. Network anomaly detection: A machine learning perspective. Chapman and Hall/CRC.</p>
+<p>[5]: Dua, S. and Du, X., 2016. Data mining and machine learning in cybersecurity. Auerbach Publications.</p>
             </div>
 <div class="row run">
     <h3>Test this module</h3>
@@ -149,8 +158,8 @@ the top 5 predictions. Most audio file formats are supported (see <a href="https
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/deep-oc-audio-classification-tf
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-audio-classification-tf</code></pre>
+    <pre><code>$ docker pull deephdc/deep-oc-mods
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-mods</code></pre>
  
     <h4>Execute on your computer using udocker</h4>
     <p>
@@ -164,9 +173,9 @@ $ source udocker/bin/activate
 $ git clone https://github.com/indigo-dc/udocker
 $ cd udocker
 $ pip install .
-$ udocker pull deephdc/deep-oc-audio-classification-tf
-$ udocker create deephdc/deep-oc-audio-classification-tf
-$ udocker run -p 5000:5000  deephdc/deep-oc-audio-classification-tf</code></pre>
+$ udocker pull deephdc/deep-oc-mods
+$ udocker create deephdc/deep-oc-mods
+$ udocker run -p 5000:5000  deephdc/deep-oc-mods</code></pre>
 
     <hr />
 
@@ -195,7 +204,7 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-audio-classification-tf</code></pre>
     </p>
     <p>Once you are registedered, you can go to our 
         <a title="Train module using DEEP Framework" 
-            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-audio-classification-tf">
+            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-mods">
             training dashboard
         </a>
         to configure and train it.
@@ -212,58 +221,34 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-audio-classification-tf</code></pre>
             <div class="row">
                 <h3>Categories</h3>
                 <p>
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/keras.html">keras</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>
                 </p>
                 <h3>License</h3>
                 <p>
-                    License: MIT
+                    License: Apache 2.0
                 </p>
             </div>
 
             <div class="row">
-                <h3>Try it live!
-                <img src="https://img.shields.io/badge/-beta-yellow">
-                </h3>
-                <ul>
-                    <li>
-                        <a class="button" title="Try using the swagger UI" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/audio-classification-tf/swagger.json">
-                            <span class="fas fa-window-maximize"></span> Web UI <span class="fas fa-arrow-circle-right"></span></a>
-                        <a class="button" title="API endpoint" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/audio-classification-tf/">
-                            <span class="fas fa-code"></span> API <span class="fas fa-arrow-circle-right"></span></a>
-                    </li>
-                    <li>
-                        <a class="button" title="Swagger specification" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/audio-classification-tf/swagger.json">
-                            <span class="fas fa-code"></span> API specification <span class="fas fa-arrow-circle-right"></span></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="row">
                 <h3>Configure and train</h3>
                 <ul>
                     <li>
-                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-audio-classification-tf"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
+                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-mods"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
                     </li>
                 </ul>
             </div>
             <div class="row">
                 <h3>Get the code</h3>
-                    <a class="button" title="GitHub repository"  target="_blank" href="http://github.com/deephdc/audio-classification-tf"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-audio-classification-tf"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/mods"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-mods"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
 
-                <h3>Get the data</h3>
-                    <a class="button" title="Dataset"  target="_blank" href="https://research.google.com/audioset"><span class="fa fa-quote-left"></span> Dataset <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Training files"  target="_blank" href="https://cephrgw01.ifca.es:8080/swift/v1/audio-classification-tf/"><span class="fa fa-quote-left"></span> Training files <span class="fas fa-arrow-circle-right"></span></a>
-                <h3>Citing this module</h3>
-                    <a class="button" title="Module citation"  target="_blank" href="https://arxiv.org/pdf/1803.02353.pdf"><span class="fa fa-quote-left"></span> Citation <span class="fas fa-arrow-circle-right"></span></a>
             </div>
         </div>
     </div>
