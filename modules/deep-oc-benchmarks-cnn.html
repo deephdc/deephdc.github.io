@@ -112,20 +112,21 @@
                             Thu 19 December 2019
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2020-02-12T14:54:51+01:00">
-                            Wed 12 February 2020
+                        <time class="modified" datetime="2020-02-17T17:09:32+01:00">
+                            Mon 17 February 2020
                         </time>
                 </p>
             </div>
             <div class="row content">
                 <h3>Module description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-benchmarks_api/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-benchmarks_api/master"></a></p>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-benchmarks_cnn/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-benchmarks_cnn/master"></a></p>
 <p><a href="https://github.com/tensorflow/benchmarks/tree/master/scripts/tf_cnn_benchmarks">tf_cnn_benchmarks</a>
-from TensorFlow team accessed via DEEPaaS API</p>
+from TensorFlow team accessed via <a href="https://github.com/indigo-dc/DEEPaaS">DEEPaaS API</a></p>
 <p>tf_cnn_benchmarks contains implementations of several popular convolutional models 
 (e.g. Googlenet, Inception, Overfeat, Resnet, VGG), 
-and is designed to be as fast as possible. tf_cnn_benchmarks supports both running on a single machine 
-or running in distributed mode across multiple hosts.
+and is designed to be as fast as possible. tf_cnn_benchmarks supports running on a single machine 
+on a single GPU and multiple GPUs
+(please, note that running in distributed mode across multiple hosts is not supported by these Docker images).
 See the <a href="https://www.tensorflow.org/performance/performance_models">High-Performance models guide</a> for more information.</p>
 <p><strong>References</strong></p>
 <p>[1] TF CNN Benchmarks: <a href=https://github.com/tensorflow/benchmarks/tree/master/scripts/tf_cnn_benchmarks>https://github.com/tensorflow/benchmarks/tree/master/scripts/tf_cnn_benchmarks</a></p>
