@@ -1,27 +1,9 @@
 {% extends "base.html" %}
-{% block head %}
-  {{ super() }}
-  {% if article.description %}
-    <meta name="description" content="{{article.description}}" />
-  {% endif %}
-
-  {% for tag in article.tags %}
-    <meta name="tags" content="{{tag}}" />
-  {% endfor %}
-
-{% endblock %}
-
-{% block title %} - Module "{{ article.title|striptags }}"{% endblock %}
-
-{% block content %}
-
-<section id="module-entry">
-<div class="container module-entry">
 
 {% set ns = namespace(trainable=false) %}
 {% set ns = namespace(pretrained=false) %}
 {% set ns = namespace(v2=false) %}
-    {% set ns = namespace(tools=false) %}
+{% set ns = namespace(tools=false) %}
 {% for cat in article.categories or [article.category] %}
     {% if cat.name == "trainable" %}
     {% set ns.trainable = true %}
@@ -39,6 +21,25 @@
     {% set ns.tools = true %}
     {% endif %}
 {% endfor %}
+
+{% block head %}
+  {{ super() }}
+  {% if article.description %}
+    <meta name="description" content="{{article.description}}" />
+  {% endif %}
+
+  {% for tag in article.tags %}
+    <meta name="tags" content="{{tag}}" />
+  {% endfor %}
+
+{% endblock %}
+
+{% block title %} - {% if ns.tools %} Tool {% else %} Model {% endif %} "{{ article.title|striptags }}"{% endblock %}
+
+{% block content %}
+
+<section id="module-entry">
+<div class="container module-entry">
 
     <div class="row">
         <div class="eight columns">
