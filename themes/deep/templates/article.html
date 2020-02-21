@@ -21,6 +21,7 @@
 {% set ns = namespace(trainable=false) %}
 {% set ns = namespace(pretrained=false) %}
 {% set ns = namespace(v2=false) %}
+    {% set ns = namespace(tools=false) %}
 {% for cat in article.categories or [article.category] %}
     {% if cat.name == "trainable" %}
     {% set ns.trainable = true %}
@@ -32,6 +33,10 @@
 
     {% if cat.name == "api-v2" %}
     {% set ns.v2 = true %}
+    {% endif %}
+
+    {% if cat.name == "tools" %}
+    {% set ns.tools = true %}
     {% endif %}
 {% endfor %}
 
@@ -45,6 +50,25 @@
                 {{ article.summary }}
                 
                 <hr>
+                <p>
+                    <span class="fas fa-folder"></span>
+                    {% if ns.tools %}
+                        Tool
+                    {% else %}
+                        Model
+                    {% endif %}
+                    {% for cat in article.categories or [article.category] %}
+                    {% if cat.name == "inference" %}
+                    | <a href="{{ SITEURL }}/{{ cat.url }}">Inference</a>
+                    {% endif %}
+                    {% if cat.name == "trainable" %}
+                    | <a href="{{ SITEURL }}/{{ cat.url }}">Trainable</a>
+                    {% endif %}
+                    {% if cat.name == "pre-trained" %}
+                    | <a href="{{ SITEURL }}/{{ cat.url }}">Pre-trained</a>
+                    {% endif %}
+                    {% endfor %}
+                </p>
                 <p>
                 {% if article.authors %}
                     Published by
@@ -66,7 +90,7 @@
                 </p>
             </div>
             <div class="row content">
-                <h3>Module description</h3>
+                <h3>{% if ns.tools %} Tool {% else %} Model {% endif %} Description</h3>
                 {{ article.content }}
             </div>
             {% include "_includes/module_execution_instructions.html" %}
