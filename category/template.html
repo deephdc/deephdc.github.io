@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog - Module "Speech keywords classifier"</title>
+        <title>DEEP Open Catalog - Category template</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -14,9 +14,6 @@
 
         <link rel="icon" type="image/png" href="https://marketplace.deep-hybrid-datacloud.eu/favicon.ico" />
         
-
-
-
 </head>
 
 <body>
@@ -65,9 +62,9 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/semantic segmentation.html">semantic segmentation</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a></li>
-                                <li class="popover-item ">
-                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/template.html">template</a></li>
                                 <li class="popover-item active">
+                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/template.html">template</a></li>
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tools.html">tools</a></li>
@@ -85,181 +82,47 @@
     </div>
 </div>
 </nav>    
-
-<section id="module-entry">
-<div class="container module-entry">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<section id="module-list">
+<div class="container section">
+    <div class="row">
+        <h2>Modules in the 'template' category</h2>
+    </div>
 
     <div class="row">
-        <div class="eight columns">
-            <div class="row header">
-                <h2 class="entry-title" >Speech keywords classifier</h2>
-                
-                
-                <p>Train a speech classifier to classify audio files between different keywords.</p>
-                
-                <hr>
-                <p>
-                    <span class="fas fa-folder"></span>
-                        Model
-                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">Trainable</a>
-                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">Inference</a>
-                </p>
-                <p>
-                    Published by
-                    DEEP-Hybrid-DataCloud Consortium
-                    <br>
-                    Created: 
-                        <time class="published" datetime="2019-07-31T00:00:00+02:00">
-                            Wed 31 July 2019
-                        </time>
-                        - Updated: 
-                        <time class="modified" datetime="2020-02-21T11:59:15+01:00">
-                            Fri 21 February 2020
-                        </time>
-                </p>
+<ul class="module-list">
+
+
+    <li class="one-third column">
+        <div class="module-list-entry">
+            <header>
+                <h3 class="entry-title"><a href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-data-science-template.html" rel="bookmark" title="Permalink to DEEP Data Science template">DEEP Data Science template</a></h3>
+            </header>
+            <div class="row">
+                <div class="one column">
+                </div>
+                <div class="ten columns">
+                    <p class="post-info">
+                        <span class="fas fa-folder"></span>
+                            Tool
+                    </p>
+                </div>
             </div>
-            <div class="row content">
-                <h3> Model  Description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-speech-to-text-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-speech-to-text-tf/master"></a></p>
-<p>This is a plug-and-play tool to train and evaluate a speech-to-text tool using deep neural networks. The network architecture is based on one of the tutorials provided by Tensorflow <a href="https://www.tensorflow.org/tutorials/sequences/audio_recognition">1</a>.
-The architecture used in this tutorial is based on some described in the paper Convolutional Neural Networks for Small-footprint Keyword Spotting <a href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43969.pdf">2</a>.</p>
-<p>There are lots of different approaches to building neural network models to work with audio including recurrent networks or dilated convolutions. This model is based on the kind of convolutional network that will feel very familiar to anyone who's worked with image recognition. That may seem surprising at first though, since audio is inherently a one-dimensional continuous signal across time, not a 2D spatial problem. We define a window of time we believe our spoken words should fit into, and converting the audio signal in that window into an image. This is done by grouping the incoming audio samples into short segments, just a few milliseconds long, and calculating the strength of the frequencies across a set of bands. Each set of frequency strengths from a segment is treated as a vector of numbers, and those vectors are arranged in time order to form a two-dimensional array. This array of values can then be treated like a single-channel image and is known as a spectrogram. These spectrograms will be the input for the training.
-The container does not come with any pretrained model, it has to be trained first on a dataset to be used for prediction.</p>
-<p>The PREDICT method expects an audio files as input (or the url of an audio file) and will return a JSON with 
-the top 5 predictions.</p>
-<p><img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-speech-to-text-tf/master/images/speech-to-text.png'/></p>
-<p><strong>References</strong></p>
-            </div>
-<div class="row run">
-    <h3>Test this module</h3>
-    <p>
-        You can test and execute this module in various ways.
-    </p>
-    <h4>Excecute locally on your computer using Docker</h4>
-    <p>
-		You can run this module directly on your computer, assuming that you
-		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
-		installed, by following these steps:
-    </p>
-    <pre><code>$ docker pull deephdc/deep-oc-speech-to-text-tf
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-speech-to-text-tf</code></pre>
- 
-    <h4>Execute on your computer using udocker</h4>
-    <p>
-        If you do not have Docker available or you do not want to install it,
-        you can use <a title="udocker repository" target="_blank"
-                       href="https://github.com/indigo-dc/udocker">udocker</a> 
-        within a Python virtualenv:
-    </p>
-            <pre><code>$ virtualenv udocker
-$ source udocker/bin/activate
-$ git clone https://github.com/indigo-dc/udocker
-$ cd udocker
-$ pip install .
-$ udocker pull deephdc/deep-oc-speech-to-text-tf
-$ udocker create deephdc/deep-oc-speech-to-text-tf
-$ udocker run -p 5000:5000  deephdc/deep-oc-speech-to-text-tf</code></pre>
-
-    <hr />
-
-    <p>
-        In either case, once the module is running, point your browser to
-        <code>http://127.0.0.1:5000/</code> and you will see the API
-        documentation, where you can test the module functionality, as well as
-        perform other actions (such as training).
-    </p>
-    <p>
-        For more information, refer to the 
-        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
-           title="DEEP user documentation">user documentation</a>.
-    </p>
-
-</div>
-
-<div class="row run">
-    <h3>Train this module</h3>
-    <p>
-        You can train this model using the DEEP framework. In order to execute
-        this module in our pilot e-Infrastructure you would need to be
-        registered in the <a href="https://iam.deep-hybrid-datacloud.eu/"
-                             title="DEEP Identity and Access Management">DEEP
-                             IAM</a>.
-    </p>
-    <p>Once you are registedered, you can go to our 
-        <a title="Train module using DEEP Framework" 
-            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-speech-to-text-tf">
-            training dashboard
-        </a>
-        to configure and train it.
-    </p>
-    <p>
-        For more information, refer to the 
-        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
-           title="DEEP user documentation">user documentation</a>.
-    </p>
-</div>
+            <!--
+                <time class="published" datetime="2018-08-01T00:00:00+02:00"> Wed 01 August 2018 </time> 
+                <address class="vcard author">By
+                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a>
+                </address>
+            -->
+            <div class="entry-content"> 
+                <p>A logical, reasonably standardized, but flexible project structure for doing and sharing data science work. Based on more general <a href="http://drivendata.github.io/cookiecutter-data-science/">data science template</a>.</p>
+                <a class="button button-primary" href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-data-science-template.html">Know more &raquo;&raquo;</a>
+            </div><!-- /.entry-content -->
         </div>
-
-        <div class="four columns buttons">
-            <div class="row">
-                <h3>Categories</h3>
-                <p>
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
-                </p>
-                <h3>License</h3>
-                <p>
-                    License: Apache 2.0
-                </p>
-            </div>
-
-            <div class="row">
-                <h3>Configure and train</h3>
-                <ul>
-                    <li>
-                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-speech-to-text-tf"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="row">
-                <h3>Get the code</h3>
-                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/speech-to-text-tf"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-speech-to-text-tf"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
-
-                <h3>Citing this module</h3>
-                    <a class="button" title="Module citation"  target="_blank" href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43969.pdf"><span class="fa fa-quote-left"></span> Citation <span class="fas fa-arrow-circle-right"></span></a>
-            </div>
-        </div>
+    </li>
+</ul>
     </div>
 </div>
-
-
-
-    
-</section>
+</section><!-- /#content -->
         
 <footer id="contentinfo" class="body">
     <div class="footer">
