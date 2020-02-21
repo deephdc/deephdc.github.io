@@ -1,6 +1,17 @@
-# DEEP Data Science template
+---
+Title: DEEP Data Science template
+Date: 2019-02-16
+Modified: 2019-02-16
+Category: tools
+GitHub: https://github.com/indigo-dc/cookiecutter-data-science
 
-_A logical, reasonably standardized, but flexible project structure for doing and sharing data science work. 
+License: MIT
+Summary: >
+    A logical, reasonably standardized, but flexible project structure for doing and sharing data science work.
+    Based on more general [data science template](http://drivendata.github.io/cookiecutter-data-science/).
+---
+
+_A logical, reasonably standardized, but flexible project structure for doing and sharing data science work.
 Based on more general [template](http://drivendata.github.io/cookiecutter-data-science/)._
 
 To simplify the development and in an easy way integrate a model with [DEEPaaS API](https://github.com/indigo-dc/DEEPaaS),
@@ -43,7 +54,7 @@ Once you answer all the questions, two directories will be created:
 
 each directory is a git repository and has two branches: `master` and `test`.
 
-#### The directory structure of <your_project> looks like this: 
+#### The directory structure of <your_project> looks like this:
 
 ```
 ├── LICENSE
@@ -56,7 +67,7 @@ each directory is a git repository and has two branches: `master` and `test`.
 ├── models                 <- Trained and serialized models, model predictions, or model summaries
 │
 ├── notebooks              <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                             the creator's initials (if many user development), 
+│                             the creator's initials (if many user development),
 │                             and a short `_` delimited description, e.g.
 │                             `1.0-jqp-initial_data_exploration.ipynb`.
 │
@@ -90,7 +101,7 @@ each directory is a git repository and has two branches: `master` and `test`.
 └── tox.ini                <- tox file with settings for running tox; see tox.testrun.org
 ```
 
-#### The directory structure of DEEP-OC-<your_project> looks like this: 
+#### The directory structure of DEEP-OC-<your_project> looks like this:
 
 ```
 ├─ Dockerfile             Describes main steps on integrationg DEEPaaS API and

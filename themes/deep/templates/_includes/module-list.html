@@ -1,5 +1,13 @@
 <ul class="module-list">
 {% for article in articles_page.object_list %}
+
+    {% set ns = namespace(tools=false) %}
+    {% for cat in article.categories or [article.category] %}
+        {% if cat.name == "tools" %}
+        {% set ns.tools = true %}
+        {% endif %}
+    {% endfor %}
+
     <li class="one-third column">
         <div class="module-list-entry">
             <header>
@@ -11,9 +19,13 @@
                 <div class="ten columns">
                     <p class="post-info">
                         <span class="fas fa-folder"></span>
-                        Model
+                        {% if ns.tools %}
+                            Tool
+                        {% else %}
+                            Model
+                        {% endif %}
                         {% for cat in article.categories or [article.category] %}
-                        {% if cat.name == "inferece" %}
+                        {% if cat.name == "inference" %}
                         | <a href="{{ SITEURL }}/{{ cat.url }}">Inference</a>
                         {% endif %}
                         {% if cat.name == "trainable" %}
