@@ -1,8 +1,8 @@
 ---
 Title: DEEP Data Science template
-Date: 2019-02-16
+Date: 2018-08-01
 Modified: 2019-02-16
-Category: tools
+Category: tools, template, data science
 GitHub: https://github.com/indigo-dc/cookiecutter-data-science
 
 License: MIT
@@ -16,14 +16,6 @@ Based on more general [template](http://drivendata.github.io/cookiecutter-data-s
 
 To simplify the development and in an easy way integrate a model with [DEEPaaS API](https://github.com/indigo-dc/DEEPaaS),
 a project template, [DEEP Data Science template](https://github.com/indigo-dc/cookiecutter-data-science) is offered.
-
-|              |                                                        |
-|--------------|--------------------------------------------------------|
-| GitHub       | https://github.com/indigo-dc/cookiecutter-data-science |
-| Date created | 2018-08                                                |
-| License      | MIT                                                    |
-| Keywords     | project, template, data science                        |
-
 
 ### Requirements to use the cookiecutter template:
  - Python 3.5
@@ -120,5 +112,5 @@ each directory is a git repository and has two branches: `master` and `test`.
 
 ### Documentation
 
-More extended documentation can be found [here](http://docs.deep-hybrid-datacloud.eu/en/latest/user/overview/cookiecutter-template.html)
+More extended documentation can be found [here](http://docs.deep-hybrid-datacloud.eu/en/latest/user/overview/cookiecutter-template.html).
 

@@ -93,7 +93,9 @@
                 <h3>{% if ns.tools %} Tool {% else %} Model {% endif %} Description</h3>
                 {{ article.content }}
             </div>
-            {% include "_includes/module_execution_instructions.html" %}
+            {% if not ns.tools %}
+                {% include "_includes/module_execution_instructions.html" %}
+            {% endif %}
         </div>
 
         <div class="four columns buttons">
