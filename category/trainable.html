@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>DEEP Open Catalog</title>
+        <title>DEEP Open Catalog - Category trainable</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
+        <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
 
         <link rel="stylesheet" type="text/css" href="https://marketplace.deep-hybrid-datacloud.eu/theme/css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="https://marketplace.deep-hybrid-datacloud.eu/theme/css/skeleton.css" />
@@ -67,7 +68,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tools.html">tools</a></li>
-                                <li class="popover-item ">
+                                <li class="popover-item active">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a></li>
                             </ul>
                         </div>
@@ -81,39 +82,10 @@
     </div>
 </div>
 </nav>    
-
-<section id="header" class="header">
-<div class="container section">
-    <div class="row">
-        <div class="four columns">
-            <img class="deep-picture" src="images/deep-cloud.png">
-        </div>
-        <div class="eight columns">
-            <h1>DEEP Open Catalog <strong></strong></h1>
-            <p>
-            Welcome to the DEEP Open Catalog!
-            </p>
-            <p>
-            DEEP-Hybrid-DataCloud is delivering a comprehensive platform to
-            easily develop, build, share and deploy Artificial Intelligence,
-            Machine Learning and Deep Learning modules on top of distributed
-            e-Infrastructures.
-            </p>
-            <p>
-            In the DEEP Open Catalog you can find ready to use modules in a
-            variety of domains. These modules can be executed on your local
-            laptop, on a production server or on top of computing
-            e-Infrastructures supporting the DEEP-Hybrid-DataCloud stack.
-            </p>
-        </div>
-    </div>
-</div>
-</section>
-        
 <section id="module-list">
 <div class="container section">
     <div class="row">
-        <h2>Explore our marketplace!</h2>
+        <h2>Modules in the 'trainable' category</h2>
     </div>
 
     <div class="row">
@@ -217,37 +189,6 @@
     <li class="one-third column">
         <div class="module-list-entry">
             <header>
-                <h3 class="entry-title"><a href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-oc-posenet-tf.html" rel="bookmark" title="Permalink to Body pose detection">Body pose detection</a></h3>
-            </header>
-            <div class="row">
-                <div class="one column">
-                </div>
-                <div class="ten columns">
-                    <p class="post-info">
-                        <span class="fas fa-folder"></span>
-                            Model
-                        | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">Inference</a>
-                        | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">Pre-trained</a>
-                    </p>
-                </div>
-            </div>
-            <!--
-                <time class="published" datetime="2019-07-31T00:00:00+02:00"> Wed 31 July 2019 </time> 
-                <address class="vcard author">By
-                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a>
-                </address>
-            -->
-            <div class="entry-content"> 
-                <p>Detect body poses in images.</p>
-                <a class="button button-primary" href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-oc-posenet-tf.html">Know more &raquo;&raquo;</a>
-            </div><!-- /.entry-content -->
-        </div>
-    </li>
-
-
-    <li class="one-third column">
-        <div class="module-list-entry">
-            <header>
                 <h3 class="entry-title"><a href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-oc-speech-to-text-tf.html" rel="bookmark" title="Permalink to Speech keywords classifier">Speech keywords classifier</a></h3>
             </header>
             <div class="row">
@@ -271,35 +212,6 @@
             <div class="entry-content"> 
                 <p>Train a speech classifier to classify audio files between different keywords.</p>
                 <a class="button button-primary" href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-oc-speech-to-text-tf.html">Know more &raquo;&raquo;</a>
-            </div><!-- /.entry-content -->
-        </div>
-    </li>
-
-
-    <li class="one-third column">
-        <div class="module-list-entry">
-            <header>
-                <h3 class="entry-title"><a href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-oc-generic-dev.html" rel="bookmark" title="Permalink to Development Docker image">Development Docker image</a></h3>
-            </header>
-            <div class="row">
-                <div class="one column">
-                </div>
-                <div class="ten columns">
-                    <p class="post-info">
-                        <span class="fas fa-folder"></span>
-                            Model
-                    </p>
-                </div>
-            </div>
-            <!--
-                <time class="published" datetime="2019-03-01T00:00:00+01:00"> Fri 01 March 2019 </time> 
-                <address class="vcard author">By
-                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a>
-                </address>
-            -->
-            <div class="entry-content"> 
-                <p>This is a Docker image for developing new modules</p>
-                <a class="button button-primary" href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-oc-generic-dev.html">Know more &raquo;&raquo;</a>
             </div><!-- /.entry-content -->
         </div>
     </li>
@@ -590,87 +502,10 @@
             </div><!-- /.entry-content -->
         </div>
     </li>
-
-
-    <li class="one-third column">
-        <div class="module-list-entry">
-            <header>
-                <h3 class="entry-title"><a href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-data-science-template.html" rel="bookmark" title="Permalink to DEEP Data Science template">DEEP Data Science template</a></h3>
-            </header>
-            <div class="row">
-                <div class="one column">
-                </div>
-                <div class="ten columns">
-                    <p class="post-info">
-                        <span class="fas fa-folder"></span>
-                            Tool
-                    </p>
-                </div>
-            </div>
-            <!--
-                <time class="published" datetime="2018-08-01T00:00:00+02:00"> Wed 01 August 2018 </time> 
-                <address class="vcard author">By
-                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a>
-                </address>
-            -->
-            <div class="entry-content"> 
-                <p>A logical, reasonably standardized, but flexible project structure for doing and sharing data science work. Based on more general <a href="http://drivendata.github.io/cookiecutter-data-science/">data science template</a>.</p>
-                <a class="button button-primary" href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-data-science-template.html">Know more &raquo;&raquo;</a>
-            </div><!-- /.entry-content -->
-        </div>
-    </li>
 </ul>
     </div>
 </div>
 </section><!-- /#content -->
-
-<section id="quickstart">
-<div id="quickstart" class="container section">
-    <div class="row">
-        <div class="twelve column">
-            <h2>Quickstart</h2>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="three columns">
-            <h4>1. Explore the marketplace</h3>
-            <p>Browse the <a href="#module-list">list of available modules</a>
-            and pick the one of your choice.</p>
-            <p>The <a href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-generic-container.html">DEEP Generic
-                Container</a> is a good starting point to see how the API looks
-            like (but it does not provide any functionality at all).</p>
-        </div>
-        <div class="five columns">
-            <h4>2. Try locally</h3>
-            With <a title="Docker install" target="_blank" href="https://docs.docker.com/install/#supported-platforms">Docker</a>:
-            <pre><code>$ docker search deephdc
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-generic-container</code></pre>
-            No Docker possible? Try <a title="udocker install" target="_blank" href="https://github.com/indigo-dc/udocker/blob/master/doc/installation_manual.md#udocker-installation-manual">udocker</a> instead!
-            <pre><code>$ udocker search deephdc
-$ udocker run -p 5000:5000  deephdc/deep-oc-generic-container</code></pre>
-            <p>Need GPU access?</p>
-            Use <a title="nvidia-docker install" target="_blank" href="https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)">nvidia-docker</a> together with Docker:
-            <pre><code>$ nvidia-docker run -ti -p 5000:5000 deephdc/deep-oc-generic-container</code></pre>
-            Or udocker way:
-            <pre><code>$ udocker pull deephdc/deep-oc-generic-container
-$ udocker create --name=deep-oc-generic-container deephdc/deep-oc-generic-container
-$ udocker setup --nvidia deep-oc-generic-container
-$ udocker run -p 5000:5000  deep-oc-generic-container</code></pre>                
-        </div>
-        <div class="four columns">
-            <h4>3. Browse the API</h3>
-            <ul>
-                <li>
-                    Open your browser and visit <code>http://127.0.0.1:5000/</code>.
-                </li>
-                <li>Read the Swagger documentation and test the module directly.</li>
-            </ul>
-        </div>
-    </div>
-</div>
-</section>
-
         
 <footer id="contentinfo" class="body">
     <div class="footer">

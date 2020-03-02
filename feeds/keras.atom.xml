@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>DEEP Open Catalog - keras</title><link href="https://marketplace.deep-hybrid-datacloud.eu/" rel="alternate"></link><link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/keras.atom.xml" rel="self"></link><id>https://marketplace.deep-hybrid-datacloud.eu/</id><updated>2020-03-02T10:11:52+01:00</updated><entry><title>DEEP OC Massive Online Data Streams</title><link href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-oc-mods.html" rel="alternate"></link><published>2019-02-19T00:00:00+01:00</published><updated>2020-03-02T10:11:52+01:00</updated><author><name>DEEP-Hybrid-DataCloud Consortium</name></author><id>tag:marketplace.deep-hybrid-datacloud.eu,2019-02-19:/modules/deep-oc-mods.html</id><summary type="html">&lt;p&gt;Deep learning for proactive network monitoring and security protection.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-mods/job/master"&gt;&lt;img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-mods/master"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The use case challenges proactive network monitoring for security protection of computing infrastructures [1].
+It builds an intelligent module as a machine learning application leveraging deep learning modeling 
+to enhance functionality of intrusion detection system supervising network traffic flows.
+Preserving historical data, cyber security for such centers can be enhanced in hybrid way [3,4,5] 
+using machine learning techniques, especially when large IT infrastructures and devices products 
+a huge amount of dataflows continuously and dynamically.&lt;/p&gt;
+&lt;p&gt;The principle of this deep learning module (as a part of the use case) is proactive time-series forecasting. 
+It builds prediction models capable to produce a system behaviour estimation near future. 
+The discrepancy between the prediction and the reality gives an indication of anomaly (i.e. anomaly detection).&lt;/p&gt;
+&lt;p&gt;The challenge of the solution is it aims to scalable edge technologies [4] to support
+extensive data analysis and modelling as well as to improve the cyber-resilience in hybrid combination
+in real-time with the building intelligence module using neural networks and deep learning.&lt;/p&gt;
+&lt;p&gt;Deep learning architectures [2] available in this module are: MLP, CNN, autoencoder MLP, 
+LSTM, GRU, bidirectional LSTM, sequence to sequence LSTM, stacked LSTM, attention LSTM, TCN, and stackedTCN.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: Nguyen G., Dlugolinsky S., Tran V., Lopez Garcia A.: Deep learning for proactive network monitoring and security protection. IEEE Access, 2020, Volume 8, ISSN 2169-3536, DOI 10.1109/ACCESS.2020.2968718.&lt;/p&gt;
+&lt;p&gt;[2]: Nguyen G., Dlugolinsky S., Bobak M., Tran V., Lopez Garcia A., Heredia I., Malik P., Hluchy L.: Machine Learning and Deep Learning frameworks and libraries for large-scale data mining: a survey. Artificial Intelligence Review, Volume 52, Issue 1, pp. 77-124, ISSN 0269-2821, DOI 10.1007/s10462-018-09679-z. Springer Nature, 2019.&lt;/p&gt;
+&lt;p&gt;[3]: Nguyen G., Nguyen, M., Tran, D. and Hluchy L.: A heuristics approach to mine behavioural data logs in mobile malware detection system. Data &amp;amp; Knowledge Engineering, Volume 115, pp. 129-151, ISSN 0169-023X, DOI 10.1016/j.datak.2018.03.002. Elsevier, 2018.&lt;/p&gt;
+&lt;p&gt;[4]: Bhattacharyya, D.K. and Kalita, J.K., 2013. Network anomaly detection: A machine learning perspective. Chapman and Hall/CRC.&lt;/p&gt;
+&lt;p&gt;[5]: Dua, S. and Du, X., 2016. Data mining and machine learning in cybersecurity. Auerbach Publications.&lt;/p&gt;</content><category term="services"></category></entry></feed>

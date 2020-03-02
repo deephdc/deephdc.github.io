@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>DEEP Open Catalog - Category data science</title>
+          <title>DEEP Open Catalog -  Model  "Development Docker image"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -14,6 +14,9 @@
 
         <link rel="icon" type="image/png" href="https://marketplace.deep-hybrid-datacloud.eu/favicon.ico" />
         
+
+
+
 </head>
 
 <body>
@@ -40,11 +43,11 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/cnn.html">cnn</a></li>
-                                <li class="popover-item active">
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/data science.html">data science</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a></li>
-                                <li class="popover-item ">
+                                <li class="popover-item active">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/development.html">development</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a></li>
@@ -82,47 +85,120 @@
     </div>
 </div>
 </nav>    
-<section id="module-list">
-<div class="container section">
-    <div class="row">
-        <h2>Modules in the 'data science' category</h2>
-    </div>
+
+<section id="module-entry">
+<div class="container module-entry">
 
     <div class="row">
-<ul class="module-list">
-
-
-    <li class="one-third column">
-        <div class="module-list-entry">
-            <header>
-                <h3 class="entry-title"><a href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-data-science-template.html" rel="bookmark" title="Permalink to DEEP Data Science template">DEEP Data Science template</a></h3>
-            </header>
-            <div class="row">
-                <div class="one column">
-                </div>
-                <div class="ten columns">
-                    <p class="post-info">
-                        <span class="fas fa-folder"></span>
-                            Tool
-                    </p>
-                </div>
+        <div class="eight columns">
+            <div class="row header">
+                <h2 class="entry-title" >Development Docker image</h2>
+                
+                
+                <p>This is a Docker image for developing new modules</p>
+                
+                <hr>
+                <p>
+                    <span class="fas fa-folder"></span>
+                        Model
+                </p>
+                <p>
+                    Published by
+                    DEEP-Hybrid-DataCloud Consortium
+                    <br>
+                    Created: 
+                        <time class="published" datetime="2019-03-01T00:00:00+01:00">
+                            Fri 01 March 2019
+                        </time>
+                        - Updated: 
+                        <time class="modified" datetime="2020-03-02T10:12:11+01:00">
+                            Mon 02 March 2020
+                        </time>
+                </p>
             </div>
-            <!--
-                <time class="published" datetime="2018-08-01T00:00:00+02:00"> Wed 01 August 2018 </time> 
-                <address class="vcard author">By
-                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a>
-                </address>
-            -->
-            <div class="entry-content"> 
-                <p>A logical, reasonably standardized, but flexible project structure for doing and sharing data science work. Based on more general <a href="http://drivendata.github.io/cookiecutter-data-science/">data science template</a>.</p>
-                <a class="button button-primary" href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-data-science-template.html">Know more &raquo;&raquo;</a>
-            </div><!-- /.entry-content -->
+            <div class="row content">
+                <h3> Model  Description</h3>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-generic-dev/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-generic-dev/master"></a></p>
+<p>This is a Docker image for developing new modules. It comes preinstalled with DEEPaaS, Jupyter Lab, Tensorflow, and a number of other tools (see <a href="http://github.com/deephdc/DEEP-OC-generic-dev">here</a>)
+As you have access to the terminal of Jupyter Lab, you can develop and debug your application, add your preferred tools.</p>
+            </div>
+<div class="row run">
+    <h3>Test this module</h3>
+    <p>
+        You can test and execute this module in various ways.
+    </p>
+    <h4>Excecute locally on your computer using Docker</h4>
+    <p>
+		You can run this module directly on your computer, assuming that you
+		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
+		installed, by following these steps:
+    </p>
+    <pre><code>$ docker pull deephdc/deep-oc-generic-dev
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-generic-dev</code></pre>
+ 
+    <h4>Execute on your computer using udocker</h4>
+    <p>
+        If you do not have Docker available or you do not want to install it,
+        you can use <a title="udocker repository" target="_blank"
+                       href="https://github.com/indigo-dc/udocker">udocker</a> 
+        within a Python virtualenv:
+    </p>
+            <pre><code>$ virtualenv udocker
+$ source udocker/bin/activate
+$ git clone https://github.com/indigo-dc/udocker
+$ cd udocker
+$ pip install .
+$ udocker pull deephdc/deep-oc-generic-dev
+$ udocker create deephdc/deep-oc-generic-dev
+$ udocker run -p 5000:5000  deephdc/deep-oc-generic-dev</code></pre>
+
+    <hr />
+
+    <p>
+        In either case, once the module is running, point your browser to
+        <code>http://127.0.0.1:5000/</code> and you will see the API
+        documentation, where you can test the module functionality, as well as
+        perform other actions (such as training).
+    </p>
+    <p>
+        For more information, refer to the 
+        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
+           title="DEEP user documentation">user documentation</a>.
+    </p>
+
+</div>
+
         </div>
-    </li>
-</ul>
+
+        <div class="four columns buttons">
+            <div class="row">
+                <h3>Categories</h3>
+                <p>
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/development.html">development</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/jupyterlab.html">jupyterlab</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
+                </p>
+                <h3>License</h3>
+                <p>
+                    License: MIT
+                </p>
+            </div>
+
+            <div class="row">
+                <h3>Get the code</h3>
+                    <a class="button" title="GitHub repository"  target="_blank" href="http://github.com/deephdc/DEEP-OC-generic-dev"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-generic-dev"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+
+            </div>
+        </div>
     </div>
 </div>
-</section><!-- /#content -->
+
+
+
+    
+</section>
         
 <footer id="contentinfo" class="body">
     <div class="footer">
