@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>DEEP Open Catalog - faster-rcnn</title><link href="https://marketplace.deep-hybrid-datacloud.eu/" rel="alternate"></link><link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/faster-rcnn.atom.xml" rel="self"></link><id>https://marketplace.deep-hybrid-datacloud.eu/</id><updated>2020-04-06T15:37:37+02:00</updated><entry><title>Object Detection and Classification with Pytorch</title><link href="https://marketplace.deep-hybrid-datacloud.eu/modules/.html" rel="alternate"></link><published>2019-10-17T00:00:00+02:00</published><updated>2020-04-06T15:37:37+02:00</updated><author><name>DEEP-Hybrid-DataCloud Consortium</name></author><id>tag:marketplace.deep-hybrid-datacloud.eu,2019-10-17:/modules/.html</id><summary type="html">&lt;p&gt;A trained Region Convolutional Neural Network (Faster RCNN) for object detection and classification.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-obj_detect_pytorch/job/master"&gt;&lt;img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-obj_detect_pytorch/master"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is a plug-and-play tool for object detection and classification using deep neural networks (Faster R-CNN 
+ResNet-50 FPN Architecture [1]) that were already pretrained on the &lt;a href="http://cocodataset.org/#home"&gt;COCO Dataset&lt;/a&gt;. 
+The code uses the Pytorch Library, more information can be found at &lt;a href="https://pytorch.org/docs/stabletorchvision/models.html#object-detection-instance-segmentation-and-person-keypoint-detection"&gt;Pytorch-Object-Detection&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The PREDICT method expects an image as input and will return a JSON with 
+the predictions that are greater than the probability threshold. Let's say you have an image of a cat 
+and a dog together and the probability output was 50% a dog and 80% a cat,
+if you set the threshold to 70%, the only detected object will be the cat, because its probability is grater than 70%.&lt;/p&gt;
+&lt;p&gt;This module works on uploaded images and gives as output the rectangle coordinates x1,y1 and x2,y2 were the
+classified object is located.
+It also provides you the probability of the classified detected object.&lt;/p&gt;
+&lt;p&gt;&lt;img class='fit' width='30%', src='https://raw.githubusercontent.com/SilkeDH/obj_detect_pytorch/master/reports/figures/dog_broccoli.png'/&gt;&lt;/p&gt;
+&lt;p&gt;The TRAINING method uses transfer learning and expects different parameters like learning rate, name of the clases, etc.
+Transfer learning focuses on storing knowledge gained while solving one problem and applying it to a different but related
+problem. To achieve it, the output layer of the pre-trained model is removed and a new one with the new number of outputs is
+added. Only that new layer will be trained [1]. An example of transferred learning is provided an implemented in this module.&lt;/p&gt;
+&lt;p&gt;The model requires a new dataset with the classes that are going to be classified and detected. In this case the Penn-Fudan
+Database for Pedestrian Detection and Segmentation was used to detect pedestrians.&lt;/p&gt;
+&lt;p&gt;&lt;img class='fit' width='70%', src='https://raw.githubusercontent.com/SilkeDH/obj_detect_pytorch/master/reports/figures/pytorchobj.png'/&gt;&lt;/p&gt;
+&lt;p&gt;To try this in the module, the two dataset folders (Images and Masks) must be placed in the obj_detect_pytorch/dataset/
+folder. More information about the code, the Penn Fudan Dataset and the structuring of a custom dataset can be found at &lt;a href="https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html"&gt;Torchvision Object Detection Finetuning&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: Shaoqing Ren, Kaiming He, Ross Girshick, Jian Sun. &lt;a href="https://arxiv.org/abs/1506.01497"&gt;Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks&lt;/a&gt;
+arXiv preprint (2016): 1506-01497.&lt;/p&gt;
+&lt;p&gt;[2]: West Jeremy, Ventura Dan, Warnick Sean. Spring Research Presentation: A Theoretical Foundation for Inductive Transfer,
+Brigham Young University, College of Physical and Mathematical Sciences. (2007).&lt;/p&gt;</content><category term="services"></category></entry></feed>
