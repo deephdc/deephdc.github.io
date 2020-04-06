@@ -122,7 +122,7 @@
                             Thu 17 October 2019
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2020-04-06T15:37:37+02:00">
+                        <time class="modified" datetime="2020-04-06T15:47:20+02:00">
                             Mon 06 April 2020
                         </time>
                 </p>
@@ -167,8 +167,8 @@ Brigham Young University, College of Physical and Mathematical Sciences. (2007).
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull https://hub.docker.com/r/deephdc/deep-oc-obj_detect_pytorch
-$ docker run -ti -p 5000:5000 https://hub.docker.com/r/deephdc/deep-oc-obj_detect_pytorch</code></pre>
+    <pre><code>$ docker pull deephdc/deep-oc-obj_detect_pytorch
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-obj_detect_pytorch</code></pre>
  
     <h4>Execute on your computer using udocker</h4>
     <p>
@@ -182,9 +182,9 @@ $ source udocker/bin/activate
 $ git clone https://github.com/indigo-dc/udocker
 $ cd udocker
 $ pip install .
-$ udocker pull https://hub.docker.com/r/deephdc/deep-oc-obj_detect_pytorch
-$ udocker create https://hub.docker.com/r/deephdc/deep-oc-obj_detect_pytorch
-$ udocker run -p 5000:5000  https://hub.docker.com/r/deephdc/deep-oc-obj_detect_pytorch</code></pre>
+$ udocker pull deephdc/deep-oc-obj_detect_pytorch
+$ udocker create deephdc/deep-oc-obj_detect_pytorch
+$ udocker run -p 5000:5000  deephdc/deep-oc-obj_detect_pytorch</code></pre>
 
     <hr />
 
@@ -213,7 +213,7 @@ $ udocker run -p 5000:5000  https://hub.docker.com/r/deephdc/deep-oc-obj_detect_
     </p>
     <p>Once you are registedered, you can go to our 
         <a title="Train module using DEEP Framework" 
-            href="https://train.deep-hybrid-datacloud.eu/module/https://hub.docker.com/r/deep-oc-obj-detect-pytorch">
+            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-obj-detect-pytorch">
             training dashboard
         </a>
         to configure and train it.
@@ -253,15 +253,15 @@ $ udocker run -p 5000:5000  https://hub.docker.com/r/deephdc/deep-oc-obj_detect_
                 <ul>
                     <li>
                         <a class="button" title="Try using the swagger UI" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/https://hub.docker.com/r/obj_detect_pytorch/swagger.json">
+                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/obj_detect_pytorch/swagger.json">
                             <span class="fas fa-window-maximize"></span> Web UI <span class="fas fa-arrow-circle-right"></span></a>
                         <a class="button" title="API endpoint" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/https://hub.docker.com/r/obj_detect_pytorch/">
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/obj_detect_pytorch/">
                             <span class="fas fa-code"></span> API <span class="fas fa-arrow-circle-right"></span></a>
                     </li>
                     <li>
                         <a class="button" title="Swagger specification" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/https://hub.docker.com/r/obj_detect_pytorch/swagger.json">
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/obj_detect_pytorch/swagger.json">
                             <span class="fas fa-code"></span> API specification <span class="fas fa-arrow-circle-right"></span></a>
                     </li>
                 </ul>
@@ -270,14 +270,14 @@ $ udocker run -p 5000:5000  https://hub.docker.com/r/deephdc/deep-oc-obj_detect_
                 <h3>Configure and train</h3>
                 <ul>
                     <li>
-                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/https://hub.docker.com/r/deep-oc-obj-detect-pytorch"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
+                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-obj-detect-pytorch"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
                     </li>
                 </ul>
             </div>
             <div class="row">
                 <h3>Get the code</h3>
                     <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/obj_detect_pytorch"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/https://hub.docker.com/r/deephdc/deep-oc-obj_detect_pytorch"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-obj_detect_pytorch"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
 
             </div>
         </div>
