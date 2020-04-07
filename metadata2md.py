@@ -27,7 +27,7 @@ Dataset: {{ dataset_url }}
 {% endif %}
 License: {{ license }}
 Summary: {{ summary }}
-Slug: {{sources.docker_registry_repo.split("/")[1].replace("_", "-")}}
+Slug: {{sources.docker_registry_repo.split("/")[-1].replace("_", "-")}}
 ---
 {% if continuous_integration is defined %}
 [![Build Status]({{ continuous_integration.build_status_badge }})]({{ continuous_integration.build_status_url }})
