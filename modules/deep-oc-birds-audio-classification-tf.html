@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog -  Model  "Upscale multispectral satellites images"</title>
+          <title>DEEP Open Catalog -  Model  "Bird sound classifier"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -104,10 +104,10 @@
     <div class="row">
         <div class="eight columns">
             <div class="row header">
-                <h2 class="entry-title" >Upscale multispectral satellites images</h2>
+                <h2 class="entry-title" >Bird sound classifier</h2>
                 
                 
-                <p>Upscale (superresolve) low resolution bands to high resolution in multispectral satellite imagery.</p>
+                <p>Classify audio files among bird species from the Xenocanto dataset.</p>
                 
                 <hr>
                 <p>
@@ -122,44 +122,29 @@
                     DEEP-Hybrid-DataCloud Consortium
                     <br>
                     Created: 
-                        <time class="published" datetime="2019-01-01T00:00:00+01:00">
-                            Tue 01 January 2019
+                        <time class="published" datetime="2020-04-01T00:00:00+02:00">
+                            Wed 01 April 2020
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2020-04-23T16:51:39+02:00">
+                        <time class="modified" datetime="2020-04-23T16:52:33+02:00">
                             Thu 23 April 2020
                         </time>
                 </p>
             </div>
             <div class="row content">
                 <h3> Model  Description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-satsr/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-satsr/master"></a></p>
-<p>With the latest missions launched by the European Space Agency (ESA) and National Aeronautics and Space Administration (NASA)
-equipped with the latest technologies in multi-spectral sensors, we face an unprecedented amount of data with spatial and
-temporal resolutions never reached before. Exploring the potential of this data with state-of-the-art AI techniques like
-Deep Learning, could potentially change the way we think about and protect our planet's resources.</p>
-<p>This Docker container contains  a plug-and-play tool to perform super-resolution on satellite imagery.
-It uses Deep Learning to provide a better performing alternative to classical pansharpening (more details in [1]).</p>
-<p><strong>Minimum requirements</strong> Working with satellite imagery is a memory intensive task, so an absolute minimum is
-16 GB of RAM memory. But if you want to work with full images (not small patches) you will probably need in the
-order of 50 GB. If memory requirements are not met, weird Tensorflow shape errors can appear.</p>
-<p>The PREDICT method expects a compressed file (zip or tar) containing a complete tile of the satellite. These
-tiles are different for each satellite type and can be downloaded in the respective official satellite's
-repositories. We provide nevertheless <a href="https://github.com/deephdc/satsr/blob/master/reports/additional_notes.md">some samples</a>
-for each satellite so that the user can test the module.
-The output is a GeoTiff file with the super-resolved region.</p>
-<p>Right now we are supporting super-resolution for the following satellites:</p>
-<p><a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-2">Sentinel 2</a></p>
-<p><a href="https://landsat.gsfc.nasa.gov/landsat-8/">Landsat 8</a></p>
-<p><a href="https://ncc.nesdis.noaa.gov/VIIRS/">VIIRS</a></p>
-<p><a href="https://terra.nasa.gov/about/terra-instruments/modis">MODIS</a></p>
-<p>More information on the satellites and processing levels that are supported can be found <a href="https://github.com/deephdc/satsr/blob/master/reports/additional_notes.md">here</a>
-along with some <a href="https://github.com/deephdc/satsr/tree/master/reports/figures">demo images</a> of the super-resolutions performed in non-training data.</p>
-<p>If you want to perform super-resolution on another satellite, go to the <a href="https://github.com/deephdc/satsr#train-other-satellites">training section</a>
-to see how you can easily add support for additional satellites. We are happy to accept PRs!</p>
-<p><img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-satsr/master/images/satsr.png'/></p>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-birds-audio-classification-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-birds-audio-classification-tf/master"></a></p>
+<p><strong>CAUTION: This module is in a development stage. Predictions are still not reliable.</strong> </p>
+<p>This is a plug-and-play tool to perform bird sound classification with Deep Learning.
+The PREDICT method expects an audio file as input (or the url of a audio file) and will return a JSON with 
+the top 5 predictions. Most audio file formats are supported (see <a href="https://www.ffmpeg.org/">FFMPEG</a> compatible formats).</p>
+<p>We use the <a href="https://www.gbif.org/dataset/b1047888-ae52-4179-9dd5-5448ea342a24">Xenocanto dataset</a> [1]
+which has around 350K samples covering 10K species. As an initial assessment we have trained the model on the
+1529 most popular species.</p>
+<p><img class='fit' width=550 src='https://raw.githubusercontent.com/deephdc/DEEP-OC-birds-audio-classification-tf/master/images/workflow-birds.png'/></p>
+<p>This service is based in the <a href="./deep-oc-audio-classification-tf.html">Audio Classification with Tensorflow</a> model.</p>
 <p><strong>References</strong></p>
-<p>[1]: Lanaras, C., Bioucas-Dias, J., Galliani, S., Baltsavias, E., &amp; Schindler, K. (2018). <a href="https://arxiv.org/abs/1803.04271">Super-resolution of Sentinel-2 images: Learning a globally applicable deep neural network</a>. ISPRS Journal of Photogrammetry and Remote Sensing, 146, 305-319.</p>
+<p>[1]: Vellinga W (2019). Xeno-canto - Bird sounds from around the world. Xeno-canto Foundation for Nature Sounds. Occurrence dataset https://doi.org/10.15468/qv0ksn accessed via GBIF.org on 2019-10-25.</p>
             </div>
 <div class="row run">
     <h3>Test this module</h3>
@@ -172,8 +157,8 @@ to see how you can easily add support for additional satellites. We are happy to
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/deep-oc-satsr
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-satsr</code></pre>
+    <pre><code>$ docker pull deephdc/deep-oc-birds-audio-classification-tf
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-birds-audio-classification-tf</code></pre>
  
     <h4>Execute on your computer using udocker</h4>
     <p>
@@ -187,9 +172,9 @@ $ source udocker/bin/activate
 $ git clone https://github.com/indigo-dc/udocker
 $ cd udocker
 $ pip install .
-$ udocker pull deephdc/deep-oc-satsr
-$ udocker create deephdc/deep-oc-satsr
-$ udocker run -p 5000:5000  deephdc/deep-oc-satsr</code></pre>
+$ udocker pull deephdc/deep-oc-birds-audio-classification-tf
+$ udocker create deephdc/deep-oc-birds-audio-classification-tf
+$ udocker run -p 5000:5000  deephdc/deep-oc-birds-audio-classification-tf</code></pre>
 
     <hr />
 
@@ -218,7 +203,7 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-satsr</code></pre>
     </p>
     <p>Once you are registedered, you can go to our 
         <a title="Train module using DEEP Framework" 
-            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-satsr">
+            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-birds-audio-classification-tf">
             training dashboard
         </a>
         to configure and train it.
@@ -241,7 +226,9 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-satsr</code></pre>
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/audio classification.html">audio classification</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/beta.html">beta</a>
                 </p>
                 <h3>License</h3>
                 <p>
@@ -256,15 +243,15 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-satsr</code></pre>
                 <ul>
                     <li>
                         <a class="button" title="Try using the swagger UI" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/satsr/swagger.json">
+                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/birds-audio-classification-tf/swagger.json">
                             <span class="fas fa-window-maximize"></span> Web UI <span class="fas fa-arrow-circle-right"></span></a>
                         <a class="button" title="API endpoint" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/satsr/">
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/birds-audio-classification-tf/">
                             <span class="fas fa-code"></span> API <span class="fas fa-arrow-circle-right"></span></a>
                     </li>
                     <li>
                         <a class="button" title="Swagger specification" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/satsr/swagger.json">
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/birds-audio-classification-tf/swagger.json">
                             <span class="fas fa-code"></span> API specification <span class="fas fa-arrow-circle-right"></span></a>
                     </li>
                 </ul>
@@ -273,17 +260,17 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-satsr</code></pre>
                 <h3>Configure and train</h3>
                 <ul>
                     <li>
-                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-satsr"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
+                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-birds-audio-classification-tf"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
                     </li>
                 </ul>
             </div>
             <div class="row">
                 <h3>Get the code</h3>
-                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/satsr"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-satsr"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/audio-classification-tf"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-birds-audio-classification-tf"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
 
-                <h3>Citing this module</h3>
-                    <a class="button" title="Module citation"  target="_blank" href="https://doi.org/10.1016/j.isprsjprs.2018.09.018"><span class="fa fa-quote-left"></span> Citation <span class="fas fa-arrow-circle-right"></span></a>
+                <h3>Get the data</h3>
+                    <a class="button" title="Dataset"  target="_blank" href="https://doi.org/10.15468/qv0ksn"><span class="fa fa-quote-left"></span> Dataset <span class="fas fa-arrow-circle-right"></span></a>
             </div>
         </div>
     </div>
