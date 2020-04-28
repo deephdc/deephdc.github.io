@@ -139,19 +139,19 @@ a project template, <a href="https://github.com/indigo-dc/cookiecutter-data-scie
 <li>Python 3.5</li>
 <li><a href="http://cookiecutter.readthedocs.org/en/latest/installation.html">Cookiecutter Python package</a> &gt;= 1.4.0: This can be installed with pip by or conda depending on how you manage your Python packages:</li>
 </ul>
-<div class="highlight"><pre><span></span>$ pip install cookiecutter
-</pre></div>
+<div class="highlight"><pre><span></span><code>$ pip install cookiecutter
+</code></pre></div>
 
 
 <p>or</p>
-<div class="highlight"><pre><span></span>$ conda config --add channels conda-forge
+<div class="highlight"><pre><span></span><code>$ conda config --add channels conda-forge
 $ conda install cookiecutter
-</pre></div>
+</code></pre></div>
 
 
 <h3>To start a new project, run:</h3>
-<div class="highlight"><pre><span></span><span class="err">cookiecutter https://github.com/indigo-dc/cookiecutter-data-science</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">cookiecutter https://github.com/indigo-dc/cookiecutter-data-science</span>
+</code></pre></div>
 
 
 <h3>The resulting directories</h3>
@@ -160,7 +160,7 @@ $ conda install cookiecutter
  - <your_project></p>
 <p>each directory is a git repository and has two branches: <code>master</code> and <code>test</code>.</p>
 <h4>The directory structure of <your_project> looks like this:</h4>
-<div class="highlight"><pre><span></span><span class="err">├──</span> <span class="n">LICENSE</span>
+<div class="highlight"><pre><span></span><code><span class="err">├──</span> <span class="n">LICENSE</span>
 <span class="err">├──</span> <span class="n">README</span><span class="p">.</span><span class="n">md</span>              <span class="o">&lt;-</span> <span class="n">The</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">README</span> <span class="k">for</span> <span class="n">developers</span> <span class="k">using</span> <span class="n">this</span> <span class="n">project</span><span class="p">.</span>
 <span class="err">├──</span> <span class="n">data</span>
 <span class="err">│</span>   <span class="err">└──</span> <span class="n">raw</span>                <span class="o">&lt;-</span> <span class="n">The</span> <span class="n">original</span><span class="p">,</span> <span class="n">immutable</span> <span class="n">data</span> <span class="n">dump</span><span class="p">.</span>
@@ -202,11 +202,11 @@ $ conda install cookiecutter
 <span class="err">│</span>       <span class="err">└──</span> <span class="n">visualize</span><span class="p">.</span><span class="n">py</span>
 <span class="err">│</span>
 <span class="err">└──</span> <span class="n">tox</span><span class="p">.</span><span class="n">ini</span>                <span class="o">&lt;-</span> <span class="n">tox</span> <span class="n">file</span> <span class="k">with</span> <span class="n">settings</span> <span class="k">for</span> <span class="n">running</span> <span class="n">tox</span><span class="p">;</span> <span class="n">see</span> <span class="n">tox</span><span class="p">.</span><span class="n">testrun</span><span class="p">.</span><span class="n">org</span>
-</pre></div>
+</code></pre></div>
 
 
 <h4>The directory structure of DEEP-OC-<your_project> looks like this:</h4>
-<div class="highlight"><pre><span></span><span class="err">├─ Dockerfile             Describes main steps on integrationg DEEPaaS API and</span>
+<div class="highlight"><pre><span></span><code><span class="err">├─ Dockerfile             Describes main steps on integrationg DEEPaaS API and</span>
 <span class="err">│                         &lt;your_project&gt; application in one Docker image</span>
 <span class="err">│</span>
 <span class="err">├─ Jenkinsfile            Describes basic Jenkins CI/CD pipeline</span>
@@ -218,7 +218,7 @@ $ conda install cookiecutter
 <span class="err">├─ docker-compose.yml     Allows running the application with various configurations via docker-compose</span>
 <span class="err">│</span>
 <span class="err">├─ metadata.json          Defines information propagated to the [DEEP Open Catalog](https://marketplace.deep-hybrid-datacloud.eu)</span>
-</pre></div>
+</code></pre></div>
 
 
 <h3>Documentation</h3>

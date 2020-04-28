@@ -8,19 +8,19 @@ a project template, &lt;a href="https://github.com/indigo-dc/cookiecutter-data-s
 &lt;li&gt;Python 3.5&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://cookiecutter.readthedocs.org/en/latest/installation.html"&gt;Cookiecutter Python package&lt;/a&gt; &amp;gt;= 1.4.0: This can be installed with pip by or conda depending on how you manage your Python packages:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pip install cookiecutter
-&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ pip install cookiecutter
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;or&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ conda config --add channels conda-forge
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ conda config --add channels conda-forge
 $ conda install cookiecutter
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;To start a new project, run:&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;cookiecutter https://github.com/indigo-dc/cookiecutter-data-science&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;cookiecutter https://github.com/indigo-dc/cookiecutter-data-science&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;The resulting directories&lt;/h3&gt;
@@ -29,7 +29,7 @@ $ conda install cookiecutter
  - &lt;your_project&gt;&lt;/p&gt;
 &lt;p&gt;each directory is a git repository and has two branches: &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;test&lt;/code&gt;.&lt;/p&gt;
 &lt;h4&gt;The directory structure of &lt;your_project&gt; looks like this:&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;LICENSE&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;LICENSE&lt;/span&gt;
 &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;README&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;md&lt;/span&gt;              &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;top&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;level&lt;/span&gt; &lt;span class="n"&gt;README&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;developers&lt;/span&gt; &lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;
 &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;raw&lt;/span&gt;                &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;original&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;immutable&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="n"&gt;dump&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
@@ -71,11 +71,11 @@ $ conda install cookiecutter
 &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;visualize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;span class="err"&gt;│&lt;/span&gt;
 &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;tox&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ini&lt;/span&gt;                &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="n"&gt;tox&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;settings&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;running&lt;/span&gt; &lt;span class="n"&gt;tox&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;see&lt;/span&gt; &lt;span class="n"&gt;tox&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;testrun&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;org&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h4&gt;The directory structure of DEEP-OC-&lt;your_project&gt; looks like this:&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;├─ Dockerfile             Describes main steps on integrationg DEEPaaS API and&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;├─ Dockerfile             Describes main steps on integrationg DEEPaaS API and&lt;/span&gt;
 &lt;span class="err"&gt;│                         &amp;lt;your_project&amp;gt; application in one Docker image&lt;/span&gt;
 &lt;span class="err"&gt;│&lt;/span&gt;
 &lt;span class="err"&gt;├─ Jenkinsfile            Describes basic Jenkins CI/CD pipeline&lt;/span&gt;
@@ -87,7 +87,7 @@ $ conda install cookiecutter
 &lt;span class="err"&gt;├─ docker-compose.yml     Allows running the application with various configurations via docker-compose&lt;/span&gt;
 &lt;span class="err"&gt;│&lt;/span&gt;
 &lt;span class="err"&gt;├─ metadata.json          Defines information propagated to the [DEEP Open Catalog](https://marketplace.deep-hybrid-datacloud.eu)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;Documentation&lt;/h3&gt;
