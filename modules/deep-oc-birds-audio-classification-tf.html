@@ -128,8 +128,8 @@
                             Wed 01 April 2020
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2020-05-05T10:46:20+02:00">
-                            Tue 05 May 2020
+                        <time class="modified" datetime="2020-05-07T15:42:54+02:00">
+                            Thu 07 May 2020
                         </time>
                 </p>
             </div>
@@ -137,17 +137,17 @@
                 <h3> Model  Description</h3>
                 <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-birds-audio-classification-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-birds-audio-classification-tf/master"></a>
 <img src="https://img.shields.io/badge/-beta-blueviolet"></p>
-<p><strong>CAUTION: This module is in a development stage. Predictions are still not reliable.</strong> </p>
+<p><strong>CAUTION: This module is in a development stage. Predictions might still not be reliable enough.</strong> </p>
 <p>This is a plug-and-play tool to perform bird sound classification with Deep Learning.
 The PREDICT method expects an audio file as input (or the url of a audio file) and will return a JSON with 
 the top 5 predictions. Most audio file formats are supported (see <a href="https://www.ffmpeg.org/">FFMPEG</a> compatible formats).</p>
 <p>We use the <a href="https://www.gbif.org/dataset/b1047888-ae52-4179-9dd5-5448ea342a24">Xenocanto dataset</a> [1]
 which has around 350K samples covering 10K species. As an initial assessment we have trained the model on the
-1529 most popular species.</p>
+73 most popular species, which account for roughly 20% of all observations.</p>
 <p><img class='fit' width=550 src='https://raw.githubusercontent.com/deephdc/DEEP-OC-birds-audio-classification-tf/master/images/workflow-birds.png'/></p>
 <p>This service is based in the <a href="./deep-oc-audio-classification-tf.html">Audio Classification with Tensorflow</a> model.</p>
 <p><strong>References</strong></p>
-<p>[1]: Vellinga W (2019). Xeno-canto - Bird sounds from around the world. Xeno-canto Foundation for Nature Sounds. Occurrence dataset https://doi.org/10.15468/qv0ksn accessed via GBIF.org on 2019-10-25.</p>
+<p>[1]: Vellinga W (2019). <a href="https://doi.org/10.15468/qv0ksn">Xeno-canto - Bird sounds from around the world</a>. Xeno-canto Foundation for Nature Sounds. Occurrence dataset https://doi.org/10.15468/qv0ksn accessed via GBIF.org on 2019-10-25.</p>
             </div>
 <div class="row run">
     <h3>Test this module</h3>
