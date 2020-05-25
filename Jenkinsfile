@@ -24,15 +24,26 @@ pipeline {
             }
         }
 
-        stage('Generate markdown from applications metadata') {
+        stage('Update submodules @deep-oc') {
             when {
-                branch 'pelican'
+                allOf {
+                    branch 'pelican'
+                    triggeredBy 'SCMTrigger' 
+                }
             }
             steps {
                 // Get last version of DEEP-OC modules 
                 JenkinsBuildJob(
                     "Pipeline-as-code/deep-oc/master",
                     [booleanParam(name: 'disable_oc_build', value: true)])
+            }
+        }
+
+        stage('Generate markdown from applications metadata') {
+            when {
+                branch 'pelican'
+            }
+            steps {
 
                 iterateOverProjects()
                 sh 'git status --porcelain=v1'
