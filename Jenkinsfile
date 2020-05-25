@@ -28,7 +28,7 @@ pipeline {
             when {
                 allOf {
                     branch 'pelican'
-                    triggeredBy 'SCMTrigger' 
+                    not { triggeredBy 'UpstreamCause' }
                 }
             }
             steps {
