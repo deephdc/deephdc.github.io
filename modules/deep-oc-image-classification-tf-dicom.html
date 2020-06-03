@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog -  Model  "Artistic style transfer"</title>
+          <title>DEEP Open Catalog -  Model  "Chest x-ray image classifier"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -71,7 +71,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/object detection.html">object detection</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a></li>
-                                <li class="popover-item active">
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/pytorch.html">pytorch</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/rcnn.html">rcnn</a></li>
@@ -81,7 +81,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/template.html">template</a></li>
-                                <li class="popover-item ">
+                                <li class="popover-item active">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tools.html">tools</a></li>
@@ -106,44 +106,50 @@
     <div class="row">
         <div class="eight columns">
             <div class="row header">
-                <h2 class="entry-title" >Artistic style transfer</h2>
+                <h2 class="entry-title" >Chest x-ray image classifier</h2>
                 
                 
-                <p>A module to apply artistic style transfer using pytorch.</p>
+                <p>Classify chest x-ray images in patological and non patological with this x-ray classifier.</p>
                 
                 <hr>
                 <p>
                     <span class="fas fa-folder"></span>
                         Model
-                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">Trainable</a>
                     | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">Inference</a>
                     | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">Pre-trained</a>
+                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">Trainable</a>
                 </p>
                 <p>
                     Published by
                     DEEP-Hybrid-DataCloud Consortium
                     <br>
                     Created: 
-                        <time class="published" datetime="2020-04-09T00:00:00+02:00">
-                            Thu 09 April 2020
+                        <time class="published" datetime="2019-01-01T00:00:00+01:00">
+                            Tue 01 January 2019
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2020-06-03T15:27:41+02:00">
+                        <time class="modified" datetime="2020-06-03T15:27:43+02:00">
                             Wed 03 June 2020
                         </time>
                 </p>
             </div>
             <div class="row content">
                 <h3> Model  Description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-neural_transfer/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-neural_transfer/master"></a></p>
-<p>This is neural_transfer application using DEEPaaS API.</p>
-<p>The module allows you to take the content of an image and reproduce it with a new artistic style using the style of a different image.
-The code is based on the <a href=https://github.com/pytorch/examples/tree/master/fast_neural_style>Faster Neural Style Pytorch example</a> 
-that implements the method described in 
-"Perceptual Losses for Real-Time Style Transfer and Super-Resolution" developed by Justin Johnson, Alexandre Alahia and Li Fei-Fei [1].</p>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-image-classification-tf-dicom/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-image-classification-tf-dicom/master"></a></p>
+<p>The deep learning revolution has brought significant advances in a number of fields [1], primarily linked to
+image and speech recognition. The standardization of image classification tasks like the <a href="http://www.image-net.org/challenges/LSVRC/">ImageNet Large Scale
+Visual Recognition Challenge</a> [2] has resulted in a reliable way to
+compare top performing architectures.</p>
+<p>This Docker container contains the tools to train an image classifier on your personal dataset. It is a highly
+customizable tool  that let's you choose between tens of different <a href="https://github.com/keras-team/keras-applications">top performing architectures</a>
+and training parameters.</p>
+<p>The container also comes with a pretrained general-purpose image classifier trained on ImageNet.</p>
+<p>The PREDICT method expects an RGB image as input (or the url of an RGB image) and will return a JSON with 
+the top 5 predictions.</p>
+<p><img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-image-classification-tf-dicom/master/images/imagenet.png'/></p>
 <p><strong>References</strong></p>
-<p>[1] Justin Johnson, Alexandre Alahi, Li Fei-Fei, Perceptual Losses for Real-Time Style Transfer and Super-Resolution, 
-<a href=https://arxiv.org/abs/1603.08155>arXiv:1603.08155 [cs.CV]</a></p>
+<p>[1]: Yann LeCun, Yoshua Bengio, and Geofrey Hinton. <a href="https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf">Deep learning</a>. Nature, 521(7553):436-444, May 2015.</p>
+<p>[2]: Olga Russakovsky et al. <a href="https://arxiv.org/abs/1409.0575">ImageNet Large Scale Visual Recognition Challenge</a>. International Journal of Computer Vision (IJCV), 115(3):211-252, 2015.</p>
             </div>
 <div class="row run">
     <h3>Test this module</h3>
@@ -156,8 +162,8 @@ that implements the method described in
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/deep-oc-neural_transfer
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-neural_transfer</code></pre>
+    <pre><code>$ docker pull deephdc/deep-oc-image-classification-tf-dicom
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-image-classification-tf-dicom</code></pre>
  
     <h4>Execute on your computer using udocker</h4>
     <p>
@@ -171,9 +177,9 @@ $ source udocker/bin/activate
 $ git clone https://github.com/indigo-dc/udocker
 $ cd udocker
 $ pip install .
-$ udocker pull deephdc/deep-oc-neural_transfer
-$ udocker create deephdc/deep-oc-neural_transfer
-$ udocker run -p 5000:5000  deephdc/deep-oc-neural_transfer</code></pre>
+$ udocker pull deephdc/deep-oc-image-classification-tf-dicom
+$ udocker create deephdc/deep-oc-image-classification-tf-dicom
+$ udocker run -p 5000:5000  deephdc/deep-oc-image-classification-tf-dicom</code></pre>
 
     <hr />
 
@@ -202,7 +208,7 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-neural_transfer</code></pre>
     </p>
     <p>Once you are registedered, you can go to our 
         <a title="Train module using DEEP Framework" 
-            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-neural-transfer">
+            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-image-classification-tf-dicom">
             training dashboard
         </a>
         to configure and train it.
@@ -219,16 +225,18 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-neural_transfer</code></pre>
             <div class="row">
                 <h3>Categories</h3>
                 <p>
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pytorch.html">pytorch</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/image style transfer.html">image style transfer</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/image classification.html">image classification</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>
                 </p>
                 <h3>License</h3>
                 <p>
-                    License: MIT
+                    License: Apache 2.0
                 </p>
             </div>
 
@@ -239,15 +247,15 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-neural_transfer</code></pre>
                 <ul>
                     <li>
                         <a class="button" title="Try using the swagger UI" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/neural_transfer/swagger.json">
+                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/image-classification-tf-dicom/swagger.json">
                             <span class="fas fa-window-maximize"></span> Web UI <span class="fas fa-arrow-circle-right"></span></a>
                         <a class="button" title="API endpoint" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/neural_transfer/">
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/image-classification-tf-dicom/">
                             <span class="fas fa-code"></span> API <span class="fas fa-arrow-circle-right"></span></a>
                     </li>
                     <li>
                         <a class="button" title="Swagger specification" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/neural_transfer/swagger.json">
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/image-classification-tf-dicom/swagger.json">
                             <span class="fas fa-code"></span> API specification <span class="fas fa-arrow-circle-right"></span></a>
                     </li>
                 </ul>
@@ -256,15 +264,20 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-neural_transfer</code></pre>
                 <h3>Configure and train</h3>
                 <ul>
                     <li>
-                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-neural-transfer"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
+                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-image-classification-tf-dicom"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
                     </li>
                 </ul>
             </div>
             <div class="row">
                 <h3>Get the code</h3>
-                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/neural_transfer"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-neural_transfer"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/image-classification-tf-dicom"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-image-classification-tf-dicom"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
 
+                <h3>Get the data</h3>
+                    <a class="button" title="Dataset"  target="_blank" href="http://www.image-net.org/challenges/LSVRC/"><span class="fa fa-quote-left"></span> Dataset <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Training files"  target="_blank" href="https://cephrgw01.ifca.es:8080/swift/v1/imagenet-tf/"><span class="fa fa-quote-left"></span> Training files <span class="fas fa-arrow-circle-right"></span></a>
+                <h3>Citing this module</h3>
+                    <a class="button" title="Module citation"  target="_blank" href="http://digital.csic.es/handle/10261/194498"><span class="fa fa-quote-left"></span> Citation <span class="fas fa-arrow-circle-right"></span></a>
             </div>
         </div>
     </div>
