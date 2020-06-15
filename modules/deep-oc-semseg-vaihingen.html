@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog -  Model  "semseg_vaihingen"</title>
+          <title>DEEP Open Catalog -  Model  "2D semantic segmentation"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -37,8 +37,6 @@
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/categories.html">All categories</a>
                                 </li>
-                                <li class="popover-item ">
-                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v1.html">api-v1</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a></li>
                                 <li class="popover-item ">
@@ -106,10 +104,10 @@
     <div class="row">
         <div class="eight columns">
             <div class="row header">
-                <h2 class="entry-title" >semseg_vaihingen</h2>
+                <h2 class="entry-title" >2D semantic segmentation</h2>
                 
                 
-                <p>2D semantic segmentation on the Vaihingen dataset</p>
+                <p>2D semantic segmentation trained on the Vaihingen dataset</p>
                 
                 <hr>
                 <p>
@@ -124,12 +122,12 @@
                     DEEP-Hybrid-DataCloud Consortium
                     <br>
                     Created: 
-                        <time class="published" datetime="2019-09-30T00:00:00+02:00">
-                            Mon 30 September 2019
+                        <time class="published" datetime="2019-09-29T00:00:00+02:00">
+                            Sun 29 September 2019
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2020-06-11T21:46:15+02:00">
-                            Thu 11 June 2020
+                        <time class="modified" datetime="2020-06-15T07:28:12+02:00">
+                            Mon 15 June 2020
                         </time>
                 </p>
             </div>
@@ -232,7 +230,7 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-semseg_vaihingen</code></pre>
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v1.html">api-v1</a>
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
                 </p>
                 <h3>License</h3>
                 <p>
@@ -240,6 +238,26 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-semseg_vaihingen</code></pre>
                 </p>
             </div>
 
+            <div class="row">
+                <h3>Try it live!
+                <img src="https://img.shields.io/badge/-beta-yellow">
+                </h3>
+                <ul>
+                    <li>
+                        <a class="button" title="Try using the swagger UI" target="_blank"
+                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/semseg_vaihingen/swagger.json">
+                            <span class="fas fa-window-maximize"></span> Web UI <span class="fas fa-arrow-circle-right"></span></a>
+                        <a class="button" title="API endpoint" target="_blank"
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/semseg_vaihingen/">
+                            <span class="fas fa-code"></span> API <span class="fas fa-arrow-circle-right"></span></a>
+                    </li>
+                    <li>
+                        <a class="button" title="Swagger specification" target="_blank"
+                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/semseg_vaihingen/swagger.json">
+                            <span class="fas fa-code"></span> API specification <span class="fas fa-arrow-circle-right"></span></a>
+                    </li>
+                </ul>
+            </div>
             <div class="row">
                 <h3>Configure and train</h3>
                 <ul>
