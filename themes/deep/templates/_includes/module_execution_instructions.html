@@ -21,12 +21,10 @@ $ docker run -ti -p 5000:5000 {{ article.dockerhub }}</code></pre>
     </p>
             <pre><code>$ virtualenv udocker
 $ source udocker/bin/activate
-$ git clone https://github.com/indigo-dc/udocker
-$ cd udocker
-$ pip install .
-$ udocker pull {{ article.dockerhub }}
-$ udocker create {{ article.dockerhub }}
-$ udocker run -p 5000:5000  {{ article.dockerhub }}</code></pre>
+(udocker) $ pip install udocker
+(udocker) $ udocker pull {{ article.dockerhub }}
+(udocker) $ udocker create {{ article.dockerhub }}
+(udocker) $ udocker run -p 5000:5000  {{ article.dockerhub }}</code></pre>
 
     <hr />
 
