@@ -126,8 +126,8 @@
                             Thu 09 April 2020
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2020-06-15T07:28:18+02:00">
-                            Mon 15 June 2020
+                        <time class="modified" datetime="2020-09-21T07:33:26+02:00">
+                            Mon 21 September 2020
                         </time>
                 </p>
             </div>
@@ -166,12 +166,10 @@ $ docker run -ti -p 5000:5000 deephdc/deep-oc-neural_transfer</code></pre>
     </p>
             <pre><code>$ virtualenv udocker
 $ source udocker/bin/activate
-$ git clone https://github.com/indigo-dc/udocker
-$ cd udocker
-$ pip install .
-$ udocker pull deephdc/deep-oc-neural_transfer
-$ udocker create deephdc/deep-oc-neural_transfer
-$ udocker run -p 5000:5000  deephdc/deep-oc-neural_transfer</code></pre>
+(udocker) $ pip install udocker
+(udocker) $ udocker pull deephdc/deep-oc-neural_transfer
+(udocker) $ udocker create deephdc/deep-oc-neural_transfer
+(udocker) $ udocker run -p 5000:5000  deephdc/deep-oc-neural_transfer</code></pre>
 
     <hr />
 
@@ -231,9 +229,7 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-neural_transfer</code></pre>
             </div>
 
             <div class="row">
-                <h3>Try it live!
-                <img src="https://img.shields.io/badge/-beta-yellow">
-                </h3>
+                <h3>Try it live!</h3>
                 <ul>
                     <li>
                         <a class="button" title="Try using the swagger UI" target="_blank"

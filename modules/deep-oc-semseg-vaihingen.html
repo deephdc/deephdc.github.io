@@ -126,8 +126,8 @@
                             Sun 29 September 2019
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2020-06-15T07:28:12+02:00">
-                            Mon 15 June 2020
+                        <time class="modified" datetime="2020-09-21T07:33:20+02:00">
+                            Mon 21 September 2020
                         </time>
                 </p>
             </div>
@@ -173,12 +173,10 @@ $ docker run -ti -p 5000:5000 deephdc/deep-oc-semseg_vaihingen</code></pre>
     </p>
             <pre><code>$ virtualenv udocker
 $ source udocker/bin/activate
-$ git clone https://github.com/indigo-dc/udocker
-$ cd udocker
-$ pip install .
-$ udocker pull deephdc/deep-oc-semseg_vaihingen
-$ udocker create deephdc/deep-oc-semseg_vaihingen
-$ udocker run -p 5000:5000  deephdc/deep-oc-semseg_vaihingen</code></pre>
+(udocker) $ pip install udocker
+(udocker) $ udocker pull deephdc/deep-oc-semseg_vaihingen
+(udocker) $ udocker create deephdc/deep-oc-semseg_vaihingen
+(udocker) $ udocker run -p 5000:5000  deephdc/deep-oc-semseg_vaihingen</code></pre>
 
     <hr />
 
@@ -239,9 +237,7 @@ $ udocker run -p 5000:5000  deephdc/deep-oc-semseg_vaihingen</code></pre>
             </div>
 
             <div class="row">
-                <h3>Try it live!
-                <img src="https://img.shields.io/badge/-beta-yellow">
-                </h3>
+                <h3>Try it live!</h3>
                 <ul>
                     <li>
                         <a class="button" title="Try using the swagger UI" target="_blank"
