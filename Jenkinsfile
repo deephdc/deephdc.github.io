@@ -32,7 +32,7 @@ pipeline {
                 }
             }
             steps {
-                // Get last version of DEEP-OC modules 
+                // Get last version of DEEP-OC modules
                 JenkinsBuildJob(
                     "Pipeline-as-code/deep-oc/master",
                     [booleanParam(name: 'disable_oc_build', value: true)])
@@ -50,17 +50,18 @@ pipeline {
                 sh 'git diff --diff-filter=M'
             }
         }
-	
+
         stage('Generate and publish Pelican site to Github Pages') {
             when {
                 branch 'pelican'
             }
             steps {
-                withCredentials([string(
-                        credentialsId: "indigobot-github-token",
-                        variable: "GITHUB_TOKEN")]) {
+                withCredentials([usernamePassword(
+                        credentialsId: "deephdc-bot",
+                        usernameVariable: "GITHUB_USER",
+                        passwordVariable: "GITHUB_TOKEN")]) {
                     sh 'git fetch origin master:master -f'
-                    sh 'git remote set-url origin "https://indigobot:${GITHUB_TOKEN}@github.com/deephdc/deephdc.github.io"'
+                    sh 'git remote set-url origin "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/deephdc/deephdc.github.io"'
                     sh 'make github'
                 }
             }
@@ -92,8 +93,8 @@ void iterateOverProjects() {
         submoduleCfg: [],
         userRemoteConfigs: [[url: 'https://github.com/deephdc/deep-oc']]]
     )
-	
-    dir(subdir_name) { 
+
+    dir(subdir_name) {
         any_build_failure = false
         data = sh(
             script: 'git submodule | awk \'{print $2}\'',
@@ -118,7 +119,7 @@ void iterateOverProjects() {
             }
         }
     }
-    
+
     if (any_build_failure) {
         echo "There were errors building DEEP modules. Setting the build status as UNSTABLE"
         currentBuild.result = 'UNSTABLE'
