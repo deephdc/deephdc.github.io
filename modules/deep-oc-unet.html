@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog -  Model  "Artistic style transfer"</title>
+          <title>DEEP Open Catalog -  Model  "2D semantic segmentation multilabels with Unet"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -53,7 +53,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/development.html">development</a></li>
-                                <li class="popover-item ">
+                                <li class="popover-item active">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/faster-rcnn.html">faster-rcnn</a></li>
@@ -71,7 +71,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/object detection.html">object detection</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a></li>
-                                <li class="popover-item active">
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/pytorch.html">pytorch</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/rcnn.html">rcnn</a></li>
@@ -106,44 +106,34 @@
     <div class="row">
         <div class="eight columns">
             <div class="row header">
-                <h2 class="entry-title" >Artistic style transfer</h2>
+                <h2 class="entry-title" >2D semantic segmentation multilabels with Unet</h2>
                 
                 
-                <p>A module to apply artistic style transfer using pytorch.</p>
+                <p>Semantic segmentation with Unet Deep Learning model applied to segment Cercospora Leaf Spot.</p>
                 
                 <hr>
                 <p>
                     <span class="fas fa-folder"></span>
                         Model
-                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">Trainable</a>
-                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">Inference</a>
-                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">Pre-trained</a>
                 </p>
                 <p>
                     Published by
                     DEEP-Hybrid-DataCloud Consortium
                     <br>
                     Created: 
-                        <time class="published" datetime="2020-04-09T00:00:00+02:00">
-                            Thu 09 April 2020
+                        <time class="published" datetime="2022-07-03T00:00:00+02:00">
+                            Sun 03 July 2022
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2022-08-03T09:43:32+02:00">
+                        <time class="modified" datetime="2022-08-03T09:43:36+02:00">
                             Wed 03 August 2022
                         </time>
                 </p>
             </div>
             <div class="row content">
                 <h3> Model  Description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-neural_transfer/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-neural_transfer/master"></a></p>
-<p>This is neural_transfer application using DEEPaaS API.</p>
-<p>The module allows you to take the content of an image and reproduce it with a new artistic style using the style of a different image.
-The code is based on the <a href=https://github.com/pytorch/examples/tree/master/fast_neural_style>Faster Neural Style Pytorch example</a> 
-that implements the method described in 
-"Perceptual Losses for Real-Time Style Transfer and Super-Resolution" developed by Justin Johnson, Alexandre Alahia and Li Fei-Fei [1].</p>
-<p><strong>References</strong></p>
-<p>[1] Justin Johnson, Alexandre Alahi, Li Fei-Fei, Perceptual Losses for Real-Time Style Transfer and Super-Resolution, 
-<a href=https://arxiv.org/abs/1603.08155>arXiv:1603.08155 [cs.CV]</a></p>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-unet/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-unet/master"></a></p>
+<p>This is 2D semantic segmentation multilabels with application using DEEPaaS API. The dataset used to train this model contains three classes: Background, Leaf and Disease (Cercospora).</p>
             </div>
 <div class="row run">
     <h3>Test this module</h3>
@@ -156,8 +146,8 @@ that implements the method described in
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/deep-oc-neural_transfer
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-neural_transfer</code></pre>
+    <pre><code>$ docker pull deephdc/deep-oc-unet
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-unet</code></pre>
  
     <h4>Execute on your computer using udocker</h4>
     <p>
@@ -169,9 +159,9 @@ $ docker run -ti -p 5000:5000 deephdc/deep-oc-neural_transfer</code></pre>
             <pre><code>$ virtualenv udocker
 $ source udocker/bin/activate
 (udocker) $ pip install udocker
-(udocker) $ udocker pull deephdc/deep-oc-neural_transfer
-(udocker) $ udocker create deephdc/deep-oc-neural_transfer
-(udocker) $ udocker run -p 5000:5000  deephdc/deep-oc-neural_transfer</code></pre>
+(udocker) $ udocker pull deephdc/deep-oc-unet
+(udocker) $ udocker create deephdc/deep-oc-unet
+(udocker) $ udocker run -p 5000:5000  deephdc/deep-oc-unet</code></pre>
 
     <hr />
 
@@ -189,39 +179,13 @@ $ source udocker/bin/activate
 
 </div>
 
-<div class="row run">
-    <h3>Train this module</h3>
-    <p>
-        You can train this model using the DEEP framework. In order to execute
-        this module in our pilot e-Infrastructure you would need to be
-        registered in the <a href="https://iam.deep-hybrid-datacloud.eu/"
-                             title="DEEP Identity and Access Management">DEEP
-                             IAM</a>.
-    </p>
-    <p>Once you are registedered, you can go to our 
-        <a title="Train module using DEEP Framework" 
-            href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-neural-transfer">
-            training dashboard
-        </a>
-        to configure and train it.
-    </p>
-    <p>
-        For more information, refer to the 
-        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
-           title="DEEP user documentation">user documentation</a>.
-    </p>
-</div>
         </div>
 
         <div class="four columns buttons">
             <div class="row">
                 <h3>Categories</h3>
                 <p>
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pytorch.html">pytorch</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/image style transfer.html">image style transfer</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
+                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
                 </p>
                 <h3>License</h3>
@@ -231,35 +195,9 @@ $ source udocker/bin/activate
             </div>
 
             <div class="row">
-                <h3>Try it live!</h3>
-                <ul>
-                    <li>
-                        <a class="button" title="Try using the swagger UI" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/swagger/?url=https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/neural_transfer/swagger.json">
-                            <span class="fas fa-window-maximize"></span> Web UI <span class="fas fa-arrow-circle-right"></span></a>
-                        <a class="button" title="API endpoint" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/neural_transfer/">
-                            <span class="fas fa-code"></span> API <span class="fas fa-arrow-circle-right"></span></a>
-                    </li>
-                    <li>
-                        <a class="button" title="Swagger specification" target="_blank"
-                           href="https://deepaas.deep-hybrid-datacloud.eu/api/v1/web/deepaas/deep-oc/neural_transfer/swagger.json">
-                            <span class="fas fa-code"></span> API specification <span class="fas fa-arrow-circle-right"></span></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="row">
-                <h3>Configure and train</h3>
-                <ul>
-                    <li>
-                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/module/deep-oc-neural-transfer"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="row">
                 <h3>Get the code</h3>
-                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/neural_transfer"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-neural_transfer"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/adnaneds/unet"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-unet"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
 
             </div>
         </div>
