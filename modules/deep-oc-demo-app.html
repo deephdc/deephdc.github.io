@@ -109,7 +109,7 @@
                 <h2 class="entry-title" >demo_app</h2>
                 
                 
-                <p>A toy application for demo and testing purposes. We just implement dummy inference, ie. we return the same inputs we are fed</p>
+                <p>A toy application for demo and testing purposes. We just implement dummy inference, ie. we return the same inputs we are fed.</p>
                 
                 <hr>
                 <p>
@@ -125,15 +125,45 @@
                             Tue 05 October 2021
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2022-09-16T12:10:23+02:00">
-                            Fri 16 September 2022
+                        <time class="modified" datetime="2022-09-30T12:38:58+02:00">
+                            Fri 30 September 2022
                         </time>
                 </p>
             </div>
             <div class="row content">
                 <h3> Model  Description</h3>
                 <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-demo_app/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-demo_app/master"></a></p>
-<p>This is demo_app application using DEEPaaS API.</p>
+<p>It can serve as a reference implementation of current best practices in the project (mirroring the <a href="https://github.com/deephdc/cookiecutter-deep">DEEP template</a>).</p>
+<p>This demo module implements:</p>
+<ul>
+<li>
+<p><strong>dummy inference</strong>, ie. we return the same inputs we are fed. If some input is not fed we generate a default one. </p>
+</li>
+<li>
+<p><strong>dummy training</strong>, ie. we sleep for some time and output some random monitoring metrics. </p>
+</li>
+</ul>
+<p>The two branches in this repo cover the two main usecases: </p>
+<ul>
+<li>
+<p><code>master</code>: this is a reference implementation on how to return a JSON response for predict(). </p>
+</li>
+<li>
+<p><code>return-files</code>: this is a reference implementation on how to return non-JSON responses for predict(). </p>
+</li>
+</ul>
+<p>This is particularly useful when returning: </p>
+<ul>
+<li>
+<p>long responses (that could better fit better in a txt file), </p>
+</li>
+<li>
+<p>media files (eg. returning an image), </p>
+</li>
+<li>
+<p>multiple files (for example returning an image and a text file at the same time, packing them into a zip file).</p>
+</li>
+</ul>
             </div>
 <div class="row run">
     <h3>Test this module</h3>

@@ -125,14 +125,14 @@
                             Sun 03 July 2022
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2022-09-16T12:10:24+02:00">
-                            Fri 16 September 2022
+                        <time class="modified" datetime="2022-09-30T12:38:59+02:00">
+                            Fri 30 September 2022
                         </time>
                 </p>
             </div>
             <div class="row content">
                 <h3> Model  Description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-unet/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-unet/master"></a></p>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/UC-adnaneds-DEEP-OC-unet/job/main"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/UC-adnaneds-DEEP-OC-unet/main"></a></p>
 <p>This is 2D semantic segmentation multilabels with application using DEEPaaS API. The dataset used to train this model contains three classes: Background, Leaf and Disease (Cercospora).</p>
             </div>
 <div class="row run">
@@ -146,8 +146,8 @@
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/deep-oc-unet
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-unet</code></pre>
+    <pre><code>$ docker pull deephdc/uc-adnaneds-deep-oc-unet
+$ docker run -ti -p 5000:5000 deephdc/uc-adnaneds-deep-oc-unet</code></pre>
  
     <h4>Execute on your computer using udocker</h4>
     <p>
@@ -159,9 +159,9 @@ $ docker run -ti -p 5000:5000 deephdc/deep-oc-unet</code></pre>
             <pre><code>$ virtualenv udocker
 $ source udocker/bin/activate
 (udocker) $ pip install udocker
-(udocker) $ udocker pull deephdc/deep-oc-unet
-(udocker) $ udocker create deephdc/deep-oc-unet
-(udocker) $ udocker run -p 5000:5000  deephdc/deep-oc-unet</code></pre>
+(udocker) $ udocker pull deephdc/uc-adnaneds-deep-oc-unet
+(udocker) $ udocker create deephdc/uc-adnaneds-deep-oc-unet
+(udocker) $ udocker run -p 5000:5000  deephdc/uc-adnaneds-deep-oc-unet</code></pre>
 
     <hr />
 
@@ -197,7 +197,7 @@ $ source udocker/bin/activate
             <div class="row">
                 <h3>Get the code</h3>
                     <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/adnaneds/unet"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-unet"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/uc-adnaneds-deep-oc-unet"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
 
             </div>
         </div>
