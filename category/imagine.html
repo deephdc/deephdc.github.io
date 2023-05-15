@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog -  Model  "demo_app"</title>
+        <title>DEEP Open Catalog - Category imagine</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -14,9 +14,6 @@
 
         <link rel="icon" type="image/png" href="https://marketplace.deep-hybrid-datacloud.eu/favicon.ico" />
         
-
-
-
 </head>
 
 <body>
@@ -42,6 +39,8 @@
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a></li>
                                 <li class="popover-item ">
+                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/audio.html">audio</a></li>
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/audio classification.html">audio classification</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/beta.html">beta</a></li>
@@ -53,14 +52,20 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/development.html">development</a></li>
-                                <li class="popover-item active">
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/faster-rcnn.html">faster-rcnn</a></li>
                                 <li class="popover-item ">
+                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/general purpose.html">general purpose</a></li>
+                                <li class="popover-item ">
+                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/image.html">image</a></li>
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/image classification.html">image classification</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/image style transfer.html">image style transfer</a></li>
+                                <li class="popover-item active">
+                                    <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/imagine.html">imagine</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a></li>
                                 <li class="popover-item ">
@@ -99,145 +104,79 @@
     </div>
 </div>
 </nav>    
-
-<section id="module-entry">
-<div class="container module-entry">
+<section id="module-list">
+<div class="container section">
+    <div class="row">
+        <h2>Modules in the 'imagine' category</h2>
+    </div>
 
     <div class="row">
-        <div class="eight columns">
-            <div class="row header">
-                <h2 class="entry-title" >demo_app</h2>
-                
-                
-                <p>A toy application for demo and testing purposes. We just implement dummy inference, ie. we return the same inputs we are fed.</p>
-                
-                <hr>
-                <p>
-                    <span class="fas fa-folder"></span>
-                        Model
-                </p>
-                <p>
-                    Published by
-                    DEEP-Hybrid-DataCloud Consortium
-                    <br>
-                    Created: 
-                        <time class="published" datetime="2021-10-05T00:00:00+02:00">
-                            Tue 05 October 2021
-                        </time>
-                        - Updated: 
-                        <time class="modified" datetime="2023-03-20T13:47:48+01:00">
-                            Mon 20 March 2023
-                        </time>
-                </p>
-            </div>
-            <div class="row content">
-                <h3> Model  Description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-demo_app/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-demo_app/master"></a></p>
-<p>It can serve as a reference implementation of current best practices in the project (mirroring the <a href="https://github.com/deephdc/cookiecutter-deep">DEEP template</a>).</p>
-<p>This demo module implements:</p>
-<ul>
-<li>
-<p><strong>dummy inference</strong>, ie. we return the same inputs we are fed. If some input is not fed we generate a default one. </p>
-</li>
-<li>
-<p><strong>dummy training</strong>, ie. we sleep for some time and output some random monitoring metrics. </p>
-</li>
-</ul>
-<p>The two branches in this repo cover the two main usecases: </p>
-<ul>
-<li>
-<p><code>master</code>: this is a reference implementation on how to return a JSON response for predict(). </p>
-</li>
-<li>
-<p><code>return-files</code>: this is a reference implementation on how to return non-JSON responses for predict(). </p>
-</li>
-</ul>
-<p>This is particularly useful when returning: </p>
-<ul>
-<li>
-<p>long responses (that could better fit better in a txt file), </p>
-</li>
-<li>
-<p>media files (eg. returning an image), </p>
-</li>
-<li>
-<p>multiple files (for example returning an image and a text file at the same time, packing them into a zip file).</p>
-</li>
-</ul>
-            </div>
-<div class="row run">
-    <h3>Test this module</h3>
-    <p>
-        You can test and execute this module in various ways.
-    </p>
-    <h4>Excecute locally on your computer using Docker</h4>
-    <p>
-		You can run this module directly on your computer, assuming that you
-		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
-		installed, by following these steps:
-    </p>
-    <pre><code>$ docker pull deephdc/deep-oc-demo_app
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-demo_app</code></pre>
- 
-    <h4>Execute on your computer using udocker</h4>
-    <p>
-        If you do not have Docker available or you do not want to install it,
-        you can use <a title="udocker repository" target="_blank"
-                       href="https://github.com/indigo-dc/udocker">udocker</a> 
-        within a Python virtualenv:
-    </p>
-            <pre><code>$ virtualenv udocker
-$ source udocker/bin/activate
-(udocker) $ pip install udocker
-(udocker) $ udocker pull deephdc/deep-oc-demo_app
-(udocker) $ udocker create deephdc/deep-oc-demo_app
-(udocker) $ udocker run -p 5000:5000  deephdc/deep-oc-demo_app</code></pre>
+<ul class="module-list">
 
-    <hr />
 
-    <p>
-        In either case, once the module is running, point your browser to
-        <code>http://127.0.0.1:5000/</code> and you will see the API
-        documentation, where you can test the module functionality, as well as
-        perform other actions (such as training).
-    </p>
-    <p>
-        For more information, refer to the 
-        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
-           title="DEEP user documentation">user documentation</a>.
-    </p>
-
-</div>
-
-        </div>
-
-        <div class="four columns buttons">
+    <li class="one-third column">
+        <div class="module-list-entry">
+            <header>
+                <h3 class="entry-title"><a href="https://marketplace.deep-hybrid-datacloud.eu/modules/uc-jmbifr-deep-oc-marine-species-seg.html" rel="bookmark" title="Permalink to marine_species_seg">marine_species_seg</a></h3>
+            </header>
             <div class="row">
-                <h3>Categories</h3>
-                <p>
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
-                </p>
-                <h3>License</h3>
-                <p>
-                    License: MIT
-                </p>
+                <div class="one column">
+                </div>
+                <div class="ten columns">
+                    <p class="post-info">
+                        <span class="fas fa-folder"></span>
+                            Model
+                    </p>
+                </div>
             </div>
-
-            <div class="row">
-                <h3>Get the code</h3>
-                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/demo_app"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-demo_app"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
-
-            </div>
+            <!--
+                <time class="published" datetime="2023-02-02T00:00:00+01:00"> Thu 02 February 2023 </time> 
+                <address class="vcard author">By
+                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a>
+                </address>
+            -->
+            <div class="entry-content"> 
+                <p>WIP  Identification of marine species from EMSO Azores deep-sea obervatory</p>
+                <a class="button button-primary" href="https://marketplace.deep-hybrid-datacloud.eu/modules/uc-jmbifr-deep-oc-marine-species-seg.html">Know more &raquo;&raquo;</a>
+            </div><!-- /.entry-content -->
         </div>
+    </li>
+
+
+    <li class="one-third column">
+        <div class="module-list-entry">
+            <header>
+                <h3 class="entry-title"><a href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-oc-phytoplankton-classification-tf.html" rel="bookmark" title="Permalink to Phytoplankton species classifier">Phytoplankton species classifier</a></h3>
+            </header>
+            <div class="row">
+                <div class="one column">
+                </div>
+                <div class="ten columns">
+                    <p class="post-info">
+                        <span class="fas fa-folder"></span>
+                            Model
+                        | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">Trainable</a>
+                        | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">Inference</a>
+                        | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">Pre-trained</a>
+                    </p>
+                </div>
+            </div>
+            <!--
+                <time class="published" datetime="2019-01-01T00:00:00+01:00"> Tue 01 January 2019 </time> 
+                <address class="vcard author">By
+                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a>
+                </address>
+            -->
+            <div class="entry-content"> 
+                <p>Classify phytoplankton images among 60 classes.</p>
+                <a class="button button-primary" href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-oc-phytoplankton-classification-tf.html">Know more &raquo;&raquo;</a>
+            </div><!-- /.entry-content -->
+        </div>
+    </li>
+</ul>
     </div>
 </div>
-
-
-
-    
-</section>
+</section><!-- /#content -->
         
 <footer id="contentinfo" class="body">
     <div class="footer">
