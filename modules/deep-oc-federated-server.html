@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog -  Model  "demo_app"</title>
+          <title>DEEP Open Catalog -  Model  "Federated learning server"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -118,10 +118,10 @@
     <div class="row">
         <div class="eight columns">
             <div class="row header">
-                <h2 class="entry-title" >demo_app</h2>
+                <h2 class="entry-title" >Federated learning server</h2>
                 
                 
-                <p>A toy application for demo and testing purposes. We just implement dummy inference, ie. we return the same inputs we are fed.</p>
+                <p>Federated learning server with flower</p>
                 
                 <hr>
                 <p>
@@ -133,49 +133,19 @@
                     DEEP-Hybrid-DataCloud Consortium
                     <br>
                     Created: 
-                        <time class="published" datetime="2021-10-05T00:00:00+02:00">
-                            Tue 05 October 2021
+                        <time class="published" datetime="2023-06-28T00:00:00+02:00">
+                            Wed 28 June 2023
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2023-06-28T11:55:19+02:00">
+                        <time class="modified" datetime="2023-06-28T11:55:22+02:00">
                             Wed 28 June 2023
                         </time>
                 </p>
             </div>
             <div class="row content">
                 <h3> Model  Description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-demo_app/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-demo_app/master"></a></p>
-<p>It can serve as a reference implementation of current best practices in the project (mirroring the <a href="https://github.com/deephdc/cookiecutter-deep">DEEP template</a>).</p>
-<p>This demo module implements:</p>
-<ul>
-<li>
-<p><strong>dummy inference</strong>, ie. we return the same inputs we are fed. If some input is not fed we generate a default one. </p>
-</li>
-<li>
-<p><strong>dummy training</strong>, ie. we sleep for some time and output some random monitoring metrics. </p>
-</li>
-</ul>
-<p>The two branches in this repo cover the two main usecases: </p>
-<ul>
-<li>
-<p><code>master</code>: this is a reference implementation on how to return a JSON response for predict(). </p>
-</li>
-<li>
-<p><code>return-files</code>: this is a reference implementation on how to return non-JSON responses for predict(). </p>
-</li>
-</ul>
-<p>This is particularly useful when returning: </p>
-<ul>
-<li>
-<p>long responses (that could better fit better in a txt file), </p>
-</li>
-<li>
-<p>media files (eg. returning an image), </p>
-</li>
-<li>
-<p>multiple files (for example returning an image and a text file at the same time, packing them into a zip file).</p>
-</li>
-</ul>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-federated-server/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-federated-server/master"></a></p>
+<p>Federated learning server deployed using flower.</p>
             </div>
 <div class="row run">
     <h3>Test this module</h3>
@@ -188,8 +158,8 @@
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/deep-oc-demo_app
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-demo_app</code></pre>
+    <pre><code>$ docker pull deephdc/deep-oc-federated-server
+$ docker run -ti -p 5000:5000 deephdc/deep-oc-federated-server</code></pre>
  
     <h4>Execute on your computer using udocker</h4>
     <p>
@@ -201,9 +171,9 @@ $ docker run -ti -p 5000:5000 deephdc/deep-oc-demo_app</code></pre>
             <pre><code>$ virtualenv udocker
 $ source udocker/bin/activate
 (udocker) $ pip install udocker
-(udocker) $ udocker pull deephdc/deep-oc-demo_app
-(udocker) $ udocker create deephdc/deep-oc-demo_app
-(udocker) $ udocker run -p 5000:5000  deephdc/deep-oc-demo_app</code></pre>
+(udocker) $ udocker pull deephdc/deep-oc-federated-server
+(udocker) $ udocker create deephdc/deep-oc-federated-server
+(udocker) $ udocker run -p 5000:5000  deephdc/deep-oc-federated-server</code></pre>
 
     <hr />
 
@@ -232,20 +202,15 @@ $ source udocker/bin/activate
                 </p>
                 <h3>License</h3>
                 <p>
-                    License: MIT
+                    License: Apache 2.0
                 </p>
             </div>
 
             <div class="row">
                 <h3>Get the code</h3>
-                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/demo_app"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-demo_app"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/federated-server"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-federated-server"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
 
-                <h3>Get the data</h3>
-                    <a class="button" title="Dataset"  target="_blank" href="http://add-some-url-pointing-to-your-dataset.com"><span class="fa fa-quote-left"></span> Dataset <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Training files"  target="_blank" href="http://add-some-url-where-training-files-are-stored.com"><span class="fa fa-quote-left"></span> Training files <span class="fas fa-arrow-circle-right"></span></a>
-                <h3>Citing this module</h3>
-                    <a class="button" title="Module citation"  target="_blank" href="http://add-some-DOI-url.com"><span class="fa fa-quote-left"></span> Citation <span class="fas fa-arrow-circle-right"></span></a>
             </div>
         </div>
     </div>
