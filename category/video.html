@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog -  Model  "Body pose detection"</title>
+        <title>DEEP Open Catalog - Category video</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -14,9 +14,6 @@
 
         <link rel="icon" type="image/png" href="https://marketplace.deep-hybrid-datacloud.eu/favicon.ico" />
         
-
-
-
 </head>
 
 <body>
@@ -89,13 +86,13 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/template.html">template</a></li>
-                                <li class="popover-item active">
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tools.html">tools</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a></li>
-                                <li class="popover-item ">
+                                <li class="popover-item active">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/video.html">video</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/vo.imagine-ai.eu.html">vo.imagine-ai.eu</a></li>
@@ -113,125 +110,50 @@
     </div>
 </div>
 </nav>    
-
-<section id="module-entry">
-<div class="container module-entry">
+<section id="module-list">
+<div class="container section">
+    <div class="row">
+        <h2>Modules in the 'video' category</h2>
+    </div>
 
     <div class="row">
-        <div class="eight columns">
-            <div class="row header">
-                <h2 class="entry-title" >Body pose detection</h2>
-                
-                
-                <p>Detect body poses in images.</p>
-                
-                <hr>
-                <p>
-                    <span class="fas fa-folder"></span>
-                        Model
-                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">Inference</a>
-                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">Pre-trained</a>
-                </p>
-                <p>
-                    Published by
-                    DEEP-Hybrid-DataCloud Consortium
-                    <br>
-                    Created: 
-                        <time class="published" datetime="2019-07-31T00:00:00+02:00">
-                            Wed 31 July 2019
-                        </time>
-                        - Updated: 
-                        <time class="modified" datetime="2023-09-06T09:06:31+02:00">
-                            Wed 06 September 2023
-                        </time>
-                </p>
-            </div>
-            <div class="row content">
-                <h3> Model  Description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-posenet-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-posenet-tf/master"></a></p>
-<p>This is a plug-and-play tool for real-time pose estimation using deep neural networks. The original model, weights, code, etc. was created by Google and can be found at https://github.com/tensorflow/tfjs-models/tree/master/posenet. </p>
-<p>PoseNet can be used to estimate either a single pose or multiple poses, meaning there is a version of the algorithm that can detect only one person in an image/video and another version that can detect multiple persons in an image/video. </p>
-<p>The PREDICT method expects an RGB image as input (or the url of an image) and returns as output the different body keypoints with the corresponding coordinates and the associated key score
-<img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-posenet-tf/master/images/posenet.png'/></p>
-            </div>
-<div class="row run">
-    <h3>Test this module</h3>
-    <p>
-        You can test and execute this module in various ways.
-    </p>
-    <h4>Excecute locally on your computer using Docker</h4>
-    <p>
-		You can run this module directly on your computer, assuming that you
-		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
-		installed, by following these steps:
-    </p>
-    <pre><code>$ docker pull deephdc/deep-oc-posenet-tf
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-posenet-tf</code></pre>
- 
-    <h4>Execute on your computer using udocker</h4>
-    <p>
-        If you do not have Docker available or you do not want to install it,
-        you can use <a title="udocker repository" target="_blank"
-                       href="https://github.com/indigo-dc/udocker">udocker</a> 
-        within a Python virtualenv:
-    </p>
-            <pre><code>$ virtualenv udocker
-$ source udocker/bin/activate
-(udocker) $ pip install udocker
-(udocker) $ udocker pull deephdc/deep-oc-posenet-tf
-(udocker) $ udocker create deephdc/deep-oc-posenet-tf
-(udocker) $ udocker run -p 5000:5000  deephdc/deep-oc-posenet-tf</code></pre>
+<ul class="module-list">
 
-    <hr />
 
-    <p>
-        In either case, once the module is running, point your browser to
-        <code>http://127.0.0.1:5000/</code> and you will see the API
-        documentation, where you can test the module functionality, as well as
-        perform other actions (such as training).
-    </p>
-    <p>
-        For more information, refer to the 
-        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
-           title="DEEP user documentation">user documentation</a>.
-    </p>
-
-</div>
-
-        </div>
-
-        <div class="four columns buttons">
+    <li class="one-third column">
+        <div class="module-list-entry">
+            <header>
+                <h3 class="entry-title"><a href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-oc-fasterrcnn-pytorch-api.html" rel="bookmark" title="Permalink to Object detection with FasterRCNN">Object detection with FasterRCNN</a></h3>
+            </header>
             <div class="row">
-                <h3>Categories</h3>
-                <p>
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/image.html">image</a>
-                </p>
-                <h3>License</h3>
-                <p>
-                    License: Apache 2.0
-                </p>
+                <div class="one column">
+                </div>
+                <div class="ten columns">
+                    <p class="post-info">
+                        <span class="fas fa-folder"></span>
+                            Model
+                        | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">Trainable</a>
+                        | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">Inference</a>
+                        | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">Pre-trained</a>
+                    </p>
+                </div>
             </div>
-
-            <div class="row">
-                <h3>Get the code</h3>
-                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/posenet-tf"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-posenet-tf"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
-
-            </div>
+            <!--
+                <time class="published" datetime="2023-05-04T00:00:00+02:00"> Thu 04 May 2023 </time> 
+                <address class="vcard author">By
+                    <a class="url fn" href="https://marketplace.deep-hybrid-datacloud.eu/author/deep-hybrid-datacloud-consortium.html">DEEP-Hybrid-DataCloud Consortium</a>
+                </address>
+            -->
+            <div class="entry-content"> 
+                <p>Object detection using FasterRCNN model(s) (fasterrcnn_pytorch_api)</p>
+                <a class="button button-primary" href="https://marketplace.deep-hybrid-datacloud.eu/modules/deep-oc-fasterrcnn-pytorch-api.html">Know more &raquo;&raquo;</a>
+            </div><!-- /.entry-content -->
         </div>
+    </li>
+</ul>
     </div>
 </div>
-
-
-
-    
-</section>
+</section><!-- /#content -->
         
 <footer id="contentinfo" class="body">
     <div class="footer">
