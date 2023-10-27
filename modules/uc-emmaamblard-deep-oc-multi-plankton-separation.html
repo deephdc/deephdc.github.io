@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog -  Model  "Apple tree blossom image segmentation"</title>
+          <title>DEEP Open Catalog -  Model  "multi_plankton_separation"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -55,7 +55,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/development.html">development</a></li>
-                                <li class="popover-item ">
+                                <li class="popover-item active">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/faster-rcnn.html">faster-rcnn</a></li>
@@ -89,7 +89,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/template.html">template</a></li>
-                                <li class="popover-item active">
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tools.html">tools</a></li>
@@ -120,42 +120,36 @@
     <div class="row">
         <div class="eight columns">
             <div class="row header">
-                <h2 class="entry-title" >Apple tree blossom image segmentation</h2>
+                <h2 class="entry-title" >multi_plankton_separation</h2>
                 
                 
-                <p>We suggest a 2D image segmentation model based on UNET algorithm to segment images with blossoming apple tree</p>
+                <p>Automatic separation of objects in images containing multiple plankton organisms</p>
                 
                 <hr>
                 <p>
                     <span class="fas fa-folder"></span>
                         Model
-                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">Trainable</a>
-                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">Inference</a>
-                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">Pre-trained</a>
                 </p>
                 <p>
                     Published by
                     DEEP-Hybrid-DataCloud Consortium
                     <br>
                     Created: 
-                        <time class="published" datetime="2022-07-26T00:00:00+02:00">
-                            Tue 26 July 2022
+                        <time class="published" datetime="2023-10-02T00:00:00+02:00">
+                            Mon 02 October 2023
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2023-10-27T14:13:42+02:00">
+                        <time class="modified" datetime="2023-10-27T14:13:48+02:00">
                             Fri 27 October 2023
                         </time>
                 </p>
             </div>
             <div class="row content">
                 <h3> Model  Description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/UC-hereariim-DEEP-OC-blossom/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/UC-hereariim-DEEP-OC-blossom/master"></a></p>
-<p>Apple flowers are very sensitive to temperature
-The study of their development makes it possible to study climate change.
-This module proposes a model for the segmentation of apple blossom images.
-This model is based on the UNET algorithm.
-We suggest a tool for inference of images and a tool for retrain a model
-The model in inference and retraining is tensorflow model in h5 format.</p>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/UC-emmaamblard-DEEP-OC-multi_plankton_separation/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/UC-emmaamblard-DEEP-OC-multi_plankton_separation/master"></a></p>
+<p>multi_plankton_separation is an application using the DEEPaaS API.</p>
+<p>It provides a trained model to detect each object on multiple plankton images, and return the separation lines.</p>
+<p>It is not possible to train a new model with this module.</p>
             </div>
 <div class="row run">
     <h3>Test this module</h3>
@@ -168,8 +162,8 @@ The model in inference and retraining is tensorflow model in h5 format.</p>
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/uc-hereariim-deep-oc-blossom
-$ docker run -ti -p 5000:5000 deephdc/uc-hereariim-deep-oc-blossom</code></pre>
+    <pre><code>$ docker pull deephdc/uc-emmaamblard-deep-oc-multi_plankton_separation
+$ docker run -ti -p 5000:5000 deephdc/uc-emmaamblard-deep-oc-multi_plankton_separation</code></pre>
  
     <h4>Execute on your computer using udocker</h4>
     <p>
@@ -181,9 +175,9 @@ $ docker run -ti -p 5000:5000 deephdc/uc-hereariim-deep-oc-blossom</code></pre>
             <pre><code>$ virtualenv udocker
 $ source udocker/bin/activate
 (udocker) $ pip install udocker
-(udocker) $ udocker pull deephdc/uc-hereariim-deep-oc-blossom
-(udocker) $ udocker create deephdc/uc-hereariim-deep-oc-blossom
-(udocker) $ udocker run -p 5000:5000  deephdc/uc-hereariim-deep-oc-blossom</code></pre>
+(udocker) $ udocker pull deephdc/uc-emmaamblard-deep-oc-multi_plankton_separation
+(udocker) $ udocker create deephdc/uc-emmaamblard-deep-oc-multi_plankton_separation
+(udocker) $ udocker run -p 5000:5000  deephdc/uc-emmaamblard-deep-oc-multi_plankton_separation</code></pre>
 
     <hr />
 
@@ -201,39 +195,12 @@ $ source udocker/bin/activate
 
 </div>
 
-<div class="row run">
-    <h3>Train this module</h3>
-    <p>
-        You can train this model using the DEEP framework. In order to execute
-        this module in our pilot e-Infrastructure you would need to be
-        registered in the <a href="https://iam.deep-hybrid-datacloud.eu/"
-                             title="DEEP Identity and Access Management">DEEP
-                             IAM</a>.
-    </p>
-    <p>Once you are registedered, you can go to our 
-        <a title="Train module using DEEP Framework" 
-            href="https://train.deep-hybrid-datacloud.eu/modules/uc-hereariim-deep-oc-blossom">
-            training dashboard
-        </a>
-        to configure and train it.
-    </p>
-    <p>
-        For more information, refer to the 
-        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
-           title="DEEP user documentation">user documentation</a>.
-    </p>
-</div>
         </div>
 
         <div class="four columns buttons">
             <div class="row">
                 <h3>Categories</h3>
                 <p>
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
                 </p>
@@ -244,17 +211,9 @@ $ source udocker/bin/activate
             </div>
 
             <div class="row">
-                <h3>Configure and train</h3>
-                <ul>
-                    <li>
-                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/modules/uc-hereariim-deep-oc-blossom"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="row">
                 <h3>Get the code</h3>
-                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/hereariim/blossom"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/uc-hereariim-deep-oc-blossom"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/emmaamblard/multi_plankton_separation"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/uc-emmaamblard-deep-oc-multi_plankton_separation"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
 
             </div>
         </div>
