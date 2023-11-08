@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>DEEP Open Catalog -  Model  "Plants species classifier"</title>
+          <title>DEEP Open Catalog -  Model  "ai4eosc_thunder_nowcast_ml"</title>
         <meta charset="utf-8" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Full Atom Feed" />
         <link href="https://marketplace.deep-hybrid-datacloud.eu/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="DEEP Open Catalog Categories Atom Feed" />
@@ -55,7 +55,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/development.html">development</a></li>
-                                <li class="popover-item ">
+                                <li class="popover-item active">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/faster-rcnn.html">faster-rcnn</a></li>
@@ -91,7 +91,7 @@
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/services.html">services</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/template.html">template</a></li>
-                                <li class="popover-item active">
+                                <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a></li>
                                 <li class="popover-item ">
                                     <a class="popover-link" href="https://marketplace.deep-hybrid-datacloud.eu/category/tools.html">tools</a></li>
@@ -124,63 +124,36 @@
     <div class="row">
         <div class="eight columns">
             <div class="row header">
-                <h2 class="entry-title" >Plants species classifier</h2>
+                <h2 class="entry-title" >ai4eosc_thunder_nowcast_ml</h2>
                 
                 
-                <p>Classify plant images among 10K species from the iNaturalist dataset.</p>
+                <p>Thunderstorm nowcast based on radar data (for agrometeorology)</p>
                 
                 <hr>
                 <p>
                     <span class="fas fa-folder"></span>
                         Model
-                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">Trainable</a>
-                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">Inference</a>
-                    | <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">Pre-trained</a>
                 </p>
                 <p>
                     Published by
                     DEEP-Hybrid-DataCloud Consortium
                     <br>
                     Created: 
-                        <time class="published" datetime="2019-01-01T00:00:00+01:00">
-                            Tue 01 January 2019
+                        <time class="published" datetime="2023-09-07T00:00:00+02:00">
+                            Thu 07 September 2023
                         </time>
                         - Updated: 
-                        <time class="modified" datetime="2023-11-08T10:00:03+01:00">
+                        <time class="modified" datetime="2023-11-08T10:00:24+01:00">
                             Wed 08 November 2023
                         </time>
                 </p>
             </div>
             <div class="row content">
                 <h3> Model  Description</h3>
-                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-plants-classification-tf/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-plants-classification-tf/master"></a></p>
-<p>The deep learning revolution has brought significant advances in a number of fields [1], primarily linked to
-image and speech recognition. The standardization of image classification tasks like the <a href="http://www.image-net.org/challenges/LSVRC/">ImageNet Large Scale
-Visual Recognition Challenge</a> [2] has resulted in a reliable way to
-compare top performing architectures.</p>
-<p>The use of deep learning for plant classification is not novel [3, 4] but has mainly focused in leaves and has
-been restricted to a limited amount of species, therefore making it of limited use for large-scale biodiversity
-monitoring purposes.</p>
-<p>This Docker container contains a trained Convolutional Neural network optimized for plant identification using
-images. The architecture used is an Xception [5] network using Keras on top of Tensorflow. A detailed article
-about this network and the results obtained with it can be found in [6].</p>
-<p>The PREDICT method expects an RGB image as input (or the url of an RGB image) and will return a JSON with 
-the top 5 predictions.</p>
-<p>The original training dataset was the great collection of images which are available in <a href="https://identify.plantnet.org/">PlantNet</a> under a 
-Creative-Common AttributionShareAlike 2.0 license. It consists of around 250K images belonging to more than 6K
-plant species of Western Europe. These species are distributed in 1500 genera and 200 families.</p>
-<p>A new iteration of the application has been trained using plant images from <a href="https://www.inaturalist.org/">iNaturalist</a>.
-This dataset has around 4.4M observations with 7M images from 58K worldwide species.
-We have restricted our training to the 10K most popular species.</p>
-<p><img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-plants-classification-tf/master/images/plants.png'/></p>
-<p>This service is based in the <a href="./deep-oc-image-classification-tensorflow.html">Image Classification with Tensorflow</a> model.</p>
-<p><strong>References</strong></p>
-<p>[1]: Yann LeCun, Yoshua Bengio, and Geofrey Hinton. <a href="https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf">Deep learning</a>. Nature, 521(7553):436-444, May 2015.</p>
-<p>[2]: Olga Russakovsky et al. <a href="https://arxiv.org/abs/1409.0575">ImageNet Large Scale Visual Recognition Challenge</a>. International Journal of Computer Vision (IJCV), 115(3):211-252, 2015.</p>
-<p>[3]: Sue Han Lee, Chee Seng Chan, Paul Wilkin, and Paolo Remagnino. <a href="https://arxiv.org/abs/1506.08425">Deep-plant: Plant identification with convolutional neural networks</a>, 2015.</p>
-<p>[4]: Mads Dyrmann, Henrik Karstoft, and Henrik Skov Midtiby. <a href="https://www.sciencedirect.com/science/article/pii/S1537511016301465">Plant species classification using deep convolutional neural network.</a> Biosystems Engineering, 151:72-80, 2016.</p>
-<p>[5]: Chollet, Francois. <a href="https://arxiv.org/abs/1610.02357">Xception: Deep learning with depthwise separable convolutions</a> arXiv preprint (2017): 1610-02357.</p>
-<p>[6]: Heredia, Ignacio. <a href="https://arxiv.org/abs/1706.03736">Large-scale plant classification with deep neural networks.</a> Proceedings of the Computing Frontiers Conference. ACM, 2017.</p>
+                <p><a href="https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-ai4eosc_thunder_nowcast_ml/job/master"><img alt="Build Status" src="https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-ai4eosc_thunder_nowcast_ml/master"></a></p>
+<p>ai4eosc_thunder_nowcast_ml is an application using the DEEPaaS API.</p>
+<p>Write additional information for your users (how to predict, how to retrain,
+dataset description, training description, etc).</p>
             </div>
 <div class="row run">
     <h3>Test this module</h3>
@@ -193,8 +166,8 @@ We have restricted our training to the 10K most popular species.</p>
 		have <a title="Docker documentation" href="https://docs.docker.com/">Docker</a>
 		installed, by following these steps:
     </p>
-    <pre><code>$ docker pull deephdc/deep-oc-plants-classification-tf
-$ docker run -ti -p 5000:5000 deephdc/deep-oc-plants-classification-tf</code></pre>
+    <pre><code>$ docker pull microstep/deep-oc-ai4eosc_thunder_nowcast_ml
+$ docker run -ti -p 5000:5000 microstep/deep-oc-ai4eosc_thunder_nowcast_ml</code></pre>
  
     <h4>Execute on your computer using udocker</h4>
     <p>
@@ -206,9 +179,9 @@ $ docker run -ti -p 5000:5000 deephdc/deep-oc-plants-classification-tf</code></p
             <pre><code>$ virtualenv udocker
 $ source udocker/bin/activate
 (udocker) $ pip install udocker
-(udocker) $ udocker pull deephdc/deep-oc-plants-classification-tf
-(udocker) $ udocker create deephdc/deep-oc-plants-classification-tf
-(udocker) $ udocker run -p 5000:5000  deephdc/deep-oc-plants-classification-tf</code></pre>
+(udocker) $ udocker pull microstep/deep-oc-ai4eosc_thunder_nowcast_ml
+(udocker) $ udocker create microstep/deep-oc-ai4eosc_thunder_nowcast_ml
+(udocker) $ udocker run -p 5000:5000  microstep/deep-oc-ai4eosc_thunder_nowcast_ml</code></pre>
 
     <hr />
 
@@ -226,67 +199,26 @@ $ source udocker/bin/activate
 
 </div>
 
-<div class="row run">
-    <h3>Train this module</h3>
-    <p>
-        You can train this model using the DEEP framework. In order to execute
-        this module in our pilot e-Infrastructure you would need to be
-        registered in the <a href="https://iam.deep-hybrid-datacloud.eu/"
-                             title="DEEP Identity and Access Management">DEEP
-                             IAM</a>.
-    </p>
-    <p>Once you are registedered, you can go to our 
-        <a title="Train module using DEEP Framework" 
-            href="https://train.deep-hybrid-datacloud.eu/modules/deep-oc-plants-classification-tf">
-            training dashboard
-        </a>
-        to configure and train it.
-    </p>
-    <p>
-        For more information, refer to the 
-        <a href="https://docs.deep-hybrid-datacloud.eu/en/latest/user/index.html"
-           title="DEEP user documentation">user documentation</a>.
-    </p>
-</div>
         </div>
 
         <div class="four columns buttons">
             <div class="row">
                 <h3>Categories</h3>
                 <p>
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/tensorflow.html">tensorflow</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/docker.html">docker</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/deep learning.html">deep learning</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/trainable.html">trainable</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/inference.html">inference</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/pre-trained.html">pre-trained</a>, 
-                        <a href="https://marketplace.deep-hybrid-datacloud.eu/category/image classification.html">image classification</a>, 
                         <a href="https://marketplace.deep-hybrid-datacloud.eu/category/api-v2.html">api-v2</a>
                 </p>
                 <h3>License</h3>
                 <p>
-                    License: Apache 2.0
+                    License: MIT
                 </p>
             </div>
 
             <div class="row">
-                <h3>Configure and train</h3>
-                <ul>
-                    <li>
-                        <a class="button" title="Train module using DEEP Framework"  target="_blank" href="https://train.deep-hybrid-datacloud.eu/modules/deep-oc-plants-classification-tf"><span class="fas fa-cogs"></span> Training dashboard <span class="fas fa-arrow-circle-right"></span></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="row">
                 <h3>Get the code</h3>
-                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/deephdc/image-classification-tf"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/deephdc/deep-oc-plants-classification-tf"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="GitHub repository"  target="_blank" href="https://github.com/MicroStep-MIS/ai4eosc_thunder_nowcast_ml"><span class="fab fa-github"></span>Github <span class="fas fa-arrow-circle-right"></span></a>
+                    <a class="button" title="Deploy from DockerHub"  target="_blank" href="https://hub.docker.com/r/microstep/deep-oc-ai4eosc_thunder_nowcast_ml"><span class="fab fa-docker"></span>Docker Hub <span class="fas fa-arrow-circle-right"></span></a>
 
-                <h3>Get the data</h3>
-                    <a class="button" title="Dataset"  target="_blank" href="https://www.gbif.org/es/dataset/50c9509d-22c7-4a22-a47d-8c48425ef4a7"><span class="fa fa-quote-left"></span> Dataset <span class="fas fa-arrow-circle-right"></span></a>
-                    <a class="button" title="Training files"  target="_blank" href="https://cephrgw01.ifca.es:8080/swift/v1/plants-tf/"><span class="fa fa-quote-left"></span> Training files <span class="fas fa-arrow-circle-right"></span></a>
-                <h3>Citing this module</h3>
-                    <a class="button" title="Module citation"  target="_blank" href="http://digital.csic.es/handle/10261/194545"><span class="fa fa-quote-left"></span> Citation <span class="fas fa-arrow-circle-right"></span></a>
             </div>
         </div>
     </div>
